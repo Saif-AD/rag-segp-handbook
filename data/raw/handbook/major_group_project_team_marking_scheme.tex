@@ -1,0 +1,108 @@
+\index{major~group~project!team~marking~scheme}
+\index{team~marking~scheme!major~group~project}
+The team marking scheme for the major group project employs the same approach as that of the small group project.  The mark scheme is divided into 10 percentage point intervals, from 10\% to 100\%.  To achieve a particular mark, say 60\%, the team's work must meet all the requirements associated with that mark \emph{and all the requirements that precede it}.  If a submission does not meet a particular criterion (say at the 60\% point), the team will not attain the mark associated with that criterion (i.e. their mark will be less than 60\%). 
+
+Markers will not consider achievements at a given mark point unless all expectations of all criteria at the lower mark point have been achieved.  If a team achieves some of the criteria at a particular mark point, they will receive some marks for this, proportional to the number of criteria attained at the higher level).  However, the mark will be capped below the grade point for which the submission does not attain all expectations.  Therefore, it is crucial that your team understands all marking criteria, and gets the basics right before trying to attain higher level expectations!  
+
+\paragraph{Band I: 0--20\%}
+\tfaq[1]{0mm}{What criteria must be met in order to attain a team mark in the 0--20\% range (band I) in the major group project?}{Major~group~project}
+\begin{itemize}[align=left, labelwidth=2.5em, labelsep=1em, leftmargin=3.5em]
+\item[I.1.1]\criterion{Delivery}{\necessary}{1}{The submission is structured as required.  All files and directories, including the top-level directory, meet the required naming conventions.}{To meet this requirement, make sure you read the specification of the deliverables carefully.  Prevent errors by maintaining the project structure using the required specifications from the very start.  Leave sufficient time to double or triple check the submission before uploading.}
+\item[I.1.2]\criterion{Delivery}{\necessary}{2}{All required content is included in the submission as specified in the checklist of deliverables\footnote{The checklist of deliverables will be provided via KEATS under the Major Group Project topic.}.}{Keep track of the list of deliverable and what you have completed in a shared document.}
+\item[I.2.1]\criterion{Design}{\critical}{1}{The source code includes functional data structures or domain models that represent core entities and support application logic.}{}
+\item[I.2.2]\criterion{Design}{\critical}{1}{The source code includes functional components or handlers that respond to user interactions or requests.}{}
+\item[I.2.3]\criterion{Design}{\critical}{1}{The source code includes presentation-layer templates or components that render dynamic content based on application data.}{}
+\item[I.2.4]\criterion{Design}{\necessary}{1}{The submission includes a diagram modelling the structure of the system that has been produced.  A UML structural diagram (a class diagram, a component diagram, or a deployment diagram) is expected.  Where the team is unable or unwilling to employ UML, the diagram should be accompanied by a legend describing the components.}{}
+\item[I.4.1]\criterion{Functionality}{\critical}{1}{The application delivers some form of content to the end user.  This content may be static content or views includes static content or views that are accessible without any dynamic data processing.}{}
+\item[I.4.2]\criterion{Functionality}{\critical}{2}{The application includes dynamic interfaces or views that display data retrieved from a persistent storage layer (e.g. a database or a file) or retrieved from an online data source.}{}
+\item[I.4.3]\criterion{Functionality}{\critical}{3}{The application includes a number of usable features corresponding to at least the equivalent to two one-person-week user stories per effective team member.}{Use the full development period.  This will ensure that this requirement is met.}
+\item[I.6.1]\criterion{Version Control}{\critical}{1}{The project's git repository is accessible via Team Feedback.}{Make the shared repository accessible as soon as possible.}
+\item[I.6.2]\criterion{Version Control}{\critical}{1}{The repository shows a history of mostly small commits throughout development.}{Expect team members to make regular commits when working on tasks and push these immediately to the shared repository.  Use this information to assess when team members are actively working on the project.  If you enforce this expectation, the repository will naturally meet this requirement.}
+\item[I.6.3]\criterion{Version Control}{\necessary}{2}{Commits include informative messages that adhere to the requirements for commit messages set out in \ref{sect:communication:version-control} of the Module Handbook.}{Review commit messages regularly, or when merging work at the very latest, }
+\item[I.8.1]\criterion{}{\necessary}{1}{Team Feedback contains a record of meetings (at least one per week while the team is working on the project).  Each meeting is recorded on Team Feedback within less than one week after the meeting took place.  Each meeting record includes an accurate attendance list.}{Assign a team member the responsibility to take meeting minutes.  Take attendance and record a first draft of the minutes during the minutes rather than postpone this until a later date.}
+\item[I.8.2]\criterion{}{\necessary}{2}{Each meeting record meets the expectations set out in Section~\ref{sect:communication:team-meetings}, including an agenda, a clear outline of key decisions made at the meeting, and log of actions arising from the meeting (other than software development task allocations assigned via a project management tool, such as Trello).}{}
+\end{itemize}
+
+\paragraph{Band II: 20--40\%}
+\tfaq[1]{0mm}{What criteria must be met in order to attain a team mark in the 20--40\% range (band II) in the major group project?}{Major~group~project}
+
+The criteria of this band are assessed \emph{only if all \critical} requirements of band I are met in full.  
+\begin{itemize}[align=left, labelwidth=2.5em, labelsep=1em, leftmargin=3.5em]
+\item[II.1.1]\criterion{Delivery}{\necessary}{1}{The submission includes automated setup scripts or configuration files to initialise the development environment and install dependencies.  Unless asked otherwise, you will be using Nix.}{Further information on using Nix or related tools will be released in January 2026.}
+\item[II.1.2]\criterion{Delivery}{\necessary}{1}{There are predefined user access credentials specified in the \texttt{README.md} file that the examiners can access the application.}{Do not implement two-factor authentication or CAPTCHA unless required to do so by a client in a client-proposed project.  Such features make accessing your application more time-consuming for markers and should not be necessary for a demonstration application.}
+\item[II.1.3]\criterion{Delivery}{\necessary}{1}{The submission supports database setup and seeding/unseeding via automation commands.}{}
+\item[II.1.4]\criterion{Delivery}{\necessary}{1}{The submission supports running tests and generating a coverage report via automation commands. The submission includes the original coverage report(s) as produced by the team's chosen code coverage tools.}{The availability and easy of use of automated testing and code coverage tools must be a consideration in the decision as to what technology stack to use in the project.  Do not commit a technology stack unless this is resolved.}
+\item[II.1.5]\criterion{Delivery}{\necessary}{1}{The submission supports running the application via automation commands.}{}
+\item[II.2]\criterion{Design}{\critical}{3}{The design diagrams are free from major errors and reflect the application developed.}{}
+\item[II.3]\criterion{Code (Source)}{\critical}{3}{The code is free from significant defects or major bugs.}{Test your code regularly and before each merge.}
+\item[II.4.1]\criterion{Functionality}{\critical}{1}{The application allows users to input and submit new data through appropriate user interfaces or interaction mechanisms.}{}
+\item[II.4.2]\criterion{Functionality}{\critical}{1}{The application provides functionality to retrieve and display existing data to users.}{}
+\item[II.4.3]\criterion{Functionality}{\critical}{1}{The application allows users to modify existing records or content through appropriate interfaces.}{}
+\item[II.4.4]\criterion{Functionality}{\critical}{1}{The application includes functionality for users to remove or deactivate data as needed.}{}
+\item[II.4.5]\criterion{Functionality}{\critical}{1}{The application integrates data management features into cohesive workflows that support user goals.}{}
+\item[II.4.6]\criterion{Functionality}{\critical}{1}{The scope and scale of the application is adequate for the team's effective size.}{}
+\item[II.5]\criterion{Testing}{\critical}{3}{There are at least two automated tests per effective team member.}{This criterion should be easy to meet if the team produce tests alongside source code.}
+\end{itemize}
+
+\paragraph{Band III: 40--60\%}
+\tfaq[1]{0mm}{What criteria must be met in order to attain a team mark in the 40--60\% range (band III) in the major group project?}{Major~group~project}
+
+The criteria of this band are assessed \emph{only if all \critical} requirements of bands I and II are met in full.  
+\begin{itemize}[align=left, labelwidth=2.5em, labelsep=1em, leftmargin=3.5em]
+\item[III.1.1]\criterion{Delivery}{\necessary}{1}{The submission includes clear reused software references or AI generated code in README.md.}{}
+\item[III.1.2]\criterion{Delivery}{\necessary}{1}{The application can be installed and run without manual fixes beyond documented steps.}{}
+\item[III.2]\criterion{Design}{\critical}{3}{The software design separates concerns through the use of appropriate modules, such as class-based components or well-structured functions.  Where a framework is used, the framework structural conventions are broadly adhered to.  Where no framework is used, the team introduced a basic, sensible organisation to software.}{}
+\item[III.3.1]\criterion{Code (Source)}{\critical}{2}{The code mostly follows consistent naming conventions.}{}
+\item[III.3.2]\criterion{Code (Source)}{\critical}{2}{The code contains no egregious code smells that an average team should be able to pick up via superficial reviews (e.g., very deeply nested code, very long functions, egregious examples of code repetition).}{}
+\item[III.4.1]\criterion{Functionality}{\critical}{2}{The application supports multiple related features integrated into a cohesive workflow.}{}
+\item[III.4.2]\criterion{Functionality}{\critical}{2}{Features are fully functional and tested manually (no broken paths).}{}
+\item[III.4.3]\criterion{Functionality}{\critical}{2}{The application handles basic error cases gracefully (e.g., invalid input).}{}
+\item[III.5.1]\criterion{Testing}{\critical}{2}{The project includes unit tests for critical features.}{}
+\item[III.5.2]\criterion{Testing}{\critical}{2}{The test suite achieves coverage greater than 50\%.}{Use a code coverage tool.}
+\item[III.8]\criterion{Project management}{\necessary}{1}{The team maintains updated task tracking (e.g., backlog, progress board). This is made available either through a Trello board connected to Team Feedback, or other evidence that needs to be submitted in the \texttt{appendixes.zip} file, so that examiners have access.}{}
+\end{itemize}
+
+\paragraph{Band IV: 60--80\%}
+\tfaq[1]{0mm}{What criteria must be met in order to attain a team mark in the 60--80\% range (band IV) in the major group project?}{Major~group~project}
+
+The criteria of this band are assessed \emph{only if all \critical} requirements of bands I, II, and III are met in full.  
+\begin{itemize}[align=left, labelwidth=2.5em, labelsep=1em, leftmargin=3.5em]
+\item[IV.1]\criterion{Delivery}{\critical}{0}{All \necessary criteria from bands I, II, and III were met (precondition for Band V eligibility).}{}
+\item[IV.2.1]\criterion{Design}{\critical}{1}{Code adheres to separation of concerns and avoids bloated or multi-purpose handlers.}{}
+\item[IV.2.2]\criterion{Design}{\critical}{2}{Shared logic or rules (e.g., access control, validation) are abstracted and reused across components to avoid duplication.}{}
+\item[IV.3.1]\criterion{Code (Source)}{\critical}{1}{Variables, functions, and classes have clear, descriptive names.}{}
+\item[IV.3.2]\criterion{Code (Source)}{\critical}{1}{Consistent code layout throughout the project.}{}
+\item[IV.3.3]\criterion{Code (Source)}{\critical}{1}{No function/method exceeds 25 lines.  No function/method has more than 2 levels of nesting.}{}
+\item[IV.3.5]\criterion{Code (Source)}{\critical}{1}{The code base is mostly DRY (significant repetition avoided).}{}
+\item[IV.3.6]\criterion{Code (Templates)}{\critical}{1}{Templates are structured to minimise repetition through modular and reusable components. (e.g.: Common layout elements such as headers, footers, navigation are abstracted into separate files or components).}{}
+\item[IV.3.7]\criterion{Code (Templates)}{\critical}{1}{Presentation is separated from structure and logic (e.g.: no inline styling, CSS classes used instead; design systems are used).}{}
+\item[IV.4.1]\criterion{Functionality}{\critical}{2}{The application supports an ambitious range of objectives.}{}
+\item[IV.4.2]\criterion{Functionality}{\critical}{1}{The feature set is cohesive, avoiding isolated features that don't contribute to objectives.}{}
+\item[IV.4.3]\criterion{Functionality}{\critical}{1}{Features are fully developed and offer an intuitive, polished interface.  Expedient implementation at the expense of usability is generally avoided.  For example, dates/times follow UK conventions and are intuitive.  Records can be identified without exposing internal IDs (e.g., primary keys).  Lists include pagination, ordering, and searching.}{}
+\item[IV.4.4]\criterion{Functionality}{\critical}{1}{Features provide flexibility for end users (e.g., multiple ways to interact, customisation, admin parameters, preferences etc.).}{}
+\item[IV.5.1]\criterion{Testing}{\critical}{1}{The project includes a comprehensive test suite.}{}
+\item[IV.5.2]\criterion{Testing}{\critical}{2}{The test suite achieves impeccable statement and branch coverage.}{}
+\item[IV.5.4]\criterion{Testing}{\critical}{1}{All tests pass and there is evidence of manual tests.}{}
+\item[IV.7]\criterion{Management}{\critical}{2}{The UI is consistent across screens (look and feel).  Terminology and language are consistent throughout the interface.  Equivalent controls appear in the same place with the same look and feel.}{}
+\end{itemize}
+
+\paragraph{Band V: 80--100\%}
+\tfaq[1]{0mm}{What criteria must be met in order to attain a team mark in the 80--100\% range (band V) in the major group project?}{Major~group~project}
+
+The criteria of this band are assessed \emph{only if all} requirements (\critical \emph{and} \necessary) of bands I, II, III, and IV are met in full.  
+\begin{itemize}[align=left, labelwidth=2.5em, labelsep=1em, leftmargin=3.5em]
+\item[V.2.1]\criterion{Design}{\critical}{1}{The design achieves high cohesion across components.}{}
+\item[V.2.2]\criterion{Design}{\critical}{1}{The design achieves low coupling across components.}{}
+\item[V.2.3]\criterion{Design}{\critical}{1}{Classes have limited responsibility (ideally single responsibility).  Functions and methods do one thing only.}{}
+\item[V.3.1]\criterion{Code (Source)}{\critical}{1}{Naming is consistent and meaningful throughout the application.}{}
+\item[V.3.2]\criterion{Code (Source)}{\critical}{1}{Functions and methods are extremely short (15 lines or less).  Functions and methods have no more than 1 level of nesting.}{}
+\item[V.3.4]\criterion{Code (Source)}{\critical}{1}{The code includes no repetition (fully DRY).}{}
+\item[V.3.5]\criterion{Code (Test)}{\critical}{1}{Test code uses clear, descriptive, and consistent names.}{}
+\item[V.3.6]\criterion{Code (Test)}{\critical}{1}{Test code repetition is minimal.}{}
+\item[V.3.7]\criterion{Code (Test)}{\critical}{1}{Test function/method bodies contain 25 lines or less with no more than 2 levels of nesting.}{}
+\item[V.4.1]\criterion{Functionality}{\critical}{3}{The application is very ambitious in scope for the team's effective size.}{}
+\item[V.4.2]\criterion{Functionality}{\critical}{3}{The application is exceptionally polished in terms of usability and completeness.}{}
+\item[V.5.1]\criterion{Testing}{\critical}{2}{Test suites are carefully designed to cover a comprehensive range of input and output partitions.}{}
+\item[V.5.2]\criterion{Testing}{\critical}{1}{Test suites address a wide range of potential error causes.}{}
+\item[V.7]\criterion{Management}{\critical}{2}{The team's time management was excellent throughout the project.  The final three days of the project were free from significant development activity (based on commit stats).}{}
+\end{itemize}

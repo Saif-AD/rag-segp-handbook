@@ -1,0 +1,15 @@
+{"id":"q01","query":"How are students allocated to teams in the small group project?","expected_hint":"Small group project > Group allocation"}
+{"id":"q02","query":"How are teams formed in the major group project?","expected_hint":"Major group project > Group allocation"}
+{"id":"q03","query":"Are we allowed to use JavaScript in the small group project?","expected_hint":"Small group project > Technology and tools"}
+{"id":"q04","query":"What happens if fewer people in our team contribute?","expected_hint":"Study guide > Assessment > Effective team size"}
+{"id":"q05","query":"How is the major group project marked?","expected_hint":"Major group project > Assessment"}
+{"id":"q06","query":"What is the assessment structure for the module?","expected_hint":"Study guide > Assessment"}
+{"id":"q07","query":"Which development tools should be used in the small group project?","expected_hint":"Small group project > Technology and tools > Tools"}
+{"id":"q08","query":"Where can I find the team I am allocated to?","expected_hint":"Tools > Team Feedback > Team formation"}
+{"id":"q09","query":"What knowledge and skills are required before starting the small group project?","expected_hint":"Small group project > Prerequisites to participate"}
+{"id":"q10","query":"Do all team members receive the same mark in the major group project?","expected_hint":"Major group project > Assessment"}
+{"id":"q11","query":"What technologies are allowed in the small group project?","expected_hint":"Small group project > Technology and tools > Technology constraints"}
+{"id":"q12","query":"What is the role of software tools in this module?","expected_hint":"Tools"}
+{"id":"q13","query":"What is the policy on generative AI for this module?","expected_hint":"Study guide > Policy on generative AI"}
+{"id":"q14","query":"What is the recommended effective team size?","expected_hint":"Study guide > Assessment > Effective team size"}
+{"id":"q15","query":"How is minor mark redistribution handled?","expected_hint":"Major group project > Assessment > Minor mark redistribution"}

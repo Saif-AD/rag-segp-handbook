@@ -1,0 +1,205 @@
+\begin{theindex}
+
+  \item academic-proposed~project, 114
+  \item accountability, 50, 53, 63, 117
+  \item assessment, 13
+    \subitem group, 14
+    \subitem individual
+      \subsubitem major~correction, 14
+      \subsubitem minor~mark~adjustment, 14
+    \subitem peer assessment, 13
+  \item assignment
+    \subitem major~group~project, 112
+    \subitem small~group~project, 96
+
+  \indexspace
+
+  \item calendar, 37
+  \item capped~mark, 17
+  \item client-proposed~project, 113
+  \item code editor, 23
+  \item code~cleanliness, 63
+  \item code~review, 42
+  \item collaborative~coding~session, 34
+  \item communication, 57
+
+  \indexspace
+
+  \item deadlines
+    \subitem extention, 17
+  \item deferral, 17
+  \item deliverables
+    \subitem major~group~project, 117
+    \subitem small~group~project, 98
+  \item disruptive behaviour, 55
+  \item Django, 24
+
+  \indexspace
+
+  \item expectations, 39
+    \subitem code~authorship, 25
+    \subitem coding, 11
+    \subitem engagement~with~team, 11
+    \subitem first~week~of~teaching, 39
+    \subitem four~foundational~behaviours, 49
+    \subitem group~work, 14, 43
+    \subitem independent~study, 40
+    \subitem large~group~tutorials, 41, 42
+    \subitem \LaTeX  , 36
+    \subitem report~v~code~contributions, 117
+    \subitem scope, 96
+    \subitem small~group~tutorials, 41, 42
+    \subitem system~administration, 12
+    \subitem UNIX command-line interface, 22
+    \subitem workload, 20
+  \item extension, 17
+
+  \indexspace
+
+  \item feedback
+    \subitem giving~negative, 45
+    \subitem positive~reinforcement, 45
+
+  \indexspace
+
+  \item Git, 24
+  \item group~allocation
+    \subitem major~group~project, 111
+    \subitem missed~registration~deadline, 86
+    \subitem small~group~project, 85
+
+  \indexspace
+
+  \item IDE, 23
+  \item independent~study, 41
+  \item integrated~development~environment, 23
+  \item intellectual~property, 112, 113
+
+  \indexspace
+
+  \item Kanban, 53
+
+  \indexspace
+
+  \item large~group~tutorials, 41
+  \item \LaTeX, 36, 98, 118
+  \item leadership, 48
+  \item learning~outcomes, 11
+  \item local~repository, 24
+
+  \indexspace
+
+  \item major~correction, 14
+  \item major~group~project, 12, 13
+    \subitem assignment, 112
+    \subitem client-proposed, 113, 114
+    \subitem deliverables, 117
+    \subitem group~allocation, 111
+    \subitem major~mark~correction, 126
+    \subitem minor~mark~redistribution, 126
+    \subitem peer~assessment~mark, 126
+    \subitem self-proposed, 112
+    \subitem team~marking~scheme, 119
+    \subitem technology~constraints, 114
+  \item major~mark~correction, 14
+    \subitem major~group~project, 126
+    \subitem small~group~project, 105
+  \item minor~mark~redistribution, 14
+    \subitem major~group~project, 126
+    \subitem small~group~project, 107
+  \item mitigating~circumstances~form, 16
+  \item mitigation, 16
+  \item mobile~application
+    \subitem native, 116
+  \item mob~programming, 34
+
+  \indexspace
+
+  \item objectives, 96
+  \item Office 365, 37
+
+  \indexspace
+
+  \item pair~programming, 34
+  \item peer~assessments, 13
+    \subitem assessment, 13
+    \subitem expectations, 44
+    \subitem major~group~project, 126
+    \subitem small~group~project, 108
+    \subitem Team Feedback, 44
+  \item project, 47
+  \item project~management~approach
+    \subitem small~group~project, 97, 116
+  \item Python, 24
+
+  \indexspace
+
+  \item reduced team capacity, 55
+  \item remote~repository, 24
+  \item replacement~attempt, 17
+  \item replacement~policy, 17
+  \item requirements, 96
+
+  \indexspace
+
+  \item schedule, 20
+  \item scope creep, 55
+  \item self-proposed~project, 112
+  \item small~group~project, 12, 13
+    \subitem assignment, 96
+    \subitem deliverables, 98
+    \subitem group~allocation, 85
+    \subitem major~mark~correction, 105
+    \subitem minor~mark~redistribution, 107
+    \subitem peer~assessment~mark, 108
+    \subitem project~management~approach, 97, 116
+    \subitem starter~code, 97
+    \subitem team~marking~scheme, 99
+    \subitem technology~constraints, 96
+  \item small~group~tutorials, 41
+  \item software~tools, 21
+
+  \indexspace
+
+  \item Team Feedback
+    \subitem peer~assessments, 44
+  \item team size, 55
+  \item team~charter, 42, 129
+  \item Team~Feedback, 27
+    \subitem team~formation, 28, 111
+  \item team~marking~scheme
+    \subitem major~group~project, 119
+    \subitem small~group~project, 99
+  \item team~meetings, 58
+    \subitem agenda, 31
+    \subitem attendance, 31
+    \subitem minutes, 31
+  \item team~size
+    \subitem effective, 96, 98
+  \item technical debt, 55
+  \item technology~constraints
+    \subitem major~group~project, 114
+    \subitem small~group~project, 96
+  \item testing, 11, 55, 64
+  \item training, 12
+  \item Trello, 35
+
+  \indexspace
+
+  \item UNIX command-line interface, 22
+
+  \indexspace
+
+  \item virtual~environment, 118
+
+  \indexspace
+
+  \item waste, 63
+  \item web~browser, 37
+  \item workload, 19
+  \item workstation
+    \subitem git, 105
+    \subitem software~requirements, 21
+    \subitem system~administration, 12
+
+\end{theindex}

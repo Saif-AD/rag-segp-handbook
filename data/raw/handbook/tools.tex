@@ -1,0 +1,399 @@
+\chapter{Tools}
+\label{ch:tools}
+
+\tfaq[1]{0mm}{What is the role of software tools in this module?}{Tools}
+
+\index{software~tools}
+As in any engineering discipline, software engineering is heavily reliant on tools.  The general trend in software engineering is one of increasing availability of increasingly sophisticated tools.  The most recent development is the emergence of generative AI tools (which you will be encouraged to employ, responsibly).  
+
+In this module, we make extensive use of a wide range of software engineering tools.  All the tools we use are tools that regular, professional develops use: no ``training wheels'' \ac{IDE} (such as BlueJ) will be provided to shield you from some of the complexity of software development. There are certain tools that you must use and others where you are allowed to select from a range of tools.  Some tools are essential to enable collaborative software development in teams.  It is also important that you ensure your individual development environment is compatible with that of your team mates.  In this section, we will identify what tools/type of tools you need to use, and make some recommendations for specific tool categories where you get a choice.
+
+As the module starts (from the very start of the academic year), you must ensure that you have regular access to a workstation\index{workstation!software~requirements} that has the software you need installed.  This can be a Faculty lab PC, a Faculty student VM (a virtual machine you access from a web browser), or your own laptop or desktop PC.  It is critical that you do not procrastinate organising your workstation and access to the necessary tools: doing so would delay your learning and ability to engage with the group projects.
+
+\section{Overiew}
+\tfaq[1]{0mm}{What software tools do I need in this module?}{Tools}
+\begin{table}[ht]
+\checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi
+  \centering
+  \fontfamily{ppl}\selectfont
+  \begin{tabular}{p{28mm} p{23mm} p{23mm} p{23mm}}
+    \toprule
+     Tool & Linux & macOS & Windows \\
+    \midrule
+    UNIX shell & Terminal & Terminal & Windows Subsystem for Linux (WSL)\\
+    Lightweight code editor & Sublime, Zed, GNU Emacs, Vim, Bluefish, Visual Studio Code (*), Pycharm (*) & Sublime, Zed, GNU Emacs, Vim, Textmate, Bluefish, Visual Studio Code (*), Pycharm (*) & Sublime, Notepad++, Visual Studio Code, GNU Emacs, Vim, Bluefish, Visual Studio Code (*), Pycharm (*)\\
+    Python 3 ($\geq 3.10$) with PIP & Install with package manager (apt, yum, dnf, ...) or from official tarball & Install with Python's official installer or via Homebrew & Install with Python's official installer \\
+    Git & Install with package manager (apt, yum, dnf, ...) if necessary & Install with XCode command-line tools & Download and install from the Git website \\
+    Web browser &\multicolumn{3}{p{60mm}}{Use any up-to-date version of a current web browser.} \\
+    Calendar & \multicolumn{3}{p{60mm}}{Office 365 or a calendar of your choice.} \\
+    GitHub & \multicolumn{3}{p{60mm}}{Use your webbrowser.} \\
+    PythonAnywhere & \multicolumn{3}{p{60mm}}{Use your webbrowser and UNIX CLI skills.} \\
+    Team Feedback & \multicolumn{3}{p{60mm}}{Use your webbrowser.} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Essential software requirements in Semester 1, with suggestions for the three most popular operating systems.\hspace{\textwidth}(*) These applications are \acp{IDE} rather than lightweight code editors, but they can be used as a code editor only.}
+  \label{tab:software-requirements:1}
+  %\zsavepos{pos:normaltab}
+\end{table}
+
+Table~\ref{tab:software-requirements:1} summarises the essential tools you need to engage with this module.  The table also provides suggestions for accessing/installing these tools on Linux, MacOS, or Windows.  Although there will be other packages to install, this should be straightforward once the tools in Table~\ref{tab:software-requirements:1} are installed correctly.  In the Semester 2 major group project, your team is allowed to work with the technology stack they choose, so more software installation may be required then.   
+
+\section{UNIX CLI}
+\tfaq[1]{0mm}{Do we have to use/know how to use a UNIX command-line interface (CLI) or Terminal?}{Tools}
+\expectation[0mm]{\index{expectations!UNIX command-line interface}Some proficiency in using a \ac{CLI} is a valuable skill for any Computer Scientist.  It is best learned by using it routinely for file management, version control, and accessing dev ops tools.  If this a new skill, make sure you always have some type of cheat sheet to hand.  There is no need to memorise commands.}
+A UNIX shell\index{UNIX command-line interface} provides a \ac{CLI}  to your operating system.  It allows you to access system administration commands that come with the operating system, and software tools using a text-interface.  At first, this may seem like an old-fashioned way of interacting with your computer.  However, it is by far the most flexible and efficient way to work with many system administration and software development tools.  UNIX' \ac{CLI} enables instructions with a wide range of arguments.  Different commands can be combined with one another, for example by feeding the output of one command as the input of another.  Moreover, when access certain systems, such as servers, remotely, a \ac{CLI}  may be the only interface available to you.  Therefore, familiarity with the UNIX \ac{CLI}  is an essential skill for software engineers.  Linux and macOS come with UNIX shells through the Terminal application.  On Windows, you need to install the Windows Subsystem for Linux (WSL) to have access to a UNIX shell.
+
+Most of the time, a UNIX \ac{CLI} is an incredibly convenient tools for a proficient power user, but not essential.  However, there will be certain occasions where the team must use a UNIX \ac{CLI}.  One such occasion is deploying a web application in production.  Every member of the team should be able to do this, so every student in this module is expected to develop some basic familiarity with the UNIX \ac{CLI}
+
+\section{Code editor}
+\tfaq[1]{0mm}{What code editor or integrated development environment (IDE) should we use?  Is using an integrated development environment (IDE) allowed?}{Tools}
+A \emph{lightweight code editor} \index{code editor}focusses primarily on supporting code editing.  This distinguishes it from an \ac{IDE}\index{integrated~development~environment}\index{IDE}, which combines all the software development tools a developer needs into a single application.  Software engineers continuously develop tools that aim to improve productivity in software development through analysis, visualisation, and automation.  An \ac{IDE} encourages developers to use the set of tools supported through the \ac{IDE}'s interface.  In the face of prolific growth of available software development tools, that can sometimes be constraining.  More importantly, software produced with certain \acp{IDE} may be difficult to edit and review without access to the \ac{IDE}, which may affect collaboration with teammates and assessment.  A lightweight code editor does not come with such baggage and it pairs well with a UNIX shell.  
+
+My advice to you is that you should use a lightweight code editor (in combination with a UNIX shell).  You can use any code editor you like.  You are \emph{not} prohibited from using  an \ac{IDE}.  However, if you \emph{choose} to use an \ac{IDE}, \emph{you are responsible for the consequences of that choice}.  In particular:
+\begin{itemize}
+\item You must ensure that the \ac{IDE} plays nice with the version control tools you are using.  An \ac{IDE} may generate a number of files that should not be version controlled.  Failing to exclude such files from a team's repository may cause your code contributions not to be recognised.  Consider yourself forewarned that this is not something that can or should normally be corrected.
+\item If multiple team members are using \acp{IDE}, failing to exclude \ac{IDE} related data from a shared repository can cause spurious merge conflicts. 
+\item \emph{The examiners will not be using any \acp{IDE}.}  They must be able to install, run, and test your team's software without an \ac{IDE}.  If they are unable to do so, because your source code is dependent on the \ac{IDE}, your team may fail the coursework.
+\item It may be challenging to use the \ac{IDE} of your choice in combination with the other tools you need to use.  Time spent towards setting up an \ac{IDE} is especially productive.
+\end{itemize}
+Therefore, you should only use an \ac{IDE} if you know what you are doing.  In general, it is only worth doing if you are confident that using the \ac{IDE} ensures you are more productive.
+
+Table~\ref{tab:software-requirements:1} suggests some code editors and some \acp{IDE} that can be used as code editors.\footnote{Personally, I prefer Sublime.  Although it is not free, you can evaluate it without time limit.  In the videos, I use Sublime or Atom.  However, Atom is no longer recommended as it is not being developed anymore.}
+
+\section{Python}
+\tfaq[1]{0mm}{What version of Python and Django do I need}{Tools}
+In the small group project, you are required to use Python and Django.  To develop \emph{Python}\index{Python} applications and \emph{Django}\index{Django} web applications, you must install a recent version of Python 3.  This comes with Python's package manager pip.  At the time of writing, I recommend that you use Python 3.12.   While there are more recent versions, there are still a substantial number of packages that are not yet compatible with Python 3.13.  As you start building Django applications, additional packages need to be installed.  We will install these with pip as and when needed.  The most default versions pip chooses will do.
+
+
+\section{Version control}
+\tfaq[1]{0mm}{What version control tools do we use in this module?}{Tools}
+Version control software is an essential tool to manage your code base.  It is especially important when multiple people are working on the same codebase (ideally on different parts of it) simultaneously. In this module, we will be using \emph{Git} \index{Git}for version control along with GitHub to maintain a shared code repository for the entire team.  
+
+Git needs to be installed on your workstation.  It may already be installed.  On a UNIX machine (including macOS), you can check whether git is installed by opening a UNIX shell/Terminal window and executing the command:
+\begin{verbatim}
+$ which git
+\end{verbatim}
+If Git is installed, this will return the directory where the executable resides.
+
+GitHub is a web service to maintain a remote repository.   Figure~\ref{fig:github} explains the relation between Git and GitHub, from the perspective of a software developer working in a team.  Each workstation maintains a \emph{local repository}\index{local~repository} that is managed via Git.  In addition, a GitHub server stores a \emph{remote repository}\index{remote~repository}.  Every time you ``commit'' code to their local repository, you should also ``push'' that commit to the remote repository on GitHub.  Other team members can then see that you have done work, and review your work on GitHub.  If they want the most up-to-date versions of the code on their workstation, they can ``pull'' the remote repository.
+
+\begin{figure}[ht]
+\checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi
+\begin{tikzpicture}
+\node[rectangle, rounded corners,
+    draw = black, 
+    text = black,
+    fill = gray!10, 
+    minimum width = 15mm] (git1) at (0,1.8) {Git};
+
+\node[cylinder, 
+    draw = black, 
+    text = black,
+    cylinder uses custom fill, 
+    cylinder body fill = gray!10, 
+    cylinder end fill = gray!40,
+    aspect = 0.2, 
+    shape border rotate = 90] (local1) at (0,0) {Local repository};
+    
+\draw [->,thick] ([xshift=1mm,yshift=-0.5mm]  git1.south) -- ([xshift=1mm,yshift=0.5mm] local1.north);
+\draw [->,thick] ([xshift=-1mm,yshift=0.5mm]  local1.north) -- ([xshift=-1mm,yshift=-0.5mm] git1.south);
+    
+\node[rectangle, rounded corners,
+    draw = black, 
+    text = black,
+    fill = gray!10, 
+    minimum width = 15mm] (git2) at (3.5,1.8) {Git};
+    
+\node[cylinder, 
+    draw = black, 
+    text = black,
+    cylinder uses custom fill, 
+    cylinder body fill = gray!10, 
+    cylinder end fill = gray!40,
+    aspect = 0.2, 
+    shape border rotate = 90] (local2) at (3.5,0) {Local repository};
+    
+\draw [->,thick] ([xshift=1mm,yshift=-0.5mm]  git2.south) -- ([xshift=1mm,yshift=0.5mm] local2.north);
+\draw [->,thick] ([xshift=-1mm,yshift=0.5mm]  local2.north) -- ([xshift=-1mm,yshift=-0.5mm] git2.south);
+    
+\node[rectangle, rounded corners,
+    draw = black, 
+    text = black,
+    fill = gray!10, 
+    minimum width = 15mm] (git3) at (7,1.8) {Git};
+    
+\node[cylinder, 
+    draw = black, 
+    text = black,
+    cylinder uses custom fill, 
+    cylinder body fill = gray!10, 
+    cylinder end fill = gray!40,
+    aspect = 0.2, 
+    shape border rotate = 90] (local3) at (7,0) {Local repository};
+    
+\draw [->,thick] ([xshift=1mm,yshift=-0.5mm]  git3.south) -- ([xshift=1mm,yshift=0.5mm] local3.north);
+\draw [->,thick] ([xshift=-1mm,yshift=0.5mm]  local3.north) -- ([xshift=-1mm,yshift=-0.5mm] git3.south);
+
+\node[cylinder, 
+    draw = black, 
+    text = black,
+    cylinder uses custom fill, 
+    cylinder body fill = gray!10, 
+    cylinder end fill = gray!40,
+    aspect = 0.2, 
+    shape border rotate = 90] (remote) at (3.5,4) {Remote repository};
+
+\draw [->,thick] ([xshift=-6mm+2mm,yshift=-0.5mm]  remote.south) -- ([xshift=2mm,yshift=0.5mm] git1.north);
+\draw [->,thick] ([xshift=-2mm,yshift=0.5mm]  git1.north) -- ([xshift=-6mm-2mm,yshift=-0.5mm] remote.south);    
+\draw [->,thick] ([xshift=1mm,yshift=-0.5mm]  remote.south) -- ([xshift=1mm,yshift=0.5mm] git2.north);
+\draw [->,thick] ([xshift=-1mm,yshift=0.5mm]  git2.north) -- ([xshift=-1mm,yshift=-0.5mm] remote.south);
+\draw [->,thick] ([xshift=6mm+2mm,yshift=-0.5mm]  remote.south) -- ([xshift=2mm,yshift=0.5mm] git3.north);
+\draw [->,thick] ([xshift=-2mm,yshift=0.5mm]  git3.north) -- ([xshift=6mm-2mm,yshift=-0.5mm] remote.south);  
+
+\draw[black, thick, densely dotted] (-1.7,-1.3) rectangle (1.7,2.5);
+\node[] at (0,-1) {\emph{Workstation}};
+\draw[black, thick, densely dotted] (3.5-1.7,-1.3) rectangle (3.5+1.7,2.5);
+\node[] at (3.5,-1) {\emph{Workstation}};
+\draw[black, thick, densely dotted] (7-1.7,-1.3) rectangle (7+1.7,2.5);
+\node[] at (7,-1) {\emph{Workstation}}; 
+\draw[black, thick, densely dotted] (-1.7,3.1) rectangle (7+1.7,5.3);
+\node[] at (-1,5) {\emph{GitHub}}; 
+\end{tikzpicture}
+\caption{GitHub and git}
+\label{fig:github}
+\end{figure}
+
+\subsection{GitHub.com and GitHub.kcl.ac.uk}
+\tfaq[1]{0mm}{Which version of GitHub should I use?}{Tools}
+In this module, you can use either GitHub's own GitHub service at github.com or King's College London's GitHub Enterprise service.  As each team will only maintain a single remote repository, you need to choose as a team which GitHub service to use.  
+
+GitHub.com tends to provide a more up-to-date range of features, compared to the Enterprise version.  However, to access all of GitHub.com's features, you need a pro account.  You can get this for free as a student, but there is a verification process to follow.  King's College London's GitHub Enterprise service can be accessed using your College credentials.  No signup or registration is required.  At the time of writing, both services are GDPR compliant, though GitHub.com data is stored on US servers.  Both services are very reliable though GitHub.com's uptime has been slightly better in recent years.
+
+\subsection{Git/GitHub configuration}
+\tfaq[1]{0mm}{How do I configure git to assign the correct email address to my commits?}{Version~control}
+When using Git and GitHub in a team, it is important to do some additional configuration of Git on your workstation to ensure that your commits are attribute to you.  Your code contribution data will be collected from GitHub with a view to assess whether you contributed sufficiently regularly and substantially to your team's code base.  It is your responsibility to ensure that your workstation is configured correctly!
+
+\expectation[10mm]{\index{expectations!code~authorship}You must make sure that your work is attributed to you on Team Feedback before the deadline of the project.  If code is not attributed to you by the time individual marking is carried out, your mark may be affected.}
+
+When you \emph{make} a commit, the name and email address of the ``author'' of the commit is attached to that commit.  This name and email address are retrieved from the workstation's git configuration, and it is fixed at the time the commit command is executed.  The name does not matter, but the email address is important.  When the commit is pushed to GitHub, GitHub attributes a GitHub account as the author of the commit using that email address.  For that attribution to be possible and correct, you must ensure that your workstation is configured to assign the primary email address of your GitHub account to all commits made on that workstation.
+
+To find the primary email address of your GitHub account, open GitHub in your webbrowser.  The click on your avatar (the image in the top righthand corner of your screen.  A menu opens: choose ``Settings''.  This leads to a new screen with a large menu on the lefthand side.  Open ``Emails'' (under Access).  This will show your primary email address.  Your workstation must be configured to assign that email address to all the commits you make.  
+
+To assign a particular name and email address to each commit, we recommend two approaches.  The first is a global configuration that assigns the same name and email to all commits in all git repositories on this workstation.  To set a global configuration, open a UNIX shell and use the following commands (replacing ``Charlie Doe'' and ``charliedoe@example.com'' by your name and email address:
+\begin{verbatim}
+$ git config --global user.name "Charlie Doe"
+$ git config --global user.email charliedoe@example.com
+\end{verbatim}
+The second approach is a local configuration that assigns a given name and email to each commit within a single repository.  To do this, use the following commands:
+\begin{verbatim}
+$ git config --local user.name "Charlie Doe"
+$ git config --local user.email charliedoe@example.com
+\end{verbatim}
+To verify your configuration, use the following command:
+\begin{verbatim}
+$ git config --list
+\end{verbatim}
+
+If you only have a single GitHub account or all your GitHub accounts (on GitHub.com and GitHub Enterprise) use the same primary email address, you can use a global configuration.  If you have GitHub accounts with different email addresses, you will need to use local configurations and must not forget to set your configuration at the start of the project.  The latter approach is obviously a little less foolproof.  Therefore, I recommend that you do the following at the start of the academic year:
+\begin{enumerate}
+\item Log into github.kcl.ac.uk and retrieve the primary email address of that account.  Look it up, do not assume you know what it is.
+\item If you do not already have a github.com account with the same primary email address, create a new github.com account using the same primary email address.
+\end{enumerate}
+This will enable you to use a single configuration for your work, irrespective of which GitHub service your team chooses to use.
+
+\subsection{Rules of engagement}
+\tfaq[1]{0mm}{How should the team be using version control tools?  What is allowed and what is prohibited?}{Version~control}
+In this module, version control tools serve a dual purpose.  First and foremost, these tools are used for collaborative software development.  In this capacity, they allow team members to share their work, review other people's work, and integrate developments into the teams emerging system as and when they are produced and quality controlled.  Teams and team members must adhere to certain rules of engagement when using version tools.  These include, but are not limited to:
+\begin{itemize}
+\item As team members work on a task, they must commit and push their work regularly with clear commit messages.  
+\item When working on a task, team members should commit and push at least once a day so that team members can observe your activity.
+\item All commits should occur in branches.  Create one branch per task.
+\item The team must agree on standards that must be met before a branch can be merged with the main.  The team must also agree a process to follow to ensure these standards are met before the branch is integrated into the main.  All team members must follow this process.
+\end{itemize}
+
+A secondary purpose of the version control tools is to maintain an accurate record of the development effort.  In this capacity, the tools are used to collate statistics on the nature and regularity of code contributions, and to identify to what extent team members produce usable work.  Once made, all commits must be preserved as they are.  Branches must never be deleted, even if the work in it cannot be merged with the main.  The commit history must never be rewritten or changed in any way.  Problems should be corrected with new commits.  
+
+If you have serious concerns about a team member's version control behaviour, contact the module organiser. Serious concerns may include fake coding activity to create a pretence of engagement when there was none, or rewriting the commit history.  When reporting a concern, always include full details of the sha, date, and message of each commit that concerns you.  Concerns must be raised as soon as possible, normally before the submission deadline.  The longer you wait to raise an issue, the less likely it can be resolved.
+
+\section{Team Feedback}
+\label{sect:tools:team-feedback}
+\tfaq[1]{0mm}{What is Team Feedback?}{Tools}
+The only tool used in this module that professional developers do not require is \emph{Team Feedback}\index{Team~Feedback}.  Team Feedback is a system developed to manage \ac{SEG}.  It collates all information lecturers need to track teams and team members in one place.  You will use it to form teams (or receive your team allocation in case of the small group project), record meetings (including attendance and minutes), track code contribution statistics, submit, receive and respond to peer assessments, record collaborative coding sessions, and receive your team and individual marks.  This section explains the role of these various features in more detail.
+
+\subsection{Account data}
+\paragraph{Registration}
+\tfaq[1]{0mm}{How can I get access to Team Feedback?}{Team~feedback}
+If you are registered to take the Software Engineering Group Project at the start of the current academic year, then a Team Feedback account will be created for you (assuming you do not already have one).  You can access the service at \href{https://apps.nms.kcl.ac.uk/stf}{https://apps.nms.kcl.ac.uk/stf}, and log in via your regular College credentials.
+
+If you have used Team Feedback before, you will normally be directed to the previous module you participated in.  Set a new module by navigating to ``Module'' > ``Select module''.  A screen with the modules you are registered to will appear.  Select this year's \ac{SEG} module and click the ``Select module'' button.
+
+If you do not have an account or you are not registered for the module in this academic year, you must contact the module organiser as soon as possible.  Unfortunately, it takes several weeks from the start of the academic year before class lists are accurate and complete, so it is possible you are not registered from the module at the start of the academic year.
+
+\paragraph{Sensitive data}
+\tfaq[1]{0mm}{Do I need to register my gender identity, ethnicity, and disability?}{Team~feedback}
+Team Feedback will encourage you to provide your gender identity, ethnicity, and disability.  You can provide this data under ``Account'' > ``Profile'', but you are not required to do this.  If you provide your gender identity and ethnicity, it is used \emph{exclusively} to produce statistics that compare marks across different gender identities, ethnicities, and people with/without disabilities.  This allows the module organisers to identify any attainment gaps, should they arise.  We aim to ensure that all students have equal opportunities to excel in this module, irrespective of their gender identity, ethnicity, or disability.  By proactively collecting data that aims to reveal attainment gaps, we can assess to what extent our efforts are successful.
+
+\subsection{Team formation}
+\faq[1]{0mm}{Where can I find the team I am allocated to or register the team I want to be part of?}{Team~formation}
+Team formation\index{Team~Feedback!team~formation} is handled via largely via Team Feedback.  
+
+Before the small group project, you must register to be allocated to a small group project team using a form available via KEATS.  This form will become available several weeks into Semester 1.  Team allocations will be released via Team Feedback, where you will find the names and contact details of your team mates.
+
+Before the major group projects, all students are strongly encouraged to form their own teams.  Once your team starts to take shape, one team member should register the team and \emph{invite} the other members to this team.  The invitees \emph{must accept the invitation} via Team Feedback if they wish to be a member of the team!  Aim to form a team of approximately 8 people (teams of 6--10 students will normally be allowed to proceed without changes to the allocation).   Teams with 5 or fewer members will have additional people allocated.  Teams with 11 or more members will be split.  If you are unable to join a student-formed team before the team registration deadline for the major group project, you must register to be allocated to a team using a form available via KEATS.  Final team allocations will be released via Team Feedback.
+
+\subsection{Meeting scheduling}
+\tfaq[1]{0mm}{Do we have to schedule our meetings via Team Feedback?}{Team~meetings}
+Team are \emph{not} required to schedule team meetings via Team Feedback.  However, you can use Team Feedback to find available meetings slots (this was a useful feature before similar functionality was incorporated into Office 365) and create a meeting invite to all team members.  Feel free to use this feature if you find it useful.  
+
+\subsection{Meeting records}
+\paragraph{How?}
+\tfaq[1]{0mm}{How can I record a team meeting on Team Feedback?}{Team~meetings}
+Open the submenu of the relevant group project in the left-hand menu, and navigate to ``Team meetings''.  It is \emph{not} necessary for the meeting to have been scheduled in order to record the meeting.  To start recording a new meeting, click the ``+ New meeting'' button.  At the start, you must record attendance for every member of the team.  You cannot proceed to create the meeting and edit the minutes until attendance has been taken.
+
+Once a meeting is created,  a record of the meeting will be listed in a table, along with a deadline to complete editing.  The meeting will only remain editable until the time shown there.  This ensures that edits are timely corrections (not a rewrite of the team's history).  While this is possible, click the edit button to edit the meeting or the delete button to delete the meeting record if it was created by accident.  
+
+\paragraph{Who?}
+\tfaq[1]{0mm}{Who must record the team's meeting on Team Feedback?}{Team~meetings}
+The purpose of the meeting is to have a written record of team member engagement, decisions taken, and actions assigned.  Therefore, each meeting must be recorded by \emph{one and only one person}.  You must agree within the team who is responsible for recording the meeting.  It is worth acknowledging that at the meeting itself, so that the meeting is recorded and there are no duplicate records of the same meeting.
+
+\paragraph{When?}
+\tfaq[1]{0mm}{When should a team meeting be recorded?}{Team~meetings}
+A team meeting must be recorded when the meeting takes place.  The best approach is for the minute taker to write the meeting minutes on a laptop during the meeting, and polish them after the meeting.  Create a meeting record at the very start of the meeting.  The first step is to record attendance.  Start by recording everyone there as ``on time'' and everyone who is absent as ``absent''.  You can correct for late arrivals later.  Start writing notes under the meeting minutes/summary as the discussion proceeds.  After the meeting, take some time to polish the minutes so that they will be understandable in the future or by teaching staff reading your minutes.
+
+Some time after the minutes were created, team members will have access to the minutes.  They should check the attendance record and minutes and send corrections in the days that follow the meeting (up to one week after the meeting took place).  The minute taker should make corrections as necessary during this period.  If nobody raises any issues and the edit window ends, the minutes will be considered correct and no more editing will be possible.  
+
+\paragraph{Scope?}
+\tfaq[1]{0mm}{Which meetings do we have to record via Team Feedback?}{Team~meetings}
+Teams must record their \emph{team coordination/planning meetings or accountability sessions} via Team Feedback.  In other words, the short meetings with the \emph{whole team} where you \emph{make decisions} about the direction of the project \emph{must be recorded via Team Feedback}.  Subgroup meetings (i.e. meetings not everyone is required to attend), collaborative coding sessions, or code review/inspection meetings (where only minor decisions are made) must \emph{not} be recorded.  
+
+Please note that the team should have at least \emph{one team coordination/planning meeting or accountability session per week}.  Meeting less frequently than will limit the team's ability to respond to risks and changing circumstances.   Meeting more frequently that once a week may be difficult to sustain over longer periods of time (though you are welcome to do so). 
+
+\paragraph{Mode of attendance}
+\tfaq[1]{0mm}{Should a team meeting be in person, online, or hybrid?}{Team~meetings}
+Teams should decide internally what ``attendance'' means.  I recommend that the weekly meeting a team record on Team Feedback is \emph{in-person}.  This approach has several advantages.  An in-person meeting requires a more significant commitment to the project than an online meeting.  To attend such a meeting on-time and in-full requires some effort.  In-person attendance encourages greater engagement with the meeting.  If your meeting is online, someone can ``attend'' by phoning into the meeting while on a bus or train, but their focus is likely to be elsewhere.  At an in-person meeting, it is also easier to share information.  Hybrid meetings should be avoided.  They split the group between the online presence and the in-person presence and makes communication that much harder.
+
+Once the mode of attendance has been agreed, stick to the rules (until your team management approaches are reviewed).  Once you start bending the rules, it will become increasingly difficult to enforce them.  Consider, for example, a team that normally meets in-person.  One person calls in asking to participate in the meeting online.  If you allow this, some of the people present will regret the effort they made to travel to the meeting, and feel entitled to ask for the same accommodation at a future meeting.
+
+\paragraph{Attendance records}
+\tfaq[1]{0mm}{How important are Team Feedback meeting attendance records?}{Team~meetings}
+It is critically important that team members attend all meetings.  Communication and coordination become much harder if some people do not attend meetings, but expect to be informed of meeting outcomes or share their views.  To prevent such complications, teams are advised not accommodate absences.  
+
+To ensure that team members attend meetings, each team must keep accurate records of meeting attendance\index{team~meetings!attendance} via Team Feedback.  Accurate attendance record keeping incentivises team members to attend meetings in full and helps the marking team identify students who do not engage adequately with their team.  Do not be tempted to mark someone as attending if they abstain from the meeting.  If you do this for one person, it would be unfair to refuse to do this for someone else.  Without accurate attendance records, it will be difficult to demonstrate later on that a team member did not engage adequately with the team.  For these reasons, teams that fail to keep accurate attendance records from the start of the project end up regretting this.
+
+\paragraph{Agenda}
+\tfaq[1]{0mm}{Do meetings require an agenda?}{Team~meetings}
+Effective meetings tend to have an agenda\index{team~meetings!agenda}.  An agenda gives attendees forewarning of what will be discussed and what they need to prepare.  The agenda should normally include the discussion topics, an indication of the expected outcome of each topic, the person or people responsible for leading the discussion, and a time budget.  During the meeting, stick to the agenda and timings as much as possible.
+
+\paragraph{Minutes}
+\tfaq[1]{0mm}{How important are Team Feedback meeting minutes?}{Team~meetings}
+Over time, people tend to forget or misremember what was agreed at team meetings and why.  Clear and complete meeting minutes\index{team~meetings!minutes} are part of the team's ``memory'', allowing everyone to review the teams' decisions.  The meeting minutes should include all: 
+\begin{itemize}
+\item \emph{Agreed decisions and their rationale}.  Make sure that the decisions that have been agreed are written up sufficiently clearly to allow future you to make sense of the minutes.  Recording the rationale for a decisions allows team members to understand why the team made a particular decision at the time.  If a rationale turned out to be invalid (or no longer valid), that may constitute a grounds for reviewing the decisions.
+\item \emph{Actions}, including the person responsible for completing them and the deadline for completion.  The team should keep track of its action log, so as to ensure that actions are completed.
+\end{itemize}
+To record good meeting minutes, someone should be assigned responsibility for completing them.  Ideally, the meeting minutes write up starts during the meeting and is completed as possible thereafter.  Allow team members are reasonable opportunity to submit corrections.
+
+\subsection{GitHub activity data}
+\paragraph{Repository registration}
+\tfaq[1]{0mm}{Do we have to register shared GitHub repositories on Team Feedback?}{Team~feedback}
+Every team should register \emph{all} shared repositories worked on by the team on Team Feedback.  Team Feedback will collect commit data from registered repositories on a daily basis until the end of the project.  If your git repository is set up correctly, GitHub will be able to attribute commits to GitHub accounts.  Team feedback uses this to produce engagement statistics for every team member.
+
+How you organise your work in repositories is up to your team.  Avoid using more repositories than necessary.  In the small group project, one repository should suffice.  In the major group project, you probably want to separate the report from the source code.  If the software system you are building consists of distinct components that run on different machines, you may or may not store them in separate repositories.
+
+\paragraph{Code contribution data}
+\tfaq[1]{0mm}{How is the code contribution data on Team Feedback used?}{Code~contribution}
+The code contribution data is used to assess whether:
+\begin{enumerate}
+\item A team member makes substantial code contributions sufficiently regularly.  To assess this, we examine the number of calendar weeks in which a team member contributed a sufficient number of lines of code.
+\item Enough of a team member's code is of a usable standard.  To assess this, we examine how much of a team member's code is merged with the main branch.
+\end{enumerate}
+In other words, code contribution data is collected to assess to what extent each team member makes a reasonable effort to engage meaningfully with the team's work throughout the development period.  The small group project and major group project chapters in this handbook provide more detailed guidelines as to how this is assessed.
+
+Team Feedback statistics include total lines of code, lines of code in the main branch, total numbers of commits, and commits in the main branch, relative to other members of the team.  This data is provided for information only, to give you an idea as to what other members of the team do.  However, it is impossible for the marks to make reliable judgements based on such data.  Line count data is a notoriously unreliable type of statistics to measure code contributions.  Line count data correlates very poorly to effort or code quality.  Therefore, we cannot use such statistics, certainly not to determine who did more work or who did less work.
+
+\paragraph{Missing data}
+\tfaq[1]{0mm}{Team Feedback is missing some of my code contribution data.  Is that a problem?}{Code~contribution}
+Team Feedback should have a record of all your coding activity.  If it does not, that is a problem that you must take steps to correct as soon as possible.   Before contacting anyone, it is advisable to identify what the problem is.  The most probable causes (from most likely to least likely) are as follows: 
+\begin{itemize}
+\item You did not configure git correctly on the (or one of the) workstation(s) you are using.
+\item The missing coding activity occurred less than 24 hours ago and has not been recorded yet.  
+\item You collaborated on this commit with someone else who has not registered the collaborative coding session correctly.
+\item A team member has altered the commit history of the project and erased some of your coding activity.
+\item The Team Feedback server has been down and its records are out of date.
+\end{itemize}
+
+To diagnose the problem, you should start by identifying the commits that you believe to be missing from Team Feedback.  Record their sha, date/time, and message in a list.  For each such commit, look up that commit in the \emph{team's} commit history (\emph{not} your individual commit history) on Team Feedback.  Does Team Feedback have a record of the commit?
+\begin{itemize}
+\item If Team Feedback does have the commit on record, there are two possible reasons why the commit is not recorded:
+  \begin{itemize}
+  \item If you made the commit and the commit is marked in yellow on Team Feedback, Team Feedback was unable to attribute the commit to you.  The problem here is that you did not set up git correctly and GitHub was also unable to attribute the commit to your GitHub account.  The commit will be associated with a, usually random looking, email address.  In Team Feedback, navigate to ``Account'' > ``Profile''.  Find the heading ``Additional email addresses'' and click on ``+ Add additional email''.  Use this feature to add the email address of the unattributed commit.  The missing commit will now be attributed to you within 24 hours.  It is also advisable to read the handbook to find out how you should be configuring git.
+  \item If another team member made the commit but you contributed to it, the person making the commit should have registered the collaborative coding session.  Contact the committer and ask them to do this as soon as possible.
+  \end{itemize}
+\item If Team Feedback does \emph{not} have the commit on record, check the following.
+  \begin{itemize}
+  \item If the commit is less than 24 hours old, wait.
+  \item Below the list of commits (by the team!), there should be a date indicating when the list was last updated.   If this date is more than 24 hours ago and precedes the date/time of your commit, Team Feedback as been unable to collect commit data for your team's repository.   Check the module announcements on KEATS to check whether this is a known technical issue, and contact the module organiser if it is not.  Do not worry, if your commits are in GitHub, the issue will be corrected eventually.
+  \item Check if the commit can be found in the shared repository on GitHub.  If it is not on GitHub, a team member may have altered the commit history for your team in violation of the rules set out in this handbook.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Falsified code activity}
+\tfaq[1]{0mm}{I suspect a member of my team has faked code contribution data.  What can be done about this?}{Code~contribution}
+There are ways in which people can create the impression of having made contributions to the code without doing any meaningful work.  One approach is to move code around unnecessarily and committing this change.  Another is to add unnecessary code, commit the change, remove the unnecessary code again, and commit that change.  Doing this type of thing with a view to create the impression of coding activity without the intent of contributing anything constitutes falsification of data.  It is a form of misconduct.
+
+If anyone is caught doing this, we will normally remove the offending commits from the code contribution statistics and send a warning the offender against doing this again.  In very flagrant cases or repeat offences following a warning, the case will be referred to the College for formal misconduct proceedings.
+
+Please report falsified code activity to the module organiser.  Your message must include a list of the offending commits, including their sha, date/time, and message, as well as the reason why you believe this evidence demonstrates data falsification.
+
+\subsection{Pair programming and collaborative coding sessions}
+\tfaq[1]{0mm}{How do I get credit for code produced through pair or mob programming and someone else made the commits?}{Code~contribution}
+Some teams may wish to tackle certain tasks to two or more people, to be completed through pair or mob programming\index{pair~programming}\index{mob~programming}.  If such an approach is adopted, two or more people code using a single machine.  One person acts as the driver and types in the code.  The other person or people act as navigator(s), guiding the driver.  If you adopt this particular approach, you must ensure that the work is attributed to the driver and the navigator(s).  To ensure this, you must adopt the following protocol:
+\begin{itemize}
+\item During a pair/mob programming session, \emph{all} commits should be made using a single machine.  The author this machine's git installation is configured for is the \emph{committer}.  In this way, all work produced collaboratively is attributed to a single author: the committer.
+\item As soon as possible after the session, the committer must register a \emph{collaborative coding session}\index{collaborative~coding~session} on Team Feedback.  When creating the session, ensure that the start time precedes the start time of the session and the end time succeeds the end time of the session.  Identify all team members involved in the session.
+\item If this is done correctly, all commits made during the collaborative coding session by the committer will be attributed to everyone identified as a member of the collaborative coding session.  Other members of the team should check that this is so and contact the committer if this is not the case as soon as possible.
+\end{itemize} 
+To register a collaborative coding session, open the submenu of the relevant group project in the left-hand menu.  Navigate to ``Code repositories'' > ``Collaborations'' (tab).  Then click the button labelled ``+ New collaboration''.  It is important the collaborative coding session is created by the committer.  Other members of the team cannot create it (to avoid abuse of the system).
+
+If multiple people collaborate on the same task using their own respective machine, you are simply subdividing a task into smaller ones to be completed individually.  This is not pair or mob programming.  Collaborative coding sessions should only be created to record genuine pair/mob programming sessions!
+
+\subsection{Trello board data}
+\tfaq[1]{0mm}{Do we have to register a Trello board on Team Feedback?}{Kanban~board}
+In the small group project, you should use Trello\index{Trello} and register your team's Trello board on Team Feedback.  This allows the module organiser to track your team's project management activity.  In the major group project, teams are not required to use Trello.
+
+To register your team's Trello board, open the submenu of the relevant group project in the left-hand menu, and navigate to ``Trello Kanban board''.
+
+\subsection{Peer assessments}
+\tfaq[1]{0mm}{How can I participate in the peer assessment exercise?}{Peer~assessments}
+Near the end of each group project, you must participate in a peer assessment exercise.  The peer assessments generally consist of a questionnaire administered via Team Feedback.  For more information on how to write good feedback, please review section~\ref{sect:feedback-and-peer-assessments}.
+
+To start writing peer assessments, open the submenu of the relevant group project in the left-hand menu, and navigate to ``Peer assessments''.  This will open a screen with options to read/write peer assessments, provided the deadline for late submission has not passed.
+
+After the peer assessments have been released, you can find the feedback you received on Team Feedback as well.  Open the submenu of the relevant group project in the left-hand menu, and navigate to ``Peer feedback''.  If there is still time to respond to feedback,  you will have an option to write a response to your peer's feedback.  Responses to your peer assessments can be found under ``Peer assessments''.
+
+\subsection{Marks and feedback}
+\tfaq[1]{0mm}{How can I find out my mark and feedback on a group project?}{Marking}
+Marks and feedback are released via Team Feedback.  For each group project, you will receive three marks along with feedback related to that mark:
+\begin{itemize}
+\item\emph{Team mark/feedback}: This is a mark along with feedback based on what the team collectively submitted.  For more information on how the team's work is assessed, please review the Small and Major Group Project chapters as these contain a detailed marking scheme.  Your team's work is assessed using this mark scheme and the feedback explains how the mark scheme applies your team's work.
+\item\emph{Individual mark/feedback}: Your individual mark is derived from the team's mark, either through a major correction (always a significant reduction) or a minor mark distribution (a change in the -5 to +5 percentage point range).  The Small and Major Group Project chapters contain detailed individual marking schemes.  Individual feedback explains how this mark scheme is applied.
+\item\emph{Peer assessment mark/feedback}: The peer assessments you write are assessed and marked.  The marking scheme for the peer assessments are also published in the Small and Major Group Project chapters of this handbook.
+\end{itemize}
+Once released, you can find the marks and feedback as follows.  Open the submenu of the relevant group project in the left-hand menu, and navigate to ``Dashboard''.  Once the marks are released, the dashboard includes a new tab labelled ``Team/individual'' mark where you can find the above three items.  Please note that in some circumstances, partial marks may be delayed.
+
+\section{Overleaf}
+\tfaq[1]{0mm}{What tool should we use to produce the major group project report?  Do we have to use \LaTeX?}{Tools}
+For the major group project, teams must produce a substantial report.  This documents ought to be produced using \LaTeX.
+
+\LaTeX\index{latex@\LaTeX} is a typesetting system that is widely used in academia to produce high-quality documents.  Organisations outside academia prefer a \ac{WYSIWYG} editor, such as Word, to produce documents.  \LaTeX uses a markup language to specify what must be typeset.  The \LaTeX source code in a \texttt{.tex} file is compiled to produce a PDF document (or some other type of document).  The use of a markup language makes it easy to automate the generation of equations, cross-references, tables of content, indices etc.  The language allows you to define custom commands you may wish to repeat, declare variables, and (in the rare event that you need to) use conventional programming structures.  This document has been produced entirely with \LaTeX and everything, including the figures, is generated from code.  Although you may not end up using it very much, knowing \LaTeX is a useful skill to have.  You will be encouraged to use it for your individual project in Year 3. 
+
+\expectation[-15mm]{\index{expectations!latex@\LaTeX}The report that must be submitted with the major group project ought to be typeset with \LaTeX, using version control to keep track of developments.}
+A \LaTeX source document can be version controlled with git because it is conventional source code.  This facilitates collaborative authoring of the document.  It also allows us to track who is working on the document and when.  In each group project, you will be provided with a template to use to write your report.  This will allow you to focus on writing the text for the document, without having to worry about the markup language too much.  In the major group project, this report document must be version controlled with git, with remote repository on GitHub that is tracked from Team Feedback.
+
+Overleaf is a web application that allows you to edit \LaTeX documents.  King's College London has a subscription to the service, you have access to the premium features of the application.
+
+\section{Generic productivity tools}
+\tfaq[1]{0mm}{Which productivity tools do we require?}{Tools}
+The only productivity tools you absolutely need in this module are an up-to-date webbrowser and a Calendar application. will need an up-to-date web browser\index{web~browser} to access documentation and browser based tools.
+
+Last but not least, you should use a \emph{calendar}\index{calendar} application and ensure it contains all your commitments, at university and outside it.  I strongly recommend that you use \emph{Office 365}\index{Office 365} with your College account.  Normally, members of the College (such as your teammates) can see when you are available and when you have other engagements.  They will \emph{not} see the content of your appointments, unless you give explicit permission for that.  Easy access to everyone's availability makes scheduling meetings, especially group meetings, considerably easier.

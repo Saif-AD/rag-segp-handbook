@@ -1,0 +1,49 @@
+\chapter{Git Command Quick Reference}
+
+\noindent\textbf{Conventions.} Words in UPPERCASE (e.g., \texttt{FILE}, \texttt{BRANCH}, \texttt{URL}) are placeholders.
+
+\section{Repository Setup}
+
+\begin{itemize}
+  \item \texttt{git init} -- create a new repository in the current directory.
+  \item \texttt{git clone URL} -- clone a remote repository.
+\end{itemize}
+
+\section{Inspecting State}
+
+\begin{itemize}
+  \item \texttt{git status} -- show changed, staged, and untracked files.
+  \item \texttt{git log} -- show commit history.
+  \item \texttt{git diff} -- show unstaged changes.
+  \item \texttt{git diff --staged} -- show staged changes.
+\end{itemize}
+
+\section{Staging and Committing}
+
+\begin{itemize}
+  \item \texttt{git add -A} -- stage all modified and untracked files.
+  \item \texttt{git commit -m "message"} -- commit staged changes.
+\end{itemize}
+
+\section{Branches}
+
+\begin{itemize}
+  \item \texttt{git branch} -- list branches.
+  \item \texttt{git branch BRANCH} -- create a branch.
+  \item \texttt{git checkout BRANCH} -- switch to a branch.
+  \item \texttt{git merge BRANCH} -- merge into current branch.
+\end{itemize}
+
+\section{Working with Remotes}
+
+\begin{itemize}
+  \item \texttt{git remote -v} -- list remotes.
+  \item \texttt{git pull} -- fetch and merge remote updates.
+  \item \texttt{git push} -- upload local commits.
+  \item \texttt{git push -u origin BRANCH} -- push the local branch named BRANCH
+        to the remote repository called \texttt{origin}, and set that remote
+        branch as the default "upstream" for the local branch. This means that
+        in the future you can simply run \texttt{git push} or \texttt{git pull}
+        without specifying the remote or branch name, because Git will remember
+        the association.
+\end{itemize}

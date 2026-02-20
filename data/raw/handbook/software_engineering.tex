@@ -1,0 +1,609 @@
+\chapter{Software quality assurance}
+\label{ch:software-quality}
+\tfaq[1]{0mm}{Does software quality matter?}{General~questions}
+Software quality refers to a wide and diverse range of desirable characteristics of software.  The relative importance of different characteristics varies from project to project.  Nevertheless, there are certain characteristics, such as functional suitability, reliability, and maintainability, are important in all projects.   Functional suitability is the degree to which a software system meets the stated or implied requirements.   In other words, functional suitability refers to the extent to which a system meets the objectives it was built for.  Reliability is the ability of a software system to perform its required functions consistently and without failure.  Reliability includes, for example, a system's ability to fail gracefully under fault conditions (e.g. not losing data if an operation is interrupted).  The ease with which a system and its component can be modified, corrected, or enhanced to improve performance or adapt to changing requirements.  Functional suitability, reliability, and maintainability are ensured by writing clean code, employing sound design, and building comprehensive automated test suites.  This chapter focusses on these means to attain software quality.
+
+
+\section{Clean code}
+\tfaq[1]{0mm}{Does clean code matter?}{Code~quality}
+Clean code is not just about writing code that works. It is about writing code that can be easily understood, maintained, and extended by your team and future developers.
+
+The following checklist provides a set of practical guidelines for writing clean, maintainable code in your software engineering group project.  These principles are summarised from Robert C. Martin's \textit{Clean Code} textbook \citep{Martin:2009}.  You can use this checklist in your team's code inspections.  Alternatively, select a subset of these principles for code inspections and leave a broader range for code reviews.
+
+\subsection{Naming}
+\paragraph{Use meaningful and descriptive names for variables, functions, classes, and files. Names must make meaningful distinctions.}
+\tfaq[1]{0mm}{What is a ``good'' name?}{Code~quality:~Naming}
+Clear names reduce the need for comments and make your code more self-documenting.  It is much more important to make code easy to read than making it easy to write.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+total_price = calculate_total(cart_items)
+
+# Bad
+tp = ct(c)
+  \end{lstlisting}
+
+\paragraph{Avoid abbreviations unless they are widely understood (e.g., \texttt{id}, \texttt{url}).} 
+\tfaq[1]{0mm}{Can we create our own abbreviations, so that our variable names are shorter?}{Code~quality:~Naming}
+  Abbreviations often save only a few keystrokes but greatly reduce clarity.  You should not be introducing new abbreviations specific to your project, if they are not already used in day-to-day parlance.  Doing so increases the amount of knowledge developers require to engage with the code.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+user_id = 123
+
+# Bad
+uid = 123
+  \end{lstlisting}
+
+\paragraph{Use consistent naming conventions.} 
+\tfaq[1]{0mm}{Do we need to coordinate the way we name things?}{Code~quality:~Naming}
+  For example, you may use \texttt{snake\_case} for variables and functions and \texttt{PascalCase} for classes.  Consistency helps readers form expectations and improves readability.  If you are inconsistent with the naming conventions, such as use \texttt{camelCase} for some of your variables, then developers will need to remember whether each variable uses \texttt{snake\_case} or  \texttt{camelCase}.\\
+  As part of your conventions, use the same word to refer to a particular operation or thing. 
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: inconsistent naming of operation to read/load a file
+def read_users(filepath):
+    ...
+def load_users(filepath): 
+    ...
+  \end{lstlisting}  
+  
+\paragraph{Choose pronounceable names to ease verbal communication within the team.} 
+\tfaq[1]{0mm}{Do I need to be able to say a name out loud?}{Code~quality:~Naming}
+  If you cannot say the name out loud, it is harder to discuss code in meetings and code reviews.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+database_connection
+
+# Bad
+dbcnx
+  \end{lstlisting}
+
+\paragraph{Avoid misleading names that suggest incorrect behaviour or data type.} 
+\tfaq[1]{0mm}{Can variable names be misleading?}{Code~quality:~Naming}
+A name causes the reader make assumptions about the data a variable contains or a function returns.  When you write the code, that may not be a concern because you recall what the variable contains.  However, clean code is written with its future readers in mind, who will not have access to the writers initial recall.  A misleading name can cause incorrect assumptions, leading to bugs in the code (or at least more challenging debugging efforts).
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad
+def is_valid():
+    return None  # Misleading; suggests a boolean return
+
+# Better
+def get_validation_errors():
+    return ["Missing field: name"]
+  \end{lstlisting}
+
+\subsection{Functions}
+\paragraph{Functions should be small}
+\tfaq[1]{0mm}{How long can a function be?}{Code~quality:~Functions}
+  Smaller functions are easier to understand, test, and reuse.  As a rule of thumb, aim to limit functions to 5 -- 15 lines of code.  You can achieve this by using additional functions (and classes/methods) to break down the body of a function, ideally in such a way that each function operates at one level of abstraction.
+
+\paragraph{Functions should do one thing, and do it well.}
+\tfaq[1]{0mm}{How much work can a function do?}{Code~quality:~Functions}
+A function that tries to do too much is hard to understand and maintain.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def save_user():
+    ...
+def send_welcome_email():
+    ...
+
+# Bad
+def save_user_and_send_email():
+    ...
+  \end{lstlisting}
+
+\paragraph{Function names should clearly state their purpose and side effects.} 
+\tfaq[1]{0mm}{How should functions be named?}{Code~quality:~Functions}
+Normally, that means a function will named by a verb or a verb phrase.  Avoid generic names like `doStuff` or `handle`.  
+\begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def delete_temp_files():
+    ...
+
+# Bad
+def process_files():
+    ...
+\end{lstlisting}
+Instead, be specific if you have to be.  If you need a rather long verb phrase because your function does different things or has side effects, then the issue is that your function is doing too much.
+  
+Instead, be specific if you have to be.  If you need a rather long verb phrase because your function does different things or has
+
+
+\paragraph{Avoid side effects unless they are intentional and clearly documented.}
+\tfaq[1]{0mm}{Can functions have side effects?}{Code~quality:~Functions}
+A function has a side effect if it changes the state of your system even though that is not appear to be the purpose of your function.  Side effects make the behaviour of your system unpredictable.  They can introduce bugs, especially if they are not obvious to the caller.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad
+def calculate_tax(user):
+    user.tax_due = 100  # Unexpected side effect
+    return 100
+    
+ # Not as a bad
+ def calculate_and_save_tax(user):
+    # Updates tax field of user record in database
+    user.tax_due = 100
+    return 100   
+   
+# Good
+def calculate_tax(user):
+    return 100  
+  \end{lstlisting}
+
+\paragraph{Avoid deeply nested functions.}
+\tfaq[1]{0mm}{How much nesting in a function is ok?}{Code~quality:~Functions}
+Deep nesting makes functions hard to read as the reader needs to keep track of the control logic at multiple levels.  Usually, a function with deep nesting also contains source code at different levels of abstraction.  Using sub-functions to separate the different levels of abstraction reduces the number of levels of nesting in a single function body and makes the code more readable.  Ideally, your function has just one level of nesting.  But that takes considerable discipline and extensive clean up.  If you cannot achieve that, aim for two levels of nesting at most.
+ 
+
+\paragraph{Functions should have as few parameters as possible.}
+\tfaq[1]{0mm}{How many parameters can a function have?}{Code~quality:~Functions}
+  Too many parameters make functions harded to understand and call.  The ideal function has not parameters at all, but that removes what makes a function a function.  One or two parameters is fine, but group parameters where possible.  Avoid more than three or more parameters whenever that is possible.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Acceptable
+def create_invoice(customer, items, discount):
+    ...
+
+# Better (grouped)
+def create_invoice(invoice_details):
+    ...
+  \end{lstlisting}
+
+\paragraph{Use default arguments or object parameters when appropriate.}
+\tfaq[1]{0mm}{Is it good for a function to have default arguments?}{Code~quality:~Functions}
+  Default arguments simplify function calls while preserving flexibility.  Specifically, the code that calls the function tends to look simpler because some parameters do not need to be specified, making it easier to read.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+def connect_to_server(host, port=22):
+    ...
+  \end{lstlisting}
+
+
+\subsection{Code structure}
+\paragraph{Organise code into logical, cohesive modules.}
+\tfaq[1]{0mm}{Does it matter what file/package you put code in?}{Code~quality:~Code~structure}
+  Group related functions, classes, and data into the same module or package. This improves code discoverability and separation of concerns.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good: user-related code grouped in one module
+# user.py
+class User:
+    ...
+def create_user():
+    ...
+def get_user_by_id(user_id):
+    ...
+  \end{lstlisting}
+  
+\paragraph{Do not repeat yourself.  Write DRY code.}
+\tfaq[1]{0mm}{Is code repetition acceptable?}{Code~quality:~Code~structure}
+Repetitive code, also known as WET (``We Enjoy Typing''/``Waste Everyone's Time'') code, is significantly harder to maintain than DRY (``Don't Repeat Yourself'') code.
+Code duplication lengthens the code base unnecessarily (making it harder to read), multiplies the places bugs can hide, makes updates error-prone (you will forget to change one copy), and slows teammates trying to understand what is really happening.  Often, code duplication can be avoided by extracting common logic into a single, well-named function or method. For example, instead of:
+
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad
+x = 5
+y = 8
+
+x_squared = x * x
+y_squared = y * y
+print("x^2=", x_squared)
+print("y^2=", y_squared)
+  \end{lstlisting}
+
+  write:
+
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Better
+def squared(n):
+    return n * n
+
+for var, name in [(5, "x"), (8, "y")]:
+    print(f"{name}? =", squared(var))  
+  \end{lstlisting}
+
+\paragraph{Keep related functions and data close together.} 
+\tfaq[1]{0mm}{Does the order of functions/data matter?}{Code~quality:~Code~structure}
+  Co-locating related code helps maintain mental context and reduces the need for jumping between files.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: scattered definitions
+# helpers.py
+def log_user_activity(): ...
+
+# user.py
+class User: ...
+
+# Good: related logic placed together
+# user.py
+class User:
+    ...
+def log_user_activity(user): ...
+  \end{lstlisting}
+
+\paragraph{Use consistent indentation and formatting throughout the codebase.} 
+\tfaq[1]{0mm}{Does formatting matter, assuming the code compiles correctly?}{Code~quality:~Code~structure}
+  Inconsistent formatting is distracting and error-prone. Follow your team's agreed-upon style or adopt a widely used style guide (e.g., PEP 8 for Python).
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def get_username(user):
+    return user.name
+
+# Bad
+def get_username(user):
+      return user.name
+  \end{lstlisting}
+
+\paragraph{Limit the length of source files. Split large files into smaller ones when needed.}
+\tfaq[1]{0mm}{How long can a source code file be?}{Code~quality:~Code~structure}
+Large files become hard to navigate and understand.  As files become longer, the reader increasingly needs to scroll through the file to find the code they wish to read or edit.   Instead, you should use modular design to separate features logically and keep file sizes small. It is difficult to be prescribe how long a file can or should be.  This will vary depending on the nature of the source code of the project.  Obviously, one cannot set hard limits.
+
+In the small group project, however, there are specific expectations set out in the marking criteria.  The limits are relatively generous.  We use specific limit to encourage teams to coordinate their inspection/review processes to ensure that limits are adhered to.
+
+\paragraph{Limit the number of files in a directory.  Organise a directory into subdirectories when needed.}
+\tfaq[1]{0mm}{How many entries can a directory contain?}{Code~quality:~Code~structure}
+  When your code base becomes quite large, limiting the lengths of files will result in a larger number of files.  Eventually, directories will become difficult to navigate.
+
+\paragraph{Place higher-level concepts above lower-level details in source files.}
+\tfaq[1]{0mm}{What order should functions, methods, and classes appear in within a source code file?}{Code~quality:~Code~structure}
+  Define public-facing or summary-level functions and classes at the top of the file. Place helpers or implementation details below to reflect a top-down reading order.  This structure limits the amount of scrolling developers need to do to engage with the public-facing functions/classes they need to use.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def run_pipeline():
+    data = load_data()
+    results = process_data(data)
+    save_results(results)
+
+def load_data():
+    ...
+
+def process_data(data):
+    ...
+
+def save_results(results):
+    ...
+  \end{lstlisting}
+
+
+\subsection{Comments}
+\paragraph{Document public classes, methods, and functions, ideally in a format suitable for automated documentation generation tools.} 
+\tfaq[1]{0mm}{What kinds of comments should our code contain?}{Code~quality:~Comments}
+  This helps users and teammates understand how to use your code. In Python, follow the docstring conventions (e.g., PEP 257 or NumPy/Sphinx style).
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+def calculate_tax(price, rate):
+    ``````
+    Calculate the tax for a given price.
+
+    Parameters:
+    price (float): The price before tax.
+    rate (float): The tax rate (e.g., 0.2 for 20%).
+
+    Returns:
+    float: The tax amount.
+    ``````
+    return price * rate
+  \end{lstlisting}
+
+\paragraph{Write comments only when the code cannot be made self-explanatory.} 
+\tfaq[1]{0mm}{Is there such a thing as excessive commenting?}{Code~quality:~Comments}
+You should use comments sparingly.  After all, comments are extra stuff for the reader to read, and we are aiming to write clean code to make the code base easy to read.  You should aim to write clear code rather than comment everything.  If you can write the code well, with good names and short functions, comments in the bodies of functions and methods, or for private datatypes are generally unnecessary.  If you use comments outside the headline public functions, methods and classes, use them to clarify non-obvious intent, not to restate the code.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Acceptable if the logic is complex
+# Using binary search to improve lookup efficiency
+def find_item(sorted_list, target):
+    ...
+  \end{lstlisting}
+
+\paragraph{Avoid redundant comments that restate what the code already expresses.}
+\tfaq[1]{0mm}{Can I use comments to explain how my code works?}{Code~quality:~Comments}
+Your code should explain how your code works, provided  Redundant comments clutter the code and can quickly become outdated.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: redundant
+i = 0  # Set i to 0
+
+# Good: self-explanatory code needs no comment
+index = 0
+  \end{lstlisting}
+
+\paragraph{Use comments in the body of the code to explain \emph{why} something is done, not \emph{what} is done.} 
+\tfaq[1]{0mm}{Can I use a comment to explain how a particularly difficult line of works?}{Code~quality:~Comments}
+You should always avoid comments inside the bodies of functions and methods, or comments to explain certain lines of code.  If you find that the code hard to read, try to clean the code rather than add comments.  If you do need comments, use them to explain reasoning, trade-offs, or non-obvious decisions. The "what" should be clear from good naming and structure.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Why: API fails silently if sent too many requests at once
+time.sleep(0.5)  # Throttle to avoid rate limiting
+  \end{lstlisting}
+
+\paragraph{Keep comments up to date. Delete outdated or incorrect comments.} 
+\tfaq[1]{0mm}{Can comments become outdated?}{Code~quality:~Comments}
+Comments can become outdated rather easily.  When we are editing code, we are working towards changing its behaviour.  In the process, we may not spot that a comment is no longer valid.  After all, the compiler or parser is not going to complain about an incorrect comment. In general, a wrong comment is worse than an unnecessary: it misleads and wastes time.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: comment does not match the code
+# Multiply by 2
+value = value * 3
+  \end{lstlisting}
+A classic example of a comment that tends to become outdated very quickly is a comment that refers to line numbers.
+
+\paragraph{Remove noise, such as "TODO" comments and commented out code.} 
+\tfaq[1]{0mm}{Can we use TODO comments or comment out code?}{Code~quality:~Comments}
+As a temporary measure, while working in a branch, it can be useful to incorporate "To Dos" or comment out code.  However, leftover code and placeholders clutter the file and confuse future readers.  Before merging your work with the main, these types of comments need to be removed.  Clean up after yourself and use issue trackers or pull requests to keep track of concerns that transcend your task.  
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: commented-out legacy code
+# def old_function():
+#     pass
+
+# Bad: vague TODO with no owner or deadline
+# TODO: fix this later
+  \end{lstlisting}
+
+
+\subsection{Formatting}
+\paragraph{Use consistent spacing, indentation, and bracket placement.} 
+\tfaq[1]{0mm}{What rules should we follow with regards to spacing, indentation, and bracket placement?}{Code~quality:~Formatting}
+Formatting rules and conventions vary from programming language to programming language.  The key is to be consistent with the languages conventions and, where there is some freedom to choose formatting, you are consistent within your team.  Consistent formatting enhances readability and prevents subtle bugs, especially in indentation-sensitive languages like Python.  In other words, it should not be possible to see who wrote what code based on the formatting, because everything should look consistent.  To achieve this, you will need to discuss formatting with your team mates.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+# Bad: inconsistent indentation and spacing
+def is_even(n):
+ if n%2==0:
+  return True
+ else:
+     return False
+  \end{lstlisting}
+
+\paragraph{Use blank lines to separate logically distinct sections of code.}
+\tfaq[1]{0mm}{How should we use blank lines in source code?}{Code~quality:~Formatting}
+  Blank lines provide visual structure, making code easier to scan and comprehend.  
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def load_config():
+    ...
+
+def connect_to_server():
+    ...
+
+# Bad: no separation
+def load_config(): 
+    ...
+def connect_to_server(): 
+    ...
+  \end{lstlisting}
+  It is important to be consistent in your use of blank lines.  Do not use excessive whitespace.  Avoid the use of blank lines inside the body of a function.  Instead, make your function body smaller so that blank lines are not needed.
+  
+\paragraph{Group related code together and separate unrelated code.} 
+\tfaq[1]{0mm}{How should units in a source code file be organised?}{Code~quality:~Formatting}
+  Keeping related logic close together helps maintain focus and context while reading.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def create_user():
+    user = User()
+    save_to_db(user)
+    send_welcome_email(user)
+
+# Bad: interleaved with unrelated logic
+def create_user():
+    user = User()
+
+def log_usage():
+    ...
+
+def save_to_db(user):
+    ...
+  \end{lstlisting}
+
+\paragraph{Keep line lengths reasonable.} 
+\tfaq[1]{0mm}{Is there a maximum line length}{Code~quality:~Formatting}
+As with other length limits, this is a judgement call.  However, lines of code can be too long because long lines are hard to read and may wrap awkwardly on some displays or printouts.  Therefore, you need to keep line lengths short.  Consider that some developers may be working on the code using a smaller laptop, and that they should be able to view each line of code in full without wrapping.  As a guide, you will want to keep line lengths under 100 characters (or less).
+
+\subsection{Error handling and control flow}
+\paragraph{Use exceptions rather than error codes where possible.}
+\tfaq[1]{0mm}{Which is better: throwing exceptions or returning error codes?}{Code~quality:~Error~handling}
+Exceptions separate normal logic from error-handling logic, making the code cleaner and easier to follow.  Therefore, where errors occur, you should be throwing exceptions rather than returning error codes.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+def get_user(user_id):
+    if user_id not in user_db:
+        raise ValueError("User ID not found")
+    return user_db[user_id]
+
+# Bad
+def get_user(user_id):
+    if user_id not in user_db:
+        return -1  # error code
+    return user_db[user_id]
+  \end{lstlisting}
+
+\paragraph{Avoid deeply nested code by returning early when conditions are not met.} 
+\tfaq[1]{0mm}{Does nesting structures that perform error handling (e.g. try-except blocks) count towards nesting limits?}{Code~quality:~Error~handling}
+Deep nesting makes code harder to read.  Error/exception handling is a common reason for nesting code, but even here you should limit the amount of nesting.  One approach you can take is returning early: this reduces indentation and improves readability, especially for guard clauses.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good: return early
+def process_item(item):
+    if not item:
+        return
+    if not item.is_valid():
+        return
+    item.process()
+
+# Bad: deeply nested
+def process_item(item):
+    if item:
+        if item.is_valid():
+            item.process()
+  \end{lstlisting}
+
+\paragraph{Handle all expected error conditions gracefully and clearly.} 
+\tfaq[1]{0mm}{Can we silence errors?}{Code~quality:~Error~handling}
+If you silence errors, perhaps by catching them in a try-except block in a Python application for example, your code will continue to run even though it does so under abnormal conditions.  The cause of the error may lead to unwanted behaviours that become difficult to diagnose.  Therefore, silencing errors is a bad idea.  Think about what might go wrong and how it should be communicated. Avoid crashing or silent failures.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good
+try:
+    data = fetch_data()
+except NetworkError as e:
+    log_error(e)
+    show_error_message("Network issue. Please try again later.")
+
+# Bad: unhandled exception may crash the program
+data = fetch_data()
+  \end{lstlisting}
+
+\vspace{1mm} % Add some vspace to ensure FAQ is in the correct margin.
+\subsection{Testing Considerations}
+\paragraph{Write code that is easy to test (e.g., avoid global state).} 
+\tfaq[1]{0mm}{The code I write is really hard to test with automated tests.  Is that a problem?}{Code~quality:~Testing}
+  Code that relies on global variables or complex side effects is harder to test reliably.  Where possible, use pure functions.  These are functions that always produce the same output for the same input, without side effects.  One technique to achieve this is dependency injection.  Here, the resources required by a function -- the dependencies -- are passed as arguments rather than created within the function.
+\begin{lstlisting}[language=Python, columns=fullflexible]
+# Harder to test code
+import requests
+
+def get_weather():
+    response = requests.get("https://api.weather.com/today")
+    return response.json()
+
+# Easier to test code
+def get_weather(http_client):
+    response = http_client.get("https://api.weather.com/today")
+    return response.json()
+  \end{lstlisting}
+The second function takes an HTTP client object as an argument.  This can be an object that makes genuine HTTP requests.  It can also be a mock client that returns fake (weather) data for testing purposes.
+
+
+\paragraph{Design small, independent units that can be tested in isolation.}
+\tfaq[1]{0mm}{How can we make code more testable with automated unit tests?}{Code~quality:~Testing}
+Small functions, methods, and classes with clear responsibilities can be tested with minimal setup and provide clearer test failures.  Therefore, designing functions, methods and classes in such a way not only makes the cleaner but easier to test too.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Good: isolated, no external dependencies
+def is_valid_email(email):
+    return "@" in email and "." in email.split("@")[-1]
+
+# Bad: function depends on external config
+def is_valid_email(email):
+    return re.match(CONFIG["email_regex"], email)
+  \end{lstlisting}
+
+\paragraph{Keep test code clean and readable, following the same standards as production code.} 
+\tfaq[1]{0mm}{Does test code need to be clean?}{Code~quality:~Testing}
+Test code is code that prescribes how your source code needs to behave.  It is, therefore, important information that those who read your code may need to consult.     Test code should be as readable and maintainable as the code it validates. Use clear naming, setup methods, and consistent structure.
+
+\subsection{Practices}
+\paragraph{Remove dead code and unused variables promptly.} 
+ Dead code clutters the codebase and makes maintenance harder. If it is not used, remove it.   Version control will preserve history if this is ever needed.
+  \begin{lstlisting}[language=Python, columns=fullflexible]
+# Bad: unused variable and commented-out function
+def process_data(data):
+    temp = 42  # unused
+    # def old_processing(): ...
+    ...
+    
+# Good: keep only what is needed
+def process_data(data):
+    ...
+  \end{lstlisting}
+
+\paragraph{Refactor code continuously to improve clarity and structure.} 
+  Refactoring keeps the codebase clean and manageable. It is easier to maintain clean code than to clean up a mess later.
+
+\paragraph{Use tools such as linters and formatters to enforce coding standards.} 
+  Automated tools (e.g., \texttt{black}, \texttt{flake8}, \texttt{pylint}) help enforce consistency and catch style issues early.
+
+\paragraph{Perform regular code reviews in addition to code inspections to maintain code quality.} 
+  Code reviews help find issues early, encourage shared ownership, and spread knowledge across the team.
+
+
+\section{Principles of good design}
+\tfaq[1]{0mm}{What is software design?  Where the handbook mentions software design, what are you talking about?}{Design}
+Effective software design is a cornerstone of maintainable, robust, and scalable systems. While surface-level concerns such as user interface aesthetics or code formatting practices may contribute to a positive development experience, the internal architecture of a software system determines its long-term viability. This section outlines foundational principles that guide the organisation of internal software structure, focusing on modular decomposition, separation of concerns, control of complexity, and the relationships between software components.
+
+\subsection{Modularity and decomposition}
+\tfaq[1]{0mm}{What is the main issue we should think about when designing software?}{Design}
+At the heart of good internal design lies the principle of modularity: the division of a software system into discrete, self-contained components known as modules.   A module may refer to a class, a file containing some functions, a package, etc.  Each module encapsulates a specific subset of the system's functionality and interacts with other modules through well-defined interfaces. This decomposition facilitates independent development and testing, enhances reusability, and reduces the cognitive load on developers by allowing them to reason about individual modules without the need to comprehend the entire system at once.
+
+Modular design further supports evolution and scalability. When new features are added or existing ones are modified, changes can often be localised to specific modules, thereby minimising the risk of unintended side effects. To be effective, however, modularity must be implemented with attention to both cohesion and coupling.
+
+\subsection{Cohesion and separation of concerns}
+\tfaq[1]{0mm}{How do we decide what goes into a particular module and what does not?}{Design}
+Cohesion refers to the degree to which the elements within a module contribute to a single, well-defined task or responsibility. A module is said to be highly cohesive when its constituent functions and data structures are directly related to one another and to the module's primary purpose. High cohesion fosters clarity and purpose within a module, making it easier to understand, test, and modify.
+
+Closely related to cohesion is the separation of concerns. This design principle advocates for dividing a system into distinct features or behaviours, each addressed by a separate module or layer. For example, data persistence, business logic, and network communication should each be handled by different parts of the system. Separation of concerns promotes clearer boundaries between responsibilities, reduces duplication, and simplifies the process of identifying and correcting defects.
+
+Both cohesion and separation of concerns are undermined when a module takes on multiple, unrelated responsibilities or when the responsibilities of one module leak into another. Therefore, careful analysis and discipline are required during the design phase to ensure responsibilities are appropriately distributed.
+
+\subsection{Minimise unnecessary complexity}
+\tfaq[1]{0mm}{Should we design a solution that considers our future plans, or is it ok to keep our design as simple as possible?}{Design}
+Another fundamental principle of internal software design is to keep the design as simple as possible. While some level of complexity is inherent to any non-trivial system, complexity that does not contribute directly to the system's requirements or maintainability constitutes a liability. Complex designs are harder to understand, more error-prone, and more costly to modify.
+
+To manage complexity effectively, designers should favour simple and predictable patterns over intricate or speculative architectures. Generality should be introduced only when it is justified by demonstrated need, not in anticipation of hypothetical future scenarios. Adhering to the maxim ``Do not add functionality unless it is necessary'' helps prevent the accumulation of design debt and preserves the system's conceptual integrity.  In other words, design for what you need now, not for what you currently think you will need in the future.  Future plans often do not materialise or change, so design work intended to solve future problems risks complicating your system unnecessarily and wastes current time.  Instead, keep the design simple but write the code in a way that makes it easy to change as your requirements evolve.
+
+\subsection{Coupling and component interactions}
+\tfaq[1]{0mm}{How should interactions between modules be organised?}{Design}
+Coupling describes the degree of dependency between different modules. In a well-designed system, modules should be loosely coupled.  That is, changes to one module should have minimal impact on others.  Ideally, modules are couples with as few other modules as possible.  Loose coupling is achieved by minimising shared knowledge, using abstraction barriers (e.g., interfaces or abstract classes), and avoiding tight interconnections such as global variables or hard-coded dependencies.
+
+Loose coupling enhances a system's flexibility and adaptability. When modules interact through minimal, stable interfaces, it becomes possible to replace or refactor one module without extensive changes elsewhere. Conversely, high coupling leads to brittle systems where small changes ripple unpredictably, increasing maintenance overhead and regression risks.
+
+It is important to note that coupling and cohesion are not independent: increasing cohesion within a module often leads to reduced coupling between modules, thereby reinforcing both qualities. Thus, a coherent approach to modularisation simultaneously advances multiple design goals.
+
+
+\section{Software testing}
+\tfaq[1]{0mm}{What is the role of software testing?}{Testing}
+Rigorous software testing is essential to ensure the reliability, correctness, and maintainability of any non-trivial software system. Testing provides empirical evidence that a system behaves as intended under specified conditions, and it serves as a safeguard against the unintended consequences of code changes. In modern software engineering practice, testing is not a one-off activity but an ongoing discipline that accompanies software development throughout its lifecycle.
+
+\subsection{Automated vs manual testing}
+
+\paragraph{Manual testing}
+\tfaq[1]{0mm}{What is the role of manual testing?}{Testing}
+Manual testing typically involves exploratory activities performed by human testers, who interact with the software in search of unexpected behaviours, usability flaws, or integration issues. Manual testing can be valuable in uncovering edge cases that are difficult to anticipate programmatically.  In practice, this looks as follows.  As a developer, you should be developing a comprehensive test suite alongside the source code.  It is also good practice to run the application and experience interacting with it yourself.  In the process of doing so, you may encounter bugs (even if you produced a substantial test suite and all tests pass).  When this happens, write an automated test that replicates the conditions causing the bug.
+
+Manual testing also plays a role in user acceptance testing and interface evaluation.  Use it to assess whether the user interface is consistent, information is easy to find, the UI scales well to cope with large volumes of data, and user objectives can be achieved in an intuitive manner.  It is also crucially important to thoroughly test a deployed system (especially prior to submitting it for marking!).  Make sure that the use can log in with the provided user credentials and that all features work normally within a production environment (which is more restrictive than a testing environment).  Also ensure that all static resources load normally.
+
+\paragraph{Automated testing}
+\tfaq[1]{0mm}{What is the role of automated testing?}{Testing}
+Automated testing consists of code that executes part of your source code and compares its actual behaviour with the expected behaviour.  Automated testing allows tests to be defined once and executed repeatedly at negligible cost.  The test code specifies how the source code is required to behave, thereby providing software specifications.  It provides a reproducible safety net, making it possible to detect regressions from the required behaviour, verify correctness under a wide range of conditions, and support continuous integration and deployment practices. Importantly, automated tests can be run frequently, on every commit if desired, ensuring that defects are detected as early as possible, when they are least expensive to fix.  While certain aspects of software need to be tested manually or inspected, development teams should rely on automated tests as much as they can.
+
+\paragraph{Manual testing instead of automated testing?}
+\tfaq[1]{0mm}{Can we substitute automated testing by more extensive manual testing?}{Testing}
+Manual testing is inherently limited by its cost, subjectivity, and inconsistency. It cannot be repeated frequently or reliably across versions, and it does not scale to large or rapidly evolving systems.  While manual testing can \emph{complement} automated approaches, particularly during exploratory or usability evaluation, it must not substitute for automation. Software systems should be designed and implemented with the explicit goal of maximising test automation. Without it, long-term quality assurance is infeasible.  Therefore, in the group projects, you are expected to produce software systems with comprehensive automated test suites.
+
+\subsection{Evaluating test quality}
+\tfaq[1]{0mm}{Why should we evaluate test quality?}{Testing}
+The presence of automated tests alone does not guarantee adequacy.  In fact, as Dijkstra famously observed ``Program testing can be used to show the presence of bugs, but never to show their absence!''  To \emph{minimise} the risk of missing bugs, it is necessary to assess the quality and coverage of automated test suites, and address shortcomings.  While no approach to evaluating test quality can guarantee an automated test suite is adequate, it can help identify and limit shortcomings.
+
+\paragraph{White-box testing and code coverage}
+\tfaq[1]{0mm}{How do code coverage tools help evaluate automated test suites?}{Testing}
+
+White-box testing techniques assess the structure of the source code itself. One of the most commonly used white-box tools is code coverage analysis, which measures the proportion of the code base executed by a test suite. Coverage metrics may include:
+\begin{itemize}
+\item Statement coverage: whether each line of code has been executed.
+\item Branch coverage: whether both the true and false paths of conditional statements are exercised.
+\item Path coverage: whether all possible execution paths through a program are tested.
+\end{itemize}
+While high coverage is desirable, it is not a substitute for meaningful tests. Superficial assertions may lead to high coverage without truly verifying correct behaviour. As such, coverage analysis should be used in conjunction with thoughtful test design, not as an end in itself.
+
+\paragraph{Black-box testing}
+\tfaq[1]{0mm}{Is high code coverage enough to have a good automated test suite?}{Testing}
+Code coverage tools can identify obvious problems with automated test suites.  However, high code coverage does not guarantee that a test suite is good.  If your team relies solely on code coverage statistics to assess test quality, the developers in your team are incentivised to produce spurious tests that simply execute much of the source code, without making a meaningful attempt to find errors.
+
+Black-box testing techniques usefully complement code coverage reports.  They evaluate the software from an external perspective without regard to internal implementation details. Black-box quality assessments often include:
+\begin{itemize}
+\item \emph{Equivalence partitioning}: dividing the input space into equivalence classes and testing representative values from each.
+\item \emph{Boundary value analysis}: testing inputs at and near the edges of valid input ranges.
+\item \emph{Fuzz testing}: supplying random or malformed inputs to uncover unexpected behavior or crashes.
+\end{itemize}
+These approaches are particularly useful for identifying input-handling errors and integration issues that may not be visible through structural analysis alone.
+
+\subsection{Ensuring Comprehensive Test Suites}
+\paragraph{Who?}
+\tfaq[1]{0mm}{Who should be writing automated tests?}{Testing}
+Developers should write automated tests for their own code.  They should have the best understanding of the requirements to complete the task they were assigned, and they developed the solution.
+
+Outsourcing tests to other members of the team is both inefficient and risky.  The tester needs to familiarise themselves with the task at hand, something the developer already did.  The tester is likely have questions for the developer to help them understand the task or the solution.  The tester may also fail to recognise certain flaws in a solution and not test for these.
+
+\paragraph{When?}
+\tfaq[1]{0mm}{When should we write automated tests?}{Testing}
+Tests should be written as soon possible, either before or concurrently with the source code.  Test writing slows down the rate at which a developer can produce functionality.  It can also be a little be boring.  Do not procrastinate, however.  The longer you wait to write tests, the worse your understanding of the task and solution approach will be.  Therefore, postponing automated test writing is likely to lead to poorer tests.  While your team is using source code not covered by automated tests, bugs introduced in that source code are much harder to discover.  Consequently, if you postpone test writing, the team will benefit less from the tests.
+
+\paragraph{How?}
+\tfaq[1]{0mm}{What strategies can we adopt to ensure we produce good test suites?}{Testing}
+Achieving comprehensive test coverage is not an incidental byproduct of software development but a result of deliberate practices and cultural norms. Several strategies can help ensure that test suites are developed in tandem with, and at the same quality level as, production code:
+\begin{enumerate}
+\item \emph{Test-Driven Development} (TDD): In TDD, developers write tests before implementing the corresponding functionality. This approach ensures that testing is an integral part of the development process rather than an afterthought.  TDD works particularly in combination with black-box testing.
+\item \emph{Continuous Integration} (CI): Automated test execution should be embedded into the build pipeline using CI tools. Builds should be considered invalid unless all \item Code Review Standards: Code review processes should include evaluation of test coverage and quality. Contributions should not be accepted without accompanying tests, unless explicitly justified.  The Semester 1 training materials explain how you can set this up for a Django project in GitHub.
+\item \emph{Coverage thresholds}: Enforcing minimum coverage levels using tools such as coverage.py,  ensures that all changes meet a baseline level of test thoroughness. While this does not guarantee adequacy, it discourages neglect.  Coverage statistics are also easy to verify, without meaningfully adding to the workload involved in your quality assurance process.
+\item \emph{Reward thorough testing}: Developers in your team must be motivated to write effective tests.  If your team's meetings or accountability sessions focus solely the functionality that team members have implemented, then you are motivating team members to produce source code at the expense of quality assurance.  Do not consider a task complete unless it comes with a comprehensive test suite, and give people who produce excellent test suites recognition for their work.
+\end{enumerate}

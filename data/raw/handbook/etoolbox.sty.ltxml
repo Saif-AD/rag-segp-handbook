@@ -1,0 +1,4 @@
+DefMacro('\AtEndOfPackage', '');
+DefMacro('\undef', '');
+DefMacro('\@makeother', '');
+DefMacro('\<', '');

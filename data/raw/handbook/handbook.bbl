@@ -1,0 +1,40 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brooks(1975)]{Brooks:1975}
+F.~Brooks.
+\newblock \emph{The mythical man-month: essays on Software Engineering}.
+\newblock Addison-Wesley, 1975.
+
+\bibitem[DeMarco and Lister(2013)]{DeMarco+Lister:2013}
+T.~DeMarco and T.~Lister.
+\newblock \emph{Peopleware. Productive Projects and Teams}.
+\newblock Addison-Wesley, third edition, 2013.
+
+\bibitem[Hooker and Moir(2022)]{Hooker+Moir:2022}
+B.~Hooker and R.~Moir.
+\newblock \emph{The waste detectives. Methods and techniques to improve flow,
+  increase value and boost profitability in a large-scale transformation}.
+\newblock Independently published, first edition, 2022.
+
+\bibitem[Kogon and Blakemore(2024)]{Kogon+Blakemore:2024}
+K.~Kogon and S.~Blakemore.
+\newblock \emph{Project management for the unofficial project manager}.
+\newblock FranklinCovey, updated edition, 2024.
+
+\bibitem[Martin(2009)]{Martin:2009}
+R.~Martin.
+\newblock \emph{Clean Code: A Handbook of Agile Software Craftsmanship}.
+\newblock Addison-Wesley, 2009.
+
+\bibitem[Martin(2017)]{Martin:2017}
+R.~Martin.
+\newblock \emph{Clean Architecture: A Craftsman's Guide to Software Structure
+  and Design: A Craftsman's Guide to Software Structure and Design}.
+\newblock Addison-Wesley, 2017.
+
+\end{thebibliography}

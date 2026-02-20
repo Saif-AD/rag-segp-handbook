@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/Users/jeroen/Library/CloudStorage/OneDrive-King'sCollegeLondon/SEG-2025-26/handbook,/Users/jeroen/onedrive/SEG-2025-26/handbook"?>
+<?latexml package="etoolbox"?>
+<?latexml package="natbib"?>
+<?latexml package="expl3"?>
+<?latexml class="book" options="a4paper,twoside,symmetric"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<?latexml package="amsmath"?>
+<?latexml package="longtable"?>
+<?latexml package="pgfplots"?>
+<?latexml package="babel" options="UKenglish"?>
+<?latexml package="acronym"?>
+<?latexml package="multirow"?>
+<?latexml package="listings"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-book.css" type="text/css"/>
+  <resource src="ltx-listings.css" type="text/css"/>
+  <title><!--  %**** handbook.tex Line 25 **** -->Software Engineering Group Project Handbook 2025/26<!--  %% 
+     %Book metadata --></title>
+  <creator role="author">
+    <personname>Jeroen Keppens</personname>
+  </creator>
+  <para xml:id="p1">
+    <ERROR class="undefined">\hypersetup</ERROR>
+    <p><!--  %uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing) -->colorlinks
+
+<ERROR class="undefined">\publisher</ERROR>Department of Informatics<break/><!--  %% Potential problem packages for latexml --><!--  %“usepackage–smartdiagram˝ 
+     %“usepackage–etoolbox˝ 
+     %“usepackage–enumitem˝ 
+     %“usepackage–pgffor˝ 
+     %% 
+     %If they’re installed, use Bergamo and Chantilly from www.fontsite.com. 
+     %They’re clones of Bembo and Gill Sans, respectively. 
+     %“IfFileExists–bergamo.sty˝–“usepackage[osf]–bergamo˝˝–˝% Bembo 
+     %“IfFileExists–chantill.sty˝–“usepackage–chantill˝˝–˝% Gill Sans -->King’s College London
+
+
+
+<!--  %“usepackage–microtype˝ --></p>
+  </para>
+</document>

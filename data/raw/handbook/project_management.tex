@@ -1,0 +1,370 @@
+\chapter{Project management}
+\label{ch:project-management}
+\section{Introduction}
+\tfaq[1]{0mm}{Why is project management so important in this module?}{Project~management}
+A project\index{project} is a significant undertaking aimed at achieving a specific set of objectives within a defined timeframe. In software development, building a system or application typically qualifies as a project: it represents a one-off effort that requires focused coordination, planning, and execution.
+
+Because projects involve a substantial commitment of resources, especially the time and expertise of skilled people, they must be managed carefully to ensure that this investment results in something valuable. Unlike routine operations, project work is often exploratory and uncertain, which means it carries more risk. Effective project management anticipates these uncertainties and prepares the team to respond when things do not go as planned.
+
+At the heart of any project is a team. In software development, much of the work is creative, and relies heavily on collaboration among individuals with diverse skills and perspectives. For this reason, good project management is not just about tasks, timelines, or tools.  It is about enabling people to work well together. This chapter offers practical guidance on how to manage student software projects effectively, with particular attention to teamwork, communication, and navigating the human factors that so often determine a project's success.
+
+\section{What makes project management difficult?}
+\tfaq[1]{0mm}{What makes project management difficult?}{Project~management}
+Managing software development projects is inherently challenging due to the complex interplay of technical and human factors. A substantial software project requires a significant amount of work distributed across multiple people. This collaborative effort must be tightly coordinated to ensure that everyone is aligned with the same goals, that features integrate smoothly, and that the overall product, particularly the user interface, presents a consistent and coherent experience.
+
+One of the key difficulties is that the quality of the software is determined by its weakest component. Even if most parts are well-engineered, a single poorly implemented module or lack of sufficient testing can undermine the entire product. As such, project managers must ensure that quality is maintained across all dimensions: code, design, documentation, test coverage, and security, to name a few.
+
+In addition to technical challenges, software teams are composed of individuals who may hold differing opinions on important issues, such as the project's direction, team workflows, or even the next steps to take. Disagreements over priorities, tools, or practices can lead to friction or misalignment if not managed carefully.
+
+Ultimately, project management is about enabling people to work together effectively to achieve a shared outcome. While there are many structured techniques for planning, tracking progress, managing risk, and facilitating communication, and these are relatively straightforward to learn and apply, the real difficulty lies in the human side of the equation. Getting everyone to buy into a common vision, agree on how to collaborate, stay motivated, and function as a cohesive team requires soft skills that are much harder to teach. It demands empathy, judgement, adaptability, and trust.  These qualities develop through experience. And even with an experienced manager, the trust needed to bind a team together can take time to build and can be easily lost. This is what makes project management in software development not just a logistical challenge, but a deeply human one.
+
+\section{Leadership}
+
+\subsection{What is leadership?}
+\tfaq[1]{0mm}{How do I get people in my team to do what they should be doing?}{Leadership}
+\index{leadership}
+Leadership is central to any successful software project, yet it is often misunderstood. In this handbook, we use the term to mean the ability to guide a group toward positive outcomes through influence rather than coercion. Leadership is therefore rooted in informal authority: the respect and trust your colleagues freely grant you.  Leadership is not a power (e.g. as bestowed through a job title) to coerce people into doing what you want them to do.
+
+Crucially, leadership should never be seen as the exclusive domain of one designated ``manager''. Every team member who has insight, expertise, or a fresh perspective must be ready to step forward and influence the group when the moment calls for it.
+
+Disagreements are inevitable in creative work: teammates come with different objectives, values, priorities, working styles, and talents. Without the safety net of formal authority, these differences can stall progress or, if handled well, spark better decisions. Navigating them takes judgement: the wisdom to know when to compromise, when to hold your ground, and how to prevent a clash of ideas from sliding into interpersonal conflict. In other words, leadership is the social lubricant that keeps collaboration moving when the project grows messy and uncertain.
+
+\subsection{Building informal authority through four foundational behaviours}
+\tfaq[1]{0mm}{How do I develop leadership or informal authority?}{Leadership}
+\index{expectations!four~foundational~behaviours}
+
+Influence rarely flows from raw charisma alone. Most people must consciously cultivate behaviours that earn trust and inspire commitment. Research on high-performing teams highlights four foundational habits that strengthen informal authority and make conflict easier to resolve (adapted from \citep{Kogon+Blakemore:2024}) . Figure \ref{fig:four-foundational-behaviours} illustrates the cycle.
+
+\begin{figure}
+\checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi
+\smartdiagramset{
+uniform color list=white!90!gray for 4 items,
+uniform arrow color=true,
+}
+\smartdiagram[circular diagram:clockwise]{Demonstrate respect,Listen first,Clarify expectations,Practice accountability}
+\caption{Four foundational behaviours to build informal authority}
+\label{fig:four-foundational-behaviours}
+\end{figure}
+
+\begin{enumerate}
+\item\emph{Demonstrate respect}.  If people feel you respect them, they are more likely to engage in conversations with (even the more difficult ones).  
+Treat teammates as capable professionals whose time and opinions matter. Respect is conveyed through courtesy, genuine curiosity about their viewpoints, and consideration for their constraints. Respect does not require you to agree with everything people are telling you. It also means confronting reality: raising difficult issues promptly and candidly. Ignoring emerging problems, or saving criticism for anonymous peer reviews, is itself disrespectful.
+\item\emph{Listen first}.  Take the time to hear out people before commenting, drawing conclusion, or preempting what they will say.  This is especially important when having challenging conversation.  Unless you take the to listen to others before you share your opinion, you cannot really have considered their views or any important information they might have to share.  Failing to listen can cause tension and strain your relationship with your team mates.
+\item\emph{Clarify expectations}.   Misunderstandings multiply as a project evolves. Re-establish shared goals, priorities, roles, and next steps whenever you sense drift. Anchor the discussion in the team's agreed objectives, documented plans, and the project-management practices covered in lecture. Clear expectations shrink the arena for conflict. When clarifying expectations, draw on the objectives and plans you agreed as a team, the expectations set out in this document and the group project handbooks, and the project management practices and strategies we discuss in the lectures.
+\item\emph{Practice accountability}.\index{accountability}  Practicing accountability involves recognising concerns certain individuals are responsible for, identifying the nature of the issue, and pursuing remedial action until the concern is removed.  Without accountability, problems tend to fester until the team eventually lose control over these problems.   Practicing accountability requires three things.  (i) Be \emph{transparent}: when you see a problem, speak up.  (ii) Attain \emph{buy-in} from your team mates to address the problem.  Demonstrating respect, listening first, and clarifying expectations all help you obtain buy-in.  (iii) \emph{Follow through} (persistently) until the issue is resolved.
+\end{enumerate}
+In our discussions of project management, and strategies we will revisit these four foundational behaviours from time to time.  They will form the basis of strategies to address inter-personal challenges in project management.
+
+\subsection{The role of the project manager}
+\tfaq[1]{0mm}{What is the role of a project manager?}{Leadership}
+While leadership skills are important to everyone, they are especially important for project managers.  the project manager bears special responsibility for orchestrating the whole effort. Their mission is to steer the team toward the project objectives while honouring constraints of scope, schedule, budget, and quality. To do so they must:
+\begin{itemize}
+\item\emph{Maintain a wide-angle view.}  Individual specialists focus deeply on their own tasks; the project manager watches the big picture, anticipates cross-stream dependencies, and highlights looming risks before they bite.
+\item\emph{Clear obstacles.}  Rather than dictating technical solutions, the manager removes blockers, securing resources, negotiating with external stakeholders, or adjusting priorities, so experts can do their best work.
+\item\emph{Cultivate trust in both directions.}  The team must trust the manager's guidance, and the manager must trust the team's expertise. That trust is earned through the same four behaviours outlined above, amplified by transparency in decision-making and a willingness to admit mistakes.
+\item\emph{Make success invisible.}  When project management is effective, progress feels smooth and crises are rare, so the contribution can go unnoticed. Poor management, by contrast, is painfully obvious. Accepting that asymmetry is part of the job.
+\end{itemize}
+
+Good software development project managers, therefore, rely heavily on people skills, blended with broad technical systems thinking.
+
+\section{Project lifecycle}
+\tfaq[1]{0mm}{What is the overall structure of a typical project?}{Project~management}
+Every completed project progresses through a lifecycle: from initial conceptualisation to eventual closure. At each stage of this lifecycle, teams face different concerns and decisions. Understanding these stages helps you focus on the right issues at the right time and anticipate future challenges before they become problematic.
+
+\begin{figure}
+\checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi
+\begin{tikzpicture}[
+    node distance=0.5cm and 0.5cm,
+    every node/.style={draw, rounded corners, minimum width=2.5cm, minimum height=1cm, align=center},
+    arrow/.style={-{Latex}, thick},
+    box/.style={draw, dashed, rounded corners, inner sep=0.5cm}
+]
+
+% Nodes
+\node (initiation) at (0, 0) {Scope/\\Initiation};
+\node (planning) at (4, 1.5) {Planning};
+\node (execution) at (4, -1.5) {Execution/\\Engagement};
+\node (close) at (8, 0) {Close};
+
+% Dashed rectangle around Planning and Execution
+\node[box, fit=(planning)(execution), label=above:Track and Adapt] (track) {};
+
+% Arrows
+\draw[arrow] (initiation) -- (track);
+\draw[arrow] (track) -- (close);
+\draw[arrow] (planning) -- (execution);
+\draw[arrow] (execution) -- (planning);
+
+\end{tikzpicture}
+\caption{Project lifecycle}
+\label{fig:project-lifecycle}
+\end{figure}
+
+Kogon et al. describe the project lifecycle as a five-stage process \citep{Kogon+Blakemore:2024}, as shown in Figure~\ref{fig:project-lifecycle}. In what follows, we summarise each stage and highlight the key decisions, pitfalls, and practices that student teams should consider.
+
+
+\subsection{Project initiation/scope}
+\tfaq[1]{0mm}{What are the main decisions to be made at the start of a project?}{Project~management}
+At the outset, the project must be clearly defined. This includes answering a number of foundational questions:
+\begin{itemize}
+\item What are the project objectives? 
+\item Who are the key stakeholders in this project and how will the project outcome affect them?
+\item What are the priorities if trade-offs are required?
+\item Who is part of the project team?
+\item What constraints (e.g., time, resources, budget, quality) must the team operate under?
+\item What is out of scope for this project?
+\item What does success look like?  How will it be measured?
+\end{itemize}
+Projects often fail because these questions are inadequately addressed. Initial project proposals are frequently overambitious relative to available resources, and failing to identify key stakeholders early can lead to wasted effort and misaligned deliverables. Misunderstanding how success will be evaluated, especially by stakeholders with decision-making power, can lead to disappointment at project completion.
+
+In your group projects, these concerns are just as relevant. You may receive briefs that are intentionally broad or ambitious, and it is your team's responsibility to refine them into realistic, achievable objectives. Functionality will be assessed not only on what your software does, but also on the value it provides to its intended users. If your project involves a real client, these users are real people. Moreover, your assessment will follow detailed marking criteria. Understanding how your project will be graded is essential from day one.
+
+\subsection{Project planning}
+\tfaq[1]{0mm}{What does project planning involve?}{Project~management}
+Planning involves identifying the activities required to achieve the project's objectives, and organising people and resources to carry them out. This means creating a project schedule and determining who does what, when, and how. Planning is difficult because it requires you to predict what is achievable given the available time, effort, and information. However, skipping planning leads to inefficiencies.  Teams risk duplicating effort, missing critical tasks, or working on features that ultimately are not needed.
+
+One critical part of planning is risk management. Projects rarely go exactly as planned, and anticipating what might go wrong helps teams avoid or minimise negative outcomes. Risk management involves:
+
+\begin{enumerate}
+\item \emph{Identifying risks}: Reflect carefully on what could go wrong in the project?  If your team fails to consider a potential risk, you cannot manage it. 
+\item \emph{Analysing risks}: For each identified risk, consider its probability and its potential impact. 
+\item \emph{Risk planning}: High-probability or high-impact risks should be addressed. Finally, risks with high probability or high impact need to be managed.  For example, teams could take actions to avoid certain risks (to reduce the probability), or prepare a contingency plan (to reduce the impact). 
+\end{enumerate}
+If a project contains high-probability, high-impact risks that cannot be managed, it may not be worth pursuing in its current form.
+
+Beyond technical tasks and timelines, you are working with people: people who have their own goals, pressures, and commitments outside your project. A good project plan accounts for these human factors. This includes:
+\begin{itemize}
+\item\emph{A communication plan}: Regular meetings (e.g., weekly at the same time and place), communication tools (e.g., Slack, WhatsApp), and agreements about availability and off-hours.
+\item\emph{A task allocation and review process}: The team needs a clear understanding of how tasks are assigned, completed, and reviewed. Documentation, expectations for code quality (e.g., testing, refactoring), and demo/reporting practices should be agreed upon early.
+\item\emph{Rules for version control}: Consistent use of Git (or equivalent) avoids confusion, merge conflicts, and overwritten work
+\end{itemize}
+
+As the project progresses, your plan will need to evolve. Unanticipated issues will arise, and you will need to adapt your schedule, risk strategy, and working agreements accordingly.
+
+\subsection{Project execution/engagement}
+\tfaq[1]{0mm}{We have a plan.  What are the challenges in getting the plan executed?}{Project~management}
+This phase is about doing the work. The plan is put in to practice, tasks are completed, features are built, and deliverables are produced. However, the execution phase often brings a new challenge: maintaining team engagement.  Initial excitement tends to fade. Team members get busy with other modules or responsibilities. Sometimes even clients become less responsive. In group projects, this disengagement often takes teams by surprise, and it can stall progress.
+
+The most effective way to sustain engagement is to develop a practice of accountability\index{accountability}, built around predictable routines and shared expectations. For example:
+\begin{itemize}
+\item Hold \emph{regular, time-boxed team meetings} (e.g., weekly stand-ups of 30--40 minutes).
+\item Begin your meetings on time, stay on task, and keep it short.
+\item Use a shared project board (e.g., Kanban\index{Kanban}) to track work and guide discussion.
+\item As part of your meeting, have each team member reports on what they committed to, what they have completed, and any obstacles they face.
+\item Task assignments should be made collaboratively, allowing people to choose work that aligns with their interests and strengths.
+\item When problems arise, assign someone (typically the project manager) to clear the path forward.
+\end{itemize}
+
+Avoid behaviours that disrupt accountability:
+\begin{itemize}
+\item Irregular or ad hoc meetings make it hard to coordinate and deliver.  Attendance may be poor.  Deadlines remain unclear.
+\item Waiting around for team members to arrive, perhaps engaging in text conversations with them complaining about London public transport, disrupts the focus of the meeting.  Team members should make every effort to arrive on campus well before the meeting so that the meeting can start on time in spite of minor disruptions.  
+\item Off-topic chatter lengthens meetings and undermines focus.
+\item Excuses or blame distract from the immediate goal: making decisions and moving forward.  The team needs to focus current progress and decisions about next steps.  Accusatory conversations detract from that.  
+\item Top-down task assignment (especially from a self-appointed ``leader'') can breed resentment.
+\item Ignoring obstacles you know to block a recently assigned task's progress sets up the person responsible for failure.   Every team member, and especially a project manager, should aim to anticipate problems and speak up when they can foresee them.
+\end{itemize}
+
+Despite best intentions, teams often struggle to practice accountability because team members take too long to voice their concerns. Sometimes this delay is caused by a misguided attempt to avoid conflict by covering up the truth. However, in many cases, the team is simply slow in recognising that a significant problem exists.  It pays for group project teams to adopt certain agile development practices that promote speedy recognition of delays and other concerns:
+\begin{itemize}
+\item\emph{Assign small tasks}. A task or a bundle of tasks is only ``small enough'' if the person assigned to it can complete the work before the next week. This rule of thumb supports weekly tracking: a task should be completed or reported as incomplete in the next accountability meeting. If it is not done, it suggests that either the task was too large or the team member failed to deliver.  Irrespective of the underlying reason, both situations require discussion. Assuming a weekly 15-hour workload allocation for this module, tasks should generally take no more than 10 hours, with a deadline of 7 days or less.
+\item\emph{Assign vertical tasks}. A vertical task includes all the layers needed to deliver a small, functional improvement, including UI, control logic, helper functions, and data storage. Vertical tasks immediately add value to the software and are usually more independent of one another, reducing the likelihood of delays cascading across the team. In contrast, horizontal tasks, those focused solely on one aspect of the software (e.g., all UI screens), often depend on other layers being in place first.  Horizontal task specification introduces additional risks that delays have knock on effects.
+\item\emph{Discuss and agree what it means for a task to be complete}.  In teams where the members do not have a shared set of expectations of what constitutes a completed task, delivery of work can lead to disappointment.  As a general rule, you should:
+\begin{itemize}
+\item Require each developer to write their own automated tests\index{testing} immediately.  In other words, each team member should write the test code for their own source code.  They must do this before, or immediately after writing the source code.  Tests protect source code against the introduction of bugs: if someone introduces to source code breaking changes, complete automated tests will pick these up forcing the author of problematic code to correct their work.  Without tests, source code breaking changes can be introduced unchallenged.  Procrastination and delegation of testing are both recipes for poor or late testing.
+\item While attaining high code cleanliness and design standards require substantial code inspections and review, it is sensible to take steps to ensure some code cleaning occurs before code is shared.  Teams that do not agree common standards may end up with significant differences in the quality of work of different team members, which can breed resentment.  To avoid this, agree a standard of code cleanliness that each team member can and should achieve in their own work.
+\end{itemize}
+\end{itemize}
+
+Adopting these practices early supports regular progress, early identification of issues, and a healthier team dynamic based on shared expectations and visible contributions.
+
+\subsection{Track and adapt}
+\tfaq[1]{0mm}{Our plan is not working.  What do we do?}{Project~management}
+Ignoring known blockers during planning or handover leads to predictable failures.
+\begin{itemize}
+\item \emph{Scope creep}\index{scope creep}: New feature ideas sneak in, expanding the project beyond what is feasible. This often comes at the expense of code quality or testing.
+\item \emph{Reduced team capacity}\index{reduced team capacity}\index{team size}: If some members disengage or do not engage at all, the remaining workload may become unsustainable. The scope needs to be reduced.
+\item \emph{Technical debt}\index{technical debt}: Features are delivered with incomplete testing or inspection, leaving a backlog of work that must be addressed.
+\item \emph{Disruptive behaviours}\index{disruptive behaviour}: A team member might disregard task boundaries, overwrite others' work, or over-communicate. This may indicate that your working arrangements need to be revised or reinforced.
+\end{itemize}  
+
+These issues typically appear slowly, making them easy to ignore, until they become urgent. That is why tracking progress and reflecting on performance regularly is crucial. Build habits that help your team detect and respond to early warning signs.
+
+\subsection{Project close}
+\tfaq[1]{0mm}{What are the main decisions to be made at the end of a project?}{Project~management}
+In the context of the student group project, the closing phase culminates with submission. However, this stage involves more than simply uploading a file to KEATS: it is a critical part of the project lifecycle that requires careful coordination, attention to detail, and reflection.
+
+Before submitting your work, the team must perform thorough quality control:
+\begin{itemize}
+\item\emph{Review your submission}: Have you included everything required for the examiners to assess the work? Conversely, have you excluded any unnecessary items (e.g., the full Git repository)?
+\item\emph{Verify instructions}: Do the installation and setup instructions work on a fresh machine that has not been configured for development?
+\item\emph{Confirm deployment}: Is the software deployed, seeded with relevant data, and accessible using the required user credentials?
+\end{itemize}
+Preparing and completing the submission is a collective team responsibility.  Therefore, it requires a coordinated team effort: one that requires adequate time to complete.  Beware that ensuring everything works as intended at the point of submission can be surprisingly complex.
+
+\emph{Start submitting early!}  Do not leave submission until the final hours before the deadline. Servers are often under heavy load near submission deadlines and may respond slowly, or fail altogether. Starting early gives your team time to respond to unexpected problems without unnecessary stress.
+
+Once submission is complete, take time to reflect.  Project experience help you develop critical professional skills, including effective communication, collaboration with others, planning, risk management, and decision-making.  Your learning can be maximised via critical self reflection.  Ask yourself:
+\begin{itemize}
+\item What went well in this project?
+\item What challenges arose, and how did you respond?
+\item What would you do differently next time?
+\end{itemize}
+Avoid falling into the trap of assigning blame. While it is natural to feel frustrated if things did not go perfectly, more valuable insights often come from reflecting on your own actions: what you contributed, how you communicated, and how you adapted.
+
+The group projects provide multiple opportunities to learn from your experience.  You will write peer assessments for your team mates.  You will receive feedback  from your peers in the form of the peer assessments they wrote.  You will receive detailed feedback from markers once assessment is complete.  You may also chose to have a constructive debrief with your teammates.  Engage fully with these opportunities. They are designed not just to assess your performance but also to help you learn.
+
+Last but not least, feel free to celebrate the end of your project and your successes.  Recognising what you have achieved together is not only satisfying.  It is a great way to build friendships and connections with fellow students who may be your future colleagues or collaborators.
+
+\section{Communication}
+\tfaq[1]{0mm}{What is the role of communication in project management?}{Project~management}
+The core activity of project management is \emph{communication}\index{communication}.  All the decisions that must be made throughout a project's lifecycle rely first and foremost on good communication. Take scheduling project tasks, for example.  This may seem like an optimisation problem.  However, finding a good solution to the problem is rarely difficult unless the project is particularly large or severely constrained.  Scheduling becomes difficult when different people have a different understanding of a task's expectations, when the people doing the actual work realise the task is much harder than the rest of the team appreciate, or when something goes wrong in the completion of a task but not everyone is aware of the problem or appreciates what it is.  Resolving these issues requires good communication.
+
+This section aims to identify the diverse means of communication you use in the group projects, what you need to communicate via each means, and why it is important.
+
+\subsection{Informal communication}
+\tfaq[1]{0mm}{Do team members need to talk to each others?}{Communication}
+Any project in a small team involves a considerable amount of informal communication.  Whether it is to clarify a detail of a task, to ask or receive some help with a problem, or simply to vent one's frustrations or encourage a team mate, project teams benefit from open communication channels that can be used without too much formality.  
+
+To promote informal communication, you can use a number of approaches and tools.  One approach is to work together in the same room (you can use the labs, but take care not to disturb others using the same space for work).  This allows for the most effortless informal communication, but it does involve some organisation and travel.  Another is to use a messaging and/or video conference service.  There are messaging services that are designed for professionals, or for software engineers in particular, but any tool everyone in the team feels comfortable with is fine.  When relying on messaging, beware that your working hours may not be the working hours of your team mates, and everyone is entitled to their personal time and space.  When using a messaging service, teams should have a conversation about boundaries, such as out-of-hours messaging.
+
+Informal communication \emph{complements} a range of more formal forms of communication.  It cannot be a substitute for the latter.  For example, you should not use your messaging tool or informal chats to make important decisions, or allocate work to someone who does not attend meetings.
+
+\subsection{Team meetings}
+\label{sect:communication:team-meetings}
+\tfaq[1]{0mm}{How do we organise team meetings?}{Team~meetings}
+\index{team~meetings}
+Important discussions and decisions about the direction of the project, including task allocation and holding the team accountable, should be made at a team meeting.  This ensures that everyone in the team has a chance to consider and comment on the decision, there is a clear decision point (rather than an endless discussion in a messaging board), and everyone is informed of the decision.  
+
+A team meeting is a particular type of gathering where the team informs itself about the state of the project and makes key decisions about its future direction.  Other occasions where the team gets together, such as  a brainstorming session, a collaborative coding session, or a presentation, will not be referred to as meetings here.  To be effective, a team meeting needs to be \emph{purposeful}.  It requires everyone's full \emph{participation} and \emph{concentration}.  To achieve this, you will keep your meetings \emph{short} and \emph{on point}.  Key aspects of the process and outcomes need to be \emph{documented in writing}, so that there is a record of the team's decisions.  To achieve this, teams should follow this protocol:
+
+\begin{itemize}
+\item\emph{Scheduling}:  To schedule meetings efficiently, schedule all meetings once at the start of the project by booking a regular time and place (i.e. same time and place each week) at the start of the project.  Ad hoc scheduling of individual meetings makes organising meetings time consuming, and this gets only harder as a term progresses.  Teams that do not schedule their meetings at the outset tend to have a hard time keeping the team engaged, and sometimes fail to organise any meetings.  Your meetings should have a clear start \emph{and end} time.  People can only focus for a limited period of time, and they also need to be able to meet other commitments.  As a general rule, it should be possible to complete a team meeting in 30 minutes, but I recommend scheduling 1-hour slot per meeting to allow for inefficiencies.
+\item\emph{Roles}:  Prior to the meeting, assign one team member to chair the meeting and a second team member to take minutes.  The chairperson will be responsible for guiding the conversation, ensuring all attendees have a equitable chance to participate.  The minute taker is responsible for preparing and distributing the meeting agenda, taking the meeting minutes, and making corrections as necessary.
+\item\emph{Agenda}:  Every meeting should have a clear agenda, written up and shared with all members of the team well in advance of the meeting itself.  This ensures that everyone knows what to expect at the meeting, and can prepare accordingly.  For each agenda topic, consider carefully what outcome you are looking for (e.g. agreement, information, decisions on actions, etc.).  Avoid open-ended discussion topics: these are best handled through preparation outside meetings (see below).  Assign each item to a person or persons responsible for presenting them.  Sometimes, this can be a single person presenting their findings of an information gathering exercise.  Sometimes, every member of the team will be required to report something.  To keep the meeting concise, it is advisable to add timings to each agenda topic (and stick to the timings).  Standing items on the agenda will normally include: approval of the minutes of the previous meeting, a review of the action log (see below), and any other business not already in the agenda (if time permits).
+\item\emph{Preparation}:  The key to an efficient meeting is good groundwork before the meeting.  Consider, for example, deciding what technology stack to use to develop your software.  That decision should consider a range of factors, including the team's training requirements, available tools (e.g. for automated testing, test evaluation, and other build automation tasks), and ease of deployment.  Before considering this decision at a meeting, the team should have collected all necessary information.  Preparation could include all team members trying out the technology stack, and trialling build automation tools and deployment.  Preparation tasks are typically assigned through an action log (see below).
+\item\emph{Attendance}:  Attendance at team meetings is mandatory.  Regular absences preclude a team member from engaging adequately with the team.  As an incentive to attend, get into the habit of recording attendance accurately from the outset.  
+\item\emph{Meeting}:  During the meeting, the team should have a focussed discussion of all agenda items.  It is important to stay on-topic: leave out small talk or anything unrelated to the agenda.  While these other types of conversations are important, they prolong and detract from the meeting.  The chairperson's role is keep the meeting on track.  Often, meetings do not go entire to plan, especially when an agenda item does not resolve itself through conversation.  In those situations, the discussion should focus on identifying what actions will help resolve the matter in the future, perhaps by the next meeting.  The chairperson is typically also responsible for holding participants accountable for the  actions they are due to deliver on.  The chairperson must also ensure everyone has a fair chance to participate and this may involve calling on dominant voices to listen to others and on quiet people for their views and concerns.
+\item\emph{Minutes}:  The meeting minutes are the definite record of the outcome of the meeting.  It typically includes all decisions that were made during meeting, ideally accompanied by the underlying rationale.  Where a decision involves significant risk or controversy, alternative options and their rationale should be documented too.  The minute taker is responsible for writing the minutes in a timely manner, ideally during and immediately after the meeting, sharing them with the rest of the team (you will be using Team Feedback for this), and acting on requests for corrections.  The team members are responsible for reading the minutes and pointing out any errors.
+\item\emph{Action log}:  Alongside the minutes, the minute taker should also maintain an action log of tasks arising from your meetings.  Whenever an agenda item is not resolved into a decision or agreement, more preparation work will normally be required.  These should be compiled into a ``To Do'' list for the team.  In essence, an action log is just a list of names/descriptions of actions, the person or people responsible for completion, the action's deadlines, its status, and possibly some notes (containing information such as  reference to the minutes of the meeting in which the action was created).   It is advisable to use a single action list for the entire project, so that you can keep track of all outstanding actions in a single list.
+\end{itemize}
+
+\subsection{Project scheduling and monitoring}
+\tfaq[1]{0mm}{How do you communicate project plans?}{Project~management}
+The bulk the work associated with your software engineering group project consists of software development/engineering tasks.  These tasks are distinct from the actions arising from meetings: they are substantial pieces of work that contribute directly to the project objective and may require careful scheduling and monitoring.  A typical software development task involves source code development, test code development, and quality control.  Delays in one task can impact the work of others.  In the group projects you will be doing, a simple action log is a somewhat overly simplistic way of managing such tasks.
+
+\begin{fullwidth}
+\begin{figure*}[ht]
+\caption{A sample Kanban board}
+\label{fig:sample-kanban}
+\begin{center}
+\begin{tikzpicture}[
+    column/.style={
+        draw, fill=gray!10, minimum width=3.5cm, minimum height=7cm,
+        inner sep=0pt, outer sep=0pt
+    },
+    card/.style={
+        draw, fill=white, rounded corners, drop shadow,
+        text width=2.7cm, minimum height=1cm,
+        align=left, font=\footnotesize, inner sep=5pt
+    },
+    node distance=0.5cm
+]
+
+% Columns
+\node[column] (backlog) at (0,0) {};
+\node[column, right=of backlog] (inprogress) {};
+\node[column, right=of inprogress] (review) {};
+\node[column, right=of review] (done) {};
+
+% Column Titles with padding above
+\node[font=\bfseries] at (backlog.north) [yshift=-1.2em] {Backlog};
+\node[font=\bfseries] at (inprogress.north) [yshift=-1.2em] {In Progress};
+\node[font=\bfseries] at (review.north) [yshift=-1.2em] {Under Review};
+\node[font=\bfseries] at (done.north) [yshift=-1.2em] {Done};
+
+% Cards in Backlog
+\node[card, below=1.2cm of backlog.north] (card1) {
+  \textbf{\#LIB-101} \\ 
+  As a user, I want to reset my library password via email.\\
+  \textit{3 pts}
+};
+\node[card, below=0.5cm of card1] (card2) {
+  \textbf{\#LIB-102} \\ 
+  As a librarian, I want to generate overdue book reports.\\
+  \textit{5 pts}
+};
+
+% Cards in Progress
+\node[card, below=1.2cm of inprogress.north] (card3) {
+  \textbf{\#LIB-103} \\ 
+  As a user, I want to search for books by genre and author.\\
+  \textit{8 pts}
+};
+
+% Cards in Review
+\node[card, below=1.2cm of review.north] (card4) {
+  \textbf{\#LIB-104} \\ 
+  As an admin, I want to manage user roles and permissions.\\
+  \textit{5 pts}
+};
+
+% Cards in Done
+\node[card, below=1.2cm of done.north] (card5) {
+  \textbf{\#LIB-105} \\ 
+  As a user, I want to view my current loans and due dates.\\
+  \textit{2 pts}
+};
+\end{tikzpicture}
+\end{center}
+\end{figure*}
+\end{fullwidth}
+
+One common approach is to use a Kanban board.  In a Kanban board, tasks are written on cards placed on a board with several labelled columns.  In agile software development projects, the cards typically contain user stories describing a task.  The column a card is in represents the status of the task.  Cards move from left to right.  Thus, the column sequence used in the diagram represents the team's process.  Figure~\ref{fig:sample-kanban} illustrates this idea with an example Kanban board for a simple library application.  Here, the software development process maintains a backlog of considered tasks.  Allocated tasks have two active stages -- ``In Progress'' and ``Under Review'' to complete -- before they are considered done. 
+
+When using such tools, take care to communicate its contents clearly.  When using a Kanban board, you need to have a clear understanding of what is required for a card to move from one column to the next.  Adding content into these tools is only half the work (and the least useful part).  Make sure that the team regularly review the information contained in them to guide future planning, and to adjust your project's course as necessary.
+
+\subsection{Version control}
+\label{sect:communication:version-control}
+\tfaq[1]{0mm}{In what ways are version control tools communication tools?}{Version~control}
+In team based software development, version control tools provide the means to share code and information about that code.  In this module, we will be using git and GitHub for version control.  Version control tools provide an important means of communication.
+
+As you develop code, it is important that you share your work with the rest of team immediately by making commits and pushing them to the remote repository.  This signals to team mates that you are working on a task.  On the days that you work on the project's code base, you should be making and pushing at least one commit per day (ideally more if you are doing anything substantial).
+
+\begin{itemize}
+\item\emph{Commit messages}:  A commit message in a Git repository should clearly and concisely communicate the purpose and scope of the changes introduced in that commit.  It serves as a historical record for other developers (and your future self), helping to explain what was changed and why.  A well-written commit message typically begins with a short, imperative-style summary (e.g., ``Fix broken image rendering on mobile'') no longer than 50 characters, followed optionally by a more detailed explanation in the body if needed.  The message should focus on the intent of the change rather than the technical details of how it was implemented, as the code itself shows the ``how''. Good commit messages improve collaboration, make debugging and reviewing easier, and enable meaningful version history and change logs.
+\item\emph{Issues}:  If you are using them, a Git issue should clearly describe a problem, feature request, or task in a way that is understandable to others who may work on it or review it later.  It should include a concise and descriptive title that summarises the issue, followed by a detailed explanation that provides necessary context. For bugs, this typically includes steps to reproduce the problem, expected vs. actual behaviour, relevant error messages or logs, and environment details.  For feature requests or tasks, the issue should describe the motivation, desired outcome, and any constraints or dependencies.  A well-written issue helps prioritise work, facilitates effective collaboration, and ensures that team members have a shared understanding of the problem or goal being addressed.
+\item\emph{Pull requests}:  A Git pull request is a request to merge a development branch into the main branch.  The request should clearly communicate the purpose, scope, and context of the proposed changes to facilitate efficient review and collaboration. The title should be concise but descriptive, summarising what the pull request does (e.g., ``Add pagination to search results'').  The request may reference the task or user story it implements.  The description should explain why the changes are being made, referencing related issues or tickets when applicable, and outline what has been changed at a high level.  If relevant, it should include changes that could be deemed out of scope of the original task, known limitations, or any points requiring special attention during review.  A good pull request helps reviewers understand the intent behind the changes, reduces back-and-forth clarification, and ensures the code can be confidently merged and maintained.
+\end{itemize}
+
+In the group projects, we will be using the commit history to track coding activity and contributions.  Therefore, \emph{you must preserve the commit history of your repository at all times}.  Teams must not perform hard resets, rebase, reflog + reset, branch deletion, or similar operations on their repository.  You can revert a commit as that operation preserves the commit history.
+
+The most critical operation in a shared repository is that of merging branches.  When merging two branches in a Git repository, conflicts can occur if the same lines in a file were changed differently on both branches, requiring manual resolution.  Additionally, unintended changes may be introduced if one branch is outdated or not properly tested, leading to broken functionality or regressions.  If the merge is forced or not reviewed carefully, it may also overwrite or discard important work from one of the branches.  Therefore, every team needs to agree on a carefully designed process -- one that includes appropriate checks and balances -- to merge development work from a branch with the rest of the code.
+
+\subsection{Code}
+\tfaq[1]{0mm}{In what ways is code a communication tool?}{Code~quality}
+The ratio of the amount of time software engineers spend reading code vs. writing code is said to exceed 10:1 \citep{Martin:2009}.  When working in a team, much of that code will be written by others.  Thus, code is a form of communication in its own right.  In a larger project, it is important to invest some of your time to write clean code\index{code~cleanliness} that you and your teammates are able to make sense of throughout the development period.  
+
+The importance of clean code extends to automated test suites.  As these test suites prescribe how the code is expected to behave, developers can use these to understand the software's specifications.
+
+Writing clean code in a group project requires a concerted effort from the whole team.  It takes somewhat more effort to identify the cleanliness of an individual developer's code compared to the functionality that that developer contributed.  When time is limited, individual developers may be tempted to cut corner in an effort to meet deadlines and report good progress at meetings.  To ensure high code cleanliness standards are maintained throughout the code, the team's project management should include the following:
+\begin{itemize}
+\item At the outset of the project, discuss and agree the \emph{code cleanliness standards} expects to maintain throughout the development period.  These standards should be specified in writing.  The team must also discuss and agree \emph{a process} to enforce the standards agreed by the team.  Normally, such a process will include code reviews/inspections at specific times.  A good time to perform a code review is when code is ready to be merged (e.g. when a pull request is raised).
+\item During the project, enforce the standards and the process.  During this stage, you must practice \emph{accountability}\index{accountability}.  The team will not be able to attain the expected standards if substandard code is allowed to pass inspections, or if team members are allowed to deviate from the process.  If you have concerns, speak up and use the four foundational behaviours as a guide.
+\end{itemize}
+
+\section{Waste}
+\tfaq[1]{0mm}{How do we avoid wasting time and resources in our project?}{Project~management}
+Even when everyone in your team seems suitably engaged and active, many team members find themselves disappointed with the results their team is delivering.  It can be temptingly convenient to blame this on your team mates.  Once you have come to that conclusion, a typical response is either to push them to do more work, or resent them for not being good enough.  A common cause of poor productivity, however, is \emph{waste}.\index{waste}  Therefore, productivity problems are best addressed by seeking and removing causes of waste. 
+
+Typical causes of waste include \citep{Hooker+Moir:2022}:
+\begin{itemize}
+\item \emph{Software defects}, such as bugs or source code that does not behave as required.  Undetected software defects become increasingly intractable as a code base grows.  This is especially problematic when software defects accidentally are introduced into a module as a developer is working on a different module or refactoring old code.  Writing automated tests\index{testing} as soon as possible can help avoid many defects.
+\item \emph{Relearning} something you had already learned previously is duplication of work, and therefore wasteful.  You may need to relearn something if you stop a task, and pick it up again at a later date.   If you delay testing, you may need to relearn the source code that requires testing.  If you delay refactoring, you may need to relearn the source code to be refactored.  
+\item \emph{Task switching} is necessary when a developer is working on multiple tasks simultaneously.  Some teams or individuals are tempted to take on more tasks, perhaps because they feel they are not producing enough work or because they struggle to finish work.  However, adding more tasks to your ``To Do'' is not going to help you complete tasks any faster.  On the contrary, every time you switch tasks, you need to switch contexts and refocus.  Some relearning may be needed.  Managing your workload and priorities also becomes harder, and this can cause stress.  Ultimately, you will become less productive.  Avoid this by only taking on a new task after finishing another.
+\item \emph{Incomplete or partially done work} provides no value to end users.  It is not generally awarded marks in the marking scheme.  Effort expended on work that is not completed is wasted, and might have been put to better use on tasks that do add value.  Avoid incomplete code by assigning small, vertical tasks.
+\item \emph{Delays} occur when a task needs to be put on hold.  A common reason for a task is be blocked is late delivery of a dependency.  Delays create waste due to relearning and task switching.  They also increase the risk that the task will not be completed.  Avoid delays by limiting dependencies between 
+\item \emph{Handoffs} of tasks -- i.e. reallocating work to others in the team -- creates extra work.  The extra work includes handoff communication, relearning, and task switching.  It is best avoided by keeping tasks as independent of one another, and by keeping them small in scope.
+\item \emph{Excessive features} are software features that are not required, or beyond the capacity of the team to deliver.  Extra features increase the amount and complexity of source code that needs to be built, maintained, refactored, and tested.  But the effort needed to produce the source is not readily available to the team, so something (e.g. code quality or robustness of features) needs to be sacrificed.  This tends to be wasteful because the value gained is generally lower than that which has been lost.  Avoid excessive features by developing the software in small increments, each one adding something of value.
+\end{itemize}
+If you have concerns your team productivity, reflect on your ways of working. Try to identify wasteful practices, so that you can eliminate them.

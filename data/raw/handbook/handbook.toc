@@ -1,0 +1,215 @@
+\babel@toc {UKenglish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Why a handbook?}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}How to use this handbook}{9}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Study guide}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Aims and objectives}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Module structure}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Assessment}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Peer assessments}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Individual group project marks}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Effective team size}{15}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Mitigating circumstances}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Reassessment: resits and replacements}{17}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Policy on generative AI}{18}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Workload}{19}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Schedule}{20}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Tools}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overiew}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}UNIX CLI}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Code editor}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Python}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Version control}{24}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}GitHub.com and GitHub.kcl.ac.uk}{24}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Git/GitHub configuration}{25}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Rules of engagement}{26}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Team Feedback}{27}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Account data}{28}{subsection.3.6.1}%
+\contentsline {paragraph}{Registration}{28}{paragraph*.7}%
+\contentsline {paragraph}{Sensitive data}{28}{paragraph*.8}%
+\contentsline {subsection}{\numberline {3.6.2}Team formation}{28}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Meeting scheduling}{29}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Meeting records}{29}{subsection.3.6.4}%
+\contentsline {paragraph}{How?}{29}{paragraph*.9}%
+\contentsline {paragraph}{Who?}{29}{paragraph*.10}%
+\contentsline {paragraph}{When?}{29}{paragraph*.11}%
+\contentsline {paragraph}{Scope?}{30}{paragraph*.12}%
+\contentsline {paragraph}{Mode of attendance}{30}{paragraph*.13}%
+\contentsline {paragraph}{Attendance records}{30}{paragraph*.14}%
+\contentsline {paragraph}{Agenda}{31}{paragraph*.15}%
+\contentsline {paragraph}{Minutes}{31}{paragraph*.16}%
+\contentsline {subsection}{\numberline {3.6.5}GitHub activity data}{31}{subsection.3.6.5}%
+\contentsline {paragraph}{Repository registration}{31}{paragraph*.17}%
+\contentsline {paragraph}{Code contribution data}{32}{paragraph*.18}%
+\contentsline {paragraph}{Missing data}{32}{paragraph*.19}%
+\contentsline {paragraph}{Falsified code activity}{34}{paragraph*.20}%
+\contentsline {subsection}{\numberline {3.6.6}Pair programming and collaborative coding sessions}{34}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Trello board data}{35}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3.6.8}Peer assessments}{35}{subsection.3.6.8}%
+\contentsline {subsection}{\numberline {3.6.9}Marks and feedback}{35}{subsection.3.6.9}%
+\contentsline {section}{\numberline {3.7}Overleaf}{36}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Generic productivity tools}{37}{section.3.8}%
+\contentsline {chapter}{\numberline {4}General expectations}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}First week of teaching}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Independent study}{40}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Tutorials}{41}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Small group tutorials}{42}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Large group tutorials}{42}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Working in groups}{43}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Core expectations}{43}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Feedback and peer assessments}{44}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Project management}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}What makes project management difficult?}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Leadership}{48}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}What is leadership?}{48}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Building informal authority through four foundational behaviours}{49}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}The role of the project manager}{50}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Project lifecycle}{51}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Project initiation/scope}{51}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Project planning}{52}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Project execution/engagement}{53}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Track and adapt}{55}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Project close}{56}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Communication}{57}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Informal communication}{57}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Team meetings}{58}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Project scheduling and monitoring}{60}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Version control}{61}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Code}{62}{subsection.5.5.5}%
+\contentsline {section}{\numberline {5.6}Waste}{63}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Software quality assurance}{67}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Clean code}{67}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Naming}{67}{subsection.6.1.1}%
+\contentsline {paragraph}{Use meaningful and descriptive names for variables, functions, classes, and files. Names must make meaningful distinctions.}{67}{paragraph*.21}%
+\contentsline {paragraph}{Avoid abbreviations unless they are widely understood (e.g., \texttt {id}, \texttt {url}).}{68}{paragraph*.22}%
+\contentsline {paragraph}{Use consistent naming conventions.}{68}{paragraph*.23}%
+\contentsline {paragraph}{Choose pronounceable names to ease verbal communication within the team.}{68}{paragraph*.24}%
+\contentsline {paragraph}{Avoid misleading names that suggest incorrect behaviour or data type.}{68}{paragraph*.25}%
+\contentsline {subsection}{\numberline {6.1.2}Functions}{69}{subsection.6.1.2}%
+\contentsline {paragraph}{Functions should be small}{69}{paragraph*.26}%
+\contentsline {paragraph}{Functions should do one thing, and do it well.}{69}{paragraph*.27}%
+\contentsline {paragraph}{Function names should clearly state their purpose and side effects.}{69}{paragraph*.28}%
+\contentsline {paragraph}{Avoid side effects unless they are intentional and clearly documented.}{70}{paragraph*.29}%
+\contentsline {paragraph}{Avoid deeply nested functions.}{70}{paragraph*.30}%
+\contentsline {paragraph}{Functions should have as few parameters as possible.}{70}{paragraph*.31}%
+\contentsline {paragraph}{Use default arguments or object parameters when appropriate.}{71}{paragraph*.32}%
+\contentsline {subsection}{\numberline {6.1.3}Code structure}{71}{subsection.6.1.3}%
+\contentsline {paragraph}{Organise code into logical, cohesive modules.}{71}{paragraph*.33}%
+\contentsline {paragraph}{Do not repeat yourself. Write DRY code.}{71}{paragraph*.34}%
+\contentsline {paragraph}{Keep related functions and data close together.}{72}{paragraph*.35}%
+\contentsline {paragraph}{Use consistent indentation and formatting throughout the codebase.}{72}{paragraph*.36}%
+\contentsline {paragraph}{Limit the length of source files. Split large files into smaller ones when needed.}{72}{paragraph*.37}%
+\contentsline {paragraph}{Limit the number of files in a directory. Organise a directory into subdirectories when needed.}{72}{paragraph*.38}%
+\contentsline {paragraph}{Place higher-level concepts above lower-level details in source files.}{73}{paragraph*.39}%
+\contentsline {subsection}{\numberline {6.1.4}Comments}{73}{subsection.6.1.4}%
+\contentsline {paragraph}{Document public classes, methods, and functions, ideally in a format suitable for automated documentation generation tools.}{73}{paragraph*.40}%
+\contentsline {paragraph}{Write comments only when the code cannot be made self-explanatory.}{73}{paragraph*.41}%
+\contentsline {paragraph}{Avoid redundant comments that restate what the code already expresses.}{74}{paragraph*.42}%
+\contentsline {paragraph}{Use comments in the body of the code to explain \emph {why} something is done, not \emph {what} is done.}{74}{paragraph*.43}%
+\contentsline {paragraph}{Keep comments up to date. Delete outdated or incorrect comments.}{74}{paragraph*.44}%
+\contentsline {paragraph}{Remove noise, such as "TODO" comments and commented out code.}{74}{paragraph*.45}%
+\contentsline {subsection}{\numberline {6.1.5}Formatting}{75}{subsection.6.1.5}%
+\contentsline {paragraph}{Use consistent spacing, indentation, and bracket placement.}{75}{paragraph*.46}%
+\contentsline {paragraph}{Use blank lines to separate logically distinct sections of code.}{75}{paragraph*.47}%
+\contentsline {paragraph}{Group related code together and separate unrelated code.}{76}{paragraph*.48}%
+\contentsline {paragraph}{Keep line lengths reasonable.}{76}{paragraph*.49}%
+\contentsline {subsection}{\numberline {6.1.6}Error handling and control flow}{76}{subsection.6.1.6}%
+\contentsline {paragraph}{Use exceptions rather than error codes where possible.}{76}{paragraph*.50}%
+\contentsline {paragraph}{Avoid deeply nested code by returning early when conditions are not met.}{77}{paragraph*.51}%
+\contentsline {paragraph}{Handle all expected error conditions gracefully and clearly.}{77}{paragraph*.52}%
+\contentsline {subsection}{\numberline {6.1.7}Testing Considerations}{77}{subsection.6.1.7}%
+\contentsline {paragraph}{Write code that is easy to test (e.g., avoid global state).}{77}{paragraph*.53}%
+\contentsline {paragraph}{Design small, independent units that can be tested in isolation.}{78}{paragraph*.54}%
+\contentsline {paragraph}{Keep test code clean and readable, following the same standards as production code.}{78}{paragraph*.55}%
+\contentsline {subsection}{\numberline {6.1.8}Practices}{78}{subsection.6.1.8}%
+\contentsline {paragraph}{Remove dead code and unused variables promptly.}{78}{paragraph*.56}%
+\contentsline {paragraph}{Refactor code continuously to improve clarity and structure.}{79}{paragraph*.57}%
+\contentsline {paragraph}{Use tools such as linters and formatters to enforce coding standards.}{79}{paragraph*.58}%
+\contentsline {paragraph}{Perform regular code reviews in addition to code inspections to maintain code quality.}{79}{paragraph*.59}%
+\contentsline {section}{\numberline {6.2}Principles of good design}{79}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Modularity and decomposition}{79}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Cohesion and separation of concerns}{80}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Minimise unnecessary complexity}{80}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Coupling and component interactions}{81}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Software testing}{81}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Automated vs manual testing}{81}{subsection.6.3.1}%
+\contentsline {paragraph}{Manual testing}{81}{paragraph*.60}%
+\contentsline {paragraph}{Automated testing}{82}{paragraph*.61}%
+\contentsline {paragraph}{Manual testing instead of automated testing?}{82}{paragraph*.62}%
+\contentsline {subsection}{\numberline {6.3.2}Evaluating test quality}{82}{subsection.6.3.2}%
+\contentsline {paragraph}{White-box testing and code coverage}{82}{paragraph*.63}%
+\contentsline {paragraph}{Black-box testing}{83}{paragraph*.64}%
+\contentsline {subsection}{\numberline {6.3.3}Ensuring Comprehensive Test Suites}{83}{subsection.6.3.3}%
+\contentsline {paragraph}{Who?}{83}{paragraph*.65}%
+\contentsline {paragraph}{When?}{84}{paragraph*.66}%
+\contentsline {paragraph}{How?}{84}{paragraph*.67}%
+\contentsline {chapter}{\numberline {7}Small group project}{85}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Group allocation}{85}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Approach}{85}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Rationale}{86}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Prerequisites to participate}{87}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Project schedules}{88}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Six week schedule}{89}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Four week schedule}{91}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Three/Two week schedule}{93}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}General considerations}{94}{subsection.7.3.4}%
+\contentsline {paragraph}{Assessment}{94}{paragraph*.70}%
+\contentsline {paragraph}{Schedule start dates}{95}{paragraph*.71}%
+\contentsline {paragraph}{Default schedule}{95}{paragraph*.72}%
+\contentsline {paragraph}{Changing schedules}{96}{paragraph*.73}%
+\contentsline {section}{\numberline {7.4}Assignment}{96}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Technology and tools}{96}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Technology constraints}{96}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Tools}{97}{subsection.7.5.2}%
+\contentsline {section}{\numberline {7.6}Project management approach}{97}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Deliverables}{98}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Assessment}{98}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Team marking criteria}{98}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Team marking scheme}{99}{subsection.7.8.2}%
+\contentsline {paragraph}{Band I: basic project requirements (0--20\%)}{99}{paragraph*.77}%
+\contentsline {paragraph}{Band II: requirements for an adequate team submission (20--40\%)}{100}{paragraph*.78}%
+\contentsline {paragraph}{Band III: requirements for a fair team submission (40--60\%)}{101}{paragraph*.79}%
+\contentsline {paragraph}{Band IV: requirements for a (very) good team submission (60--80\%)}{102}{paragraph*.80}%
+\contentsline {paragraph}{Band V: requirements for an exceptional team submission (80--100\%)}{104}{paragraph*.81}%
+\contentsline {subsection}{\numberline {7.8.3}Major mark correction}{105}{subsection.7.8.3}%
+\contentsline {subsection}{\numberline {7.8.4}Minor mark redistribution}{107}{subsection.7.8.4}%
+\contentsline {subsection}{\numberline {7.8.5}Peer assessments}{108}{subsection.7.8.5}%
+\contentsline {chapter}{\numberline {8}Major group project}{111}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Group allocation}{111}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Assignment}{112}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Self-proposed project}{112}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Client-proposed project}{113}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Self-proposed client project}{114}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Academic-proposed project}{114}{subsection.8.2.4}%
+\contentsline {section}{\numberline {8.3}Technology constraints}{114}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Project management approach}{116}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Deliverables}{117}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Assessment}{119}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Team marking scheme}{119}{subsection.8.6.1}%
+\contentsline {paragraph}{Band I: 0--20\%}{119}{paragraph*.82}%
+\contentsline {paragraph}{Band II: 20--40\%}{121}{paragraph*.83}%
+\contentsline {paragraph}{Band III: 40--60\%}{122}{paragraph*.84}%
+\contentsline {paragraph}{Band IV: 60--80\%}{123}{paragraph*.85}%
+\contentsline {paragraph}{Band V: 80--100\%}{125}{paragraph*.86}%
+\contentsline {subsection}{\numberline {8.6.2}Major mark correction}{126}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Minor mark redistribution}{126}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}Peer assessments}{126}{subsection.8.6.4}%
+\contentsline {chapter}{\numberline {A}Team charter checklist}{129}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Code inspection checklist}{133}{appendix.B}%
+\contentsline {chapter}{\numberline {C}UNIX Command Line Quick Reference}{137}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Files and Directories}{137}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Managing Access Rights}{137}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Managing Processes}{138}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Searching with grep}{138}{section.C.4}%
+\contentsline {section}{\numberline {C.5}Redirection and Pipes}{138}{section.C.5}%
+\contentsline {chapter}{\numberline {D}Git Command Quick Reference}{139}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Repository Setup}{139}{section.D.1}%
+\contentsline {section}{\numberline {D.2}Inspecting State}{139}{section.D.2}%
+\contentsline {section}{\numberline {D.3}Staging and Committing}{139}{section.D.3}%
+\contentsline {section}{\numberline {D.4}Branches}{139}{section.D.4}%
+\contentsline {section}{\numberline {D.5}Working with Remotes}{139}{section.D.5}%
+\contentsline {chapter}{Bibliography}{141}{appendix*.88}%
+\contentsline {chapter}{Frequently asked questions}{143}{appendix*.89}%
+\contentsline {chapter}{List of acronyms}{153}{appendix*.90}%
+\contentsfinish 

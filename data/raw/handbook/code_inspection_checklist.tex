@@ -1,0 +1,76 @@
+\chapter{Code inspection checklist}
+\tfaq[1]{0mm}{Against what criteria should code cleanliness be assessed?}{Code~quality}
+The following checklist provides a set of practical guidelines for writing clean, maintainable code in your software engineering group project.  These principles are summarised from Robert C. Martin's \textit{Clean Code} textbook \citep{Martin:2009}.  You can use this checklist in your team's code inspections.  Alternatively, select a subset of these principles for code inspections and leave a broader range for code reviews.
+\\
+
+\noindent\textbf{Naming}
+\begin{itemize}
+  \item Use meaningful and descriptive names for variables, functions, classes, and files.  Names must make meaningful distinctions.
+  \item Avoid abbreviations unless they are widely understood (e.g., \texttt{id}', `\texttt{url}').
+  \item Use consistent naming conventions (e.g.: \texttt{snake\_case} for variables and functions and \texttt{PascalCase} for classes).
+  \item Choose pronounceable names to ease verbal communication within the team.
+  \item Avoid misleading names that suggest incorrect behaviour or data type.
+\end{itemize}
+
+\noindent\textbf{Functions}
+\begin{itemize}
+  \item Functions should be small (ideally 5 -- 15 lines).
+  \item Functions should do one thing, and do it well.
+  \item Function names should clearly state their purpose and side effects.
+  \item Avoid side effects unless they are intentional and clearly documented.
+  \item Avoid deeply nested functions.
+  \item Prefer fewer function parameters; avoid more than 3 where possible.
+  \item Use default arguments or object parameters when appropriate.
+\end{itemize}
+
+\noindent\textbf{Code structure}
+\begin{itemize}
+  \item Organise code into logical, cohesive modules.
+  \item Do not repeat yourself.  Write DRY code.
+  \item Keep related functions and data close together.
+  \item Use consistent indentation and formatting throughout the codebase.
+  \item Limit the length of source files.  Split large files into smaller ones when needed.
+  \item Place higher-level concepts above lower-level details in source files.
+\end{itemize}
+
+\noindent\textbf{Comments}
+\begin{itemize}
+  \item Document public classes, methods, and functions, ideally in a format suitable for automated documentation generation tools.
+  \item Write comments only when the code cannot be made self-explanatory.
+  \item Avoid redundant comments that restate what the code already expresses.
+  \item Use comments in the body of the code to explain \emph{why} something is done, not \emph{what} is done.
+  \item Keep comments up to date.  Delete outdated or incorrect comments.
+  \item Remove noise, such as "TODO" comments and commented out code.
+\end{itemize}
+
+\noindent\textbf{Formatting}
+\begin{itemize}
+  \item Use consistent spacing, indentation, and bracket placement.
+  \item Use blank lines to separate logically distinct sections of code.
+  \item Group related code together and separate unrelated code.
+  \item Keep line lengths reasonable (typically under 100 characters).
+\end{itemize}
+
+\noindent\textbf{Error handling and control flow}
+\begin{itemize}
+  \item Use exceptions rather than error codes where possible.
+  \item Avoid deeply nested code; return early when conditions are not met.
+  \item Handle all expected error conditions gracefully and clearly.
+\end{itemize}
+
+\noindent\textbf{Testing Considerations}
+\begin{itemize}
+  \item Write code that is easy to test (e.g., avoid global state).
+  \item Design small, independent units that can be tested in isolation.
+  \item Keep test code clean and readable, following the same standards as production code.
+\end{itemize}
+
+\noindent\textbf{Practices}
+\begin{itemize}
+  \item Remove dead code and unused variables promptly.
+  \item Refactor code continuously to improve clarity and structure.
+  \item Use tools such as linters and formatters to enforce coding standards.
+  \item Perform regular code reviews in addition to code inspections to maintain code quality.
+\end{itemize}
+
+\noindent\emph{Note:} Clean code is not just about writing code that works. It is about writing code that can be easily understood, maintained, and extended by your team and future developers.

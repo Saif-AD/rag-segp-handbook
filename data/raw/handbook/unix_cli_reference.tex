@@ -1,0 +1,70 @@
+\chapter{UNIX Command Line Quick Reference}
+
+\noindent\textbf{Conventions.} Words in UPPERCASE (e.g., \texttt{FILE}, \texttt{DIR}, \texttt{PID}, \texttt{USER}) are placeholders.
+
+\section{Files and Directories}
+
+\begin{itemize}
+  \item \texttt{pwd} -- print the current working directory.
+  \item \texttt{ls} -- list files in the current directory.
+  \item \texttt{ls -l} -- list files in long format (with permissions, owner, size, date).
+  \item \texttt{ls -a} -- show hidden files as well.
+  \item \texttt{cd DIR} -- change to directory DIR.
+  \item \texttt{cd ..} -- go up one directory.
+  \item \texttt{touch FILE} -- create an empty file or update its timestamp.
+  \item \texttt{cp SOURCE DEST} -- copy file.
+  \item \texttt{cp -r DIR1 DIR2} -- copy a directory and its contents.
+  \item \texttt{mv SOURCE DEST} -- move or rename a file or directory.
+  \item \texttt{rm FILE} -- remove a file.
+  \item \texttt{rm -r DIR} -- remove a directory and its contents (destructive).
+  \item \texttt{cat FILE} -- display file contents.
+  \item \texttt{less FILE} -- view file contents one page at a time.
+\end{itemize}
+
+\section{Managing Access Rights}
+
+\begin{itemize}
+  \item \texttt{ls -l} -- shows file permissions in the first column (r=read, w=write, x=execute).
+  \item \texttt{chmod MODE FILE} -- change permissions.  
+        Example: \texttt{chmod 644 FILE} sets read/write for owner, read-only for others.  
+        Example: \texttt{chmod +x FILE} adds execute permission.
+  \item \texttt{chown USER FILE} -- change ownership of FILE to USER (requires privileges).
+  \item \texttt{chgrp GROUP FILE} -- change group ownership of FILE.
+\end{itemize}
+
+\section{Managing Processes}
+
+\begin{itemize}
+  \item \texttt{ps} -- list running processes for the current shell.
+  \item \texttt{ps aux} -- list all processes with details.
+  \item \texttt{top} -- interactive view of processes and resource usage.
+  \item \texttt{kill PID} -- terminate the process with process ID PID.
+  \item \texttt{kill -9 PID} -- forcefully terminate PID.
+\end{itemize}
+
+\section{Searching with grep}
+
+\begin{itemize}
+  \item \texttt{grep PATTERN FILE} -- search for PATTERN in FILE.
+  \item \texttt{grep -i PATTERN FILE} -- case-insensitive search.
+  \item \texttt{grep -r PATTERN DIR} -- search recursively in a directory.
+  \item \texttt{grep -n PATTERN FILE} -- show matching line numbers.
+  \item \texttt{grep -v PATTERN FILE} -- show lines that do not match.
+  \item \texttt{grep -E "PAT1|PAT2" FILE} -- search for multiple patterns using extended regex.
+\end{itemize}
+
+\section{Redirection and Pipes}
+
+\begin{itemize}
+  \item \texttt{COMMAND > FILE} -- redirect standard output to FILE (overwrite).
+  \item \texttt{COMMAND >> FILE} -- append standard output to FILE.
+  \item \texttt{COMMAND < FILE} -- use FILE as standard input.
+  \item \texttt{COMMAND 2> FILE} -- redirect errors (stderr) to FILE.
+  \item \texttt{COMMAND1 | COMMAND2} -- send the output of COMMAND1 as input to COMMAND2 (pipe).
+  \item \texttt{COMMAND1 | grep PATTERN} -- filter output of COMMAND1 for lines matching PATTERN.
+  \item \texttt{COMMAND1 | less} -- view long output one page at a time.
+\end{itemize}
+
+\medskip
+These commands form the backbone of everyday UNIX usage. For details, see the
+manual pages with \texttt{man COMMAND}.

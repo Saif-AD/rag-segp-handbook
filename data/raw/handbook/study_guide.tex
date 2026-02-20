@@ -1,0 +1,216 @@
+\chapter{Study guide}
+\label{ch:study-guide}
+
+\section{Aims and objectives}
+\tfaq[1]{0mm}{What are the aims and objectives of the Software Engineering Group Project module?}{General~questions}
+\marginnote[20mm]{\newthought{Further reading}: On KEATS, navigate to \emph{Module organisation $\rightarrow$ Learning outcomes} for a comprehensive list of the formal learning outcomes of this module.}
+The \ac{SEG} aims to meet certain important learning outcomes\index{learning~outcomes} imposed by the British Computer Society (the UK's professional body of Computer Scientists) that are critical to a professional career in Informatics.  This section explains in broad terms what the purpose of this module is.
+
+Virtually all Computer Science work involves other people.  Software systems are typically developed \emph{by} teams, often multi-disciplinary ones, \emph{for} clients and end-users, \emph{with the support} of people who provide financial support, support in-kind, or access to resources, and \emph{with consideration} of people affected by the change the system will bring.  Indeed, often the main challenges in software engineering stem from humans, not technology \citep{DeMarco+Lister:2013}.  Therefore, this module is, first and foremost, about working with other people and the challenges that brings.  You are not being assessed on what you can produce individually, but on what you can contribute in collaboration with fellow students!
+
+%\marginnote[10mm]{\newthought{Expectation}: \index{expectations!engagement~with~team}To participate meaningfully with your group project, you must engage fully with your team.  As a minimum, you must attend all meetings, listen to others, share your views, and present your work.}
+\expectation[10mm]{\index{expectations!engagement~with~team}To participate meaningfully with your group project, you must engage fully with your team.  As a minimum, you must attend all meetings, listen to others, share your views, and present your work.}
+Group project work introduces a number of difficulties that you would not experience in an individual project.  It requires you to agree objectives and a plan to achieve those objectives with others.  A group project rarely proceeds entirely as expected.  A team needs to hold itself and its team members to account, and intervene when necessary.  Recognising and discussing what is not going well is difficult but essential to success.  The module will introduce a range of strategies to overcome such challenges and you have opportunities to put them into practice.
+
+\expectation[10mm]{\index{expectations!coding}During a group project, you must produce some code each week, share it via GitHub, and be prepared to present it at a team meeting.  Other contributions will be welcome and needed as well, but contributing weekly code is essential.}
+In this module, you will produce software systems \emph{as a team}.  Producing code is an important component activity in that process that everyone must fully engage with.  However, software engineering goes beyond mere coding.  Other important activities include agreeing \emph{business objectives} for a client or prospective client, defining \emph{requirements and specifications} for a software solution that would enable the objectives to be achieved, producing and continuously refining a \emph{design} for the system, verification and validation including writing \emph{software tests}\index{testing} and reviewing \emph{code quality}, and \emph{deploying} the system.
+
+The productivity of a software developer is enhanced substantially by means of tools.  
+\expectation[0mm]{\index{expectations!system~administration}As a Computer Scientist, you ought to be able to administer your own workstation\index{workstation!system~administration} without excessive reliance on IT support, so it is important that you develop the skills to do so.}
+These tools include (but are not limited to) a UNIX \ac{CLI} to complete a range of system administration tasks, text/code editors, interpreters/compilers (typically called from  a \ac{CLI}), version control (e.g. git and GitHub), and build automation tools.  Using such tools requires a level of computer literacy that goes beyond that of a typical user.  As part of the course, you will need to learn to employ these tools.
+
+\section{Module structure}
+\tfaq[1]{0mm}{What is the overall structure of this module?}{General~questions}
+The \ac{SEG} module consists of three parts:
+\begin{enumerate}
+\item \emph{Teaching \& training}.  \index{training}The taught component aims to ensure that you learn the fundamental knowledge and skills to enable you to participate in the group project.  You will learn some important fundamentals of project management, software engineering, and software development tools and practices.  You will also be trained in a new programming language and framework that you will use in the small group project (and optionally in the major group project).  This component consists of live lectures, video lectures, small group tutorials, and self-guided coding exercises.   It takes place in the first eight weeks of the academic year, though most of it will be complete before the Semester 1 reading week.
+\item\emph{Small group project}.  \index{small~group~project}In the second half of Semester 1, you will participate in a six-week group project.  Think of this project as ``practice'' group project.  It is relatively low risk as it contributes only a small portion your overall mark.  If anything goes very wrong, you will not lose all that much.  However, you are likely to experience a number of potentially significant challenges of group project work.  The experience you develop in this project will be valuable as you tackle the final stage of the module.  All teams will be working on the same assignment (to deliver a deployed web application) and use the same technologies.  This allows us to provide detailed instructions -- based on the ideas introduced during the taught component -- on how the project should be managed, and what each team and each team member should be doing on a week by week basis.
+\item\emph{Major group project}.  \index{major~group~project}Semester 2 brings everything you have learned together in the form of the Major Group Project.  The project assignments will be substantial, and teams will normally require all of Semester 2 to complete the work to a good standard.  You will have an opportunity to form your own teams, choose a project assignment from a short list of topics, and select the technologies you wish to use.   Teams will be largely self-guided.  However, you should rely on what you have learned in the previous stages of the module, and there will be some advisory meetings with academics. 
+\end{enumerate}
+
+\section{Assessment}
+\tfaq[1]{0mm}{What is the assessment structure for the module?}{Marking}
+\index{assessment}
+The module's assessment consists of two group projects: your individual small group project mark accounts for 15\% of your overall individual mark, and the major group project for 85\%.  As this is a core module, you must pass it to graduate.  To pass the module, you must obtain a combined mark of 40 or more.  In other words:
+\begin{equation}
+\begin{split}
+&0.15 \times \text{individual overall small group project mark} + \\
+&0.85 \times \text{individual overall major group project mark} \geq 40
+\end{split}
+\notag
+\end{equation} 
+There are \emph{no} other requirements to pass the modules.  You can pass the module even if you fail one of the two assessment.
+
+The two group projects are quite different.  The small group project \index{small~group~project} takes place in the second half of Semester 1 and aims to prepare students for the major group project.  Team are small: 4--5 people are allocated to each team, based on information provided in a registration form.  The technology stack is heavily constraint.  There is only one assignment that all teams must complete (though there is considerable flexibility in scope, depending on effective team size and ability).  The major group project \index{major~group~project} covers all of Semester 2.  Students can form their own teams of around 8 people and teams can choose the technology stack.  A range of project assignments will be proposed to cater for a wide range of interests.
+
+Both group projects have the same overall assessment structure.  Each individual overall group project mark consists of two components: an individual group project mark accounts for 95\% of the mark and a peer assessment mark for 5\%.  The individual group project mark is derived from a team group project mark.  The remainder of the section explains the role of the peer assessments and the relationship between individual marks and peer assessments in more detail.
+
+\subsection{Peer assessments}
+\tfaq[1]{0mm}{How do the peer assessments affect me or my mark?}{Peer~assessments}
+\index{peer~assessments!assessment}
+\index{assessment!peer assessment}
+At the end of each group project, you must participate in a peer assessment \index{peer~assessments} exercise.  In each peer assessment exercise, you asked to fill out a peer assessment form for each of people you worked with in the team.  This form consists of a number of short, usually multiple-choice questions, and feedback field that allows you to write open-ended feedback for your team mate.
+
+Some time after the deadline for submitting the peer assessments, you will receive feedback from the peer assessments your team mates returned about you.  The author of each peer assessment will \emph{not} be revealed to you.  You will have an opportunity to respond to the peer assessments you received, but you are not required to respond.  If a peer assessment contains factual errors or if you wish to provide context for a peer assessment, then it is a good idea to respond so that the concerns you have about a peer assessment are recorded in the system.
+
+The peer assessments are used in two ways.
+
+Firstly, the \emph{peer assessments you write} are assessed and contribute to your overall mark.  Your overall mark for each assignment (i.e. the small group project mark and the major group project mark) is the weighted average of your individual group project mark and your peer assessment mark.  The peer assessments you write contribute 5\% to the assignment mark.  The remaining 95\% is the individual group project mark:
+\begin{equation}
+\begin{split}
+\text{assignment mark} = & 0.95\times \text{individual group project mark} + \\
+ &  0.05\times \text{individual peer assessment mark}
+\end{split}
+\notag
+\end{equation}
+Note that, given the weightings of each assignment, the small group project peer assessments contribute 0.75\% ($0.05\times 15\%$) to the overall mark, and the major group project peer assessments contribute 4.25\% ($0.05\times 85\%$) to the overall mark.  Because of this, the assessment criteria for the latter are more elaborate than those of the former.
+
+Secondly, the \emph{peer assessments you receive} are considered along with attendance and code contribution statistics when determining individual project marks.  This is explained next.
+
+\subsection{Individual group project marks}
+\tfaq[1]{0mm}{How does my individual mark relate to what the team produces?}{Marking}
+\label{sect:individual-marks}
+\index{assessment!group}
+\expectation{\index{expectations!group~work}As this module assesses your ability to work in teams, the marking schemes are designed to promote team work rather than individual work.  To do well in the module, focus your efforts on improving the team's output.}
+The group projects are assessed on work delivered by teams.  This work is assessed to produce the team's group project mark.  Individual group project marks are \emph{based on} the team's group project mark, but it is not necessarily identical to it.  An individual group project mark is computed using one of two formula, depending on whether the individual is counted as a participant who met all the expectations of the group project in full.
+
+\index{assessment!individual!major~correction}
+\index{major~correction}
+If an team member did not meet the individual expectations for the group project, the individual mark will be a reduced proportion of the team mark:\index{major~mark~correction} \begin{equation}
+\text{project mark} = \text{team mark} \times (1-\text{major correction})
+\notag
+\end{equation}
+where the major correction is in the range 10\% to 100\%, depending on the extent expectations were not met.  An individual mark scheme describes the circumstances in which a major correction is applied and how large it is.  
+
+
+If an individual is counted as a full member of the team, their mark will be very close to the team mark (i.e. within 5 percentage points of it: 
+\label{minor-mark-redistribution}
+\index{minor~mark~redistribution}
+\index{assessment!individual!minor~mark~adjustment}
+\begin{equation}
+\text{project mark} = \text{team mark} \pm \text{minor adjustment}
+\notag
+\end{equation}
+where minor adjustment ranges from -5 to +5.  The minor adjustments are effectively a small redistribution of marks (within a narrow range), where marks of some team members are moved to other team members.  The sum of all minor adjustments within a team is constrained to zero, so that for some people to gain marks, others need to lose marks.  The minor adjustment range equals -5 to +5 to ensure that (only in extreme cases) the difference between the lowest and highest marked fully contributing team member is no more than a grade boundary.  
+
+\marginnote{\vspace{-10mm}\label{individual-marking:reality-check}
+\newthought{Reality check}: It is impossible for a marker to conduct an objective comparative assessment of the contributions of individual members.  To achieve that, a marker would have to be intimately familiar with the inner workings of each team.  We simply do not and should not have that kind of access to a reasonably independent team.  Moreover, there often is no objective truth.  In a team of five people, there will be up to five different opinions on the merits of every members work.  Where teams work well, individual contributions are not easily separated from one another.  As markers cannot prefer one student's views over those of another, individual marking will be based on the evidence available to us -- participation statistics, code statistics, and peer assessments.  Subsequent pleas cannot change individual marking.  However, reports of errors in the evidence or falsification of evidence will be considered.}
+Both group projects come with minor mark redistribution schemes to decide minor adjustments.  Because nobody involved in the group projects is both impartial and omniscient (the team members are not impartial, and the lecturers not omniscient), these redistribution schemes are inevitably crude.  In essence, they seek to reward people with an adjustment of +3, 4, or 5 where the peer assessments and other contributions statistics are significantly greater than those of others, or penalise with an adjustment of -3, 4, or 5 where those statistics are significantly smaller than others (even though these people are still recognised as fully contributing team members).  A mark adjustment between -2 or +2 normally means that either someone else has been rewarded or penalised, but you are not deemed to have contributed more or less than other fully contributing members.
+
+\subsection{Effective team size}
+\label{sect:effective-team-size}
+\tfaq[1]{0mm}{The number of participating people in my team is smaller than in other teams.  How will that affect us?}{Team~member~issues}
+A common concern among students is the effect of team size on team output.  Initial team sizes vary as your class size is unlikely to be completely divisible by our desired team size.  Moreover, each year, a number of students fail to engage with their group project team, disengage from the group project, or need to interrupt their studies.  Some small group project teams will have 5 people.  Some teams may end up with just three people, or even two in extreme cases.
+
+Many assume that smaller teams have a disadvantage compared to larger teams.  After all, larger teams have more people to produce work during the same period of time.  Therefore, one might expect their combined output will be larger.  In practice, that is not universally true.  In fact, Brook's law suggests that ``\emph{adding [people] to a late software project makes it later}''\citep{Brooks:1975}.  Based on observations made during his professional experience, Brooks suggests that as teams grow, they have greater communication and coordination costs, and the increase in these costs can be greater than the benefit of the extra person.
+
+Nevertheless, the detailed team marking criteria for the small and major group project\footnote{You can find the team marking criteria for each project in the chapter on that project.} consider the number of people actively engaged with the group project.  This will be referred to as the team's effective size.   Effective team size will be calculated at the end of the project, based on the applied major corrections, as follows:
+\begin{equation}
+\text{effective team size} = \sum_{i=1}^n 1-|\text{major correction for student }
+\notag
+\end{equation}
+This number will be rounded down to the nearest 0.5.  For example, if no member of a team of 4 people has a major correction, their effective team size equals 4.  If, in a team of 5, two member receive a major correction of -70\%, the effective size of that team is deemed to be 3.5 ($5-0.7-0.7=3.6$, rounded down to the nearest 0.5.
+
+The marking schemes mention effective team size exclusively in relation to functionality.  Teams with fewer people should build applications that are smaller in scope.  All other criteria are assessed irrespective of team size.  
+
+\expectation{As a general rule, try to complete tasks as soon as possible, and delay decisions as late as possible.}
+It is not possible to determine a team's effective size until the project is over.  Some teams wonder how they can possible decide the scope of the project at the start when they do not know what the engagement of team members will be.  The answer to that question is that you don't decide the scope at the start.  By building software incrementally and iteratively, always ensuring that what you do adds value, the impact of the risk of unpredictable team size can be reduced considerably.
+
+\section{Mitigating circumstances}
+\label{sect:mitigating-circumstances}
+\tfaq[1]{0mm}{I have difficulties engaging with the project due to circumstances outside my control.  What can I do?}{Extenuating~circumstances}
+The group projects require sustained engagement with the project throughout the project period (six weeks for the small group project and ten weeks for the major group project).  If you are unable to engage sufficiently with the group projects due to circumstances beyond your control, you can request mitigation \index{mitigation} by submitting \iac{MCF}.\index{mitigating~circumstances~form}  The module lecturers cannot offer any form of mitigation (including deadline extensions), so if you send them a request for mitigation, they can only signpost the \ac{MCF} processes.
+
+To submit \iac{MCF} for this module, you should follow the same process as for any other module:
+\begin{itemize}
+\item Use the form on Student Records to create \iac{MCF} to make your case.
+\item Clearly indicate what assessments are affected by your mitigating circumstances.  Beware that each group project comes with two submissions: the group project submission and the subsequent peer assessment.  Clearly indicate all assessments/deadlines that are affected. 
+\item Submit the \ac{MCF} on time.
+\item Submit evidence within the timeframe specified on Student Records.
+\end{itemize}
+After your \ac{MCF} and the associated evidence are submitted, your case will be considered by the Department's Mitigating Circumstances board.  If you require help submitting \iac{MCF}, contact your programmes officer, personal tutor, or the KCL Student Union Advice Service.
+
+If your \ac{MCF} is approved, the Mitigating Circumstances board will decide what mitigation they will offer.  Although you can request a particular mitigation, you will not necessarily be offered what you asked for, even if your \ac{MCF} is accepted.  
+
+For the group project deliverables, \emph{only} the following mitigations are possible:
+\begin{itemize}
+\item \emph{An extension of the group project deadline by two weeks}.\index{extension}\index{deadlines!extention}  In other words, if you receive this mitigation in response to your \ac{MCF}, the team's deadline is extended by 14 days from the original deadline.  This mitigation is \emph{not} cumulative.  Even if several members of the team submit \acp{MCF} and all receive the standard two week deadline extension, the new deadline is only two weeks from the normal deadline.  The extensions apply to submissions associated with the coursework, including peer assessments.
+\item \emph{An individual deferral of the affected group project}.\index{deferral}  If you receive this mitigation, the current attempt at the group project is deemed void and moved to the next available opportunity to take this group project.  In this case, the peer assessment associated with the group project will be deferred as well.
+\end{itemize}
+No other mitigations are possible.  Specifically, we cannot adjust your marks (including your team mark or any individual corrections) based on mitigating circumstances.  The College Regulations do not allow this.
+
+\section{Reassessment: resits and replacements}
+\tfaq[1]{0mm}{What happens if I need to redo a group project?}{Extenuating~circumstances}
+A student may be allowed to take two attempts at a module.  The first attempt is marked in the normal way.  The second attempt is capped\index{capped~mark} at the pass mark (i.e. 40\%).
+
+You may require reassessment of one or both group projects under two circumstances.  
+\begin{itemize}
+\item If you are granted a deferral of a group project if your \ac{MCF} is approved or following a successful appeal, then you will take a \emph{replacement attempt}\index{replacement~attempt} at the group projects.  A replacement attempt does not count as a new attempt.  Thus, a replacement first attempt counts as a first attempt and is, therefore, uncapped.
+\item If you fail the module at the first attempt, you may be allowed to do the module again.  This is called \emph{resit}.  Resits are, by definition, capped at the pass mark (40\%).
+\end{itemize}
+
+The department's replacement policy\index{replacement~policy} is as follows:
+\begin{itemize}
+\item If you are granted a deferral for the small group project, \emph{and} you subsequently pass the major group project, then you will be offered a replacement attempt during the summer (normally in July).  This replacement attempt will take the form of an individual project, offering you an opportunity to pass the module at the first attempt before the end of the academic year in which you started the module.
+\item \emph{In all other circumstances involving a reassessment, you must retake the entire module in the next academic year}.  If you require a resit, or you defer either group project until the next academic year, you must retake both group projects in the next academic year.  The department does not offer partial reassessments of modules.
+\end{itemize}
+
+Note that if you have been granted a deferral for the small group project but pass the module overall based on the major group project alone, you can request to cancel the deferral to allow you to complete the module without taking a new attempt at the small group project.  Normally, we would advise you to take a replacement attempt if one has been offered.  However, because deferring the small group project to the next academic year would require you to take the major group project again, you may wish to avoid the associated time commitment as that can prolong your studies unnecessarily.
+
+We only offer a reassessment of the major group project once a year, in the Semester 2.  There are good reasons for this.  The major group project assesses how students work in teams.  Therefore, it can only be assessed through a larger/longer group project in a substantial team.  It is challenging to organise this reliably.  Outside Semester 2, we simply do not have sufficient students available who are likely to engage with the module.
+
+
+\section{Policy on generative AI}
+\tfaq[1]{0mm}{Can we use generative AI in this project?}{General~questions}
+As in many other fields, generative AI is increasingly becoming an important tool for software engineers.  In this module, you will have opportunities to gain experience with using generative AI.  Beware that other modules have their own policies and may prohibit generative AI altogether.  Read this section carefully to familiarise yourself with the constraints that apply.
+
+In this module, the following rules apply:
+\begin{itemize}
+\item For the peer assessment component -- i.e. writing the peer assessments and/or responding to peer assessments -- use of generative AI is strictly prohibited.  In other words, you are not allowed to use generative AI for writing peer assessments or responses.
+\item For all other work, including coding and report writing, we employ Model 3: "Authorised use of Generative AI tools to generate low-level output".  The remainder of this section briefly explains what this means
+\end{itemize}
+This means you can use generative AI and similar tools, such as GitHub Copilot to author simple routines that are small in scale and carry out a specific functionality that is likely to have already been implemented by a library.  You can use generative AI as an alternative to Python and Django documentation to find the functions, classes, and methods that enable you to reuse existing code.  Generative AI tools are also useful as an alternative to searching/browsing tutorials, forums (e.g. Stack Overflow), and examples to find out how to complete common tasks.  In software development, this type of code is normally reused but generative AI makes it easier to find and use as it can generate more readily usable examples from natural language prompts.  This can make you considerably more productive as a software engineer.  However, it also introduces new challenges as it allows you to build larger systems more quickly.
+
+Generative AI tools tend to do well on small, common, and highly specific coding tasks.  However, if you set it tasks that are larger, less common, or framed in vaguer terms, these tools become increasingly less reliable.  Generated code may fail to meet the requirements of the task, software quality standards, or the design assumptions of other parts of the code.  You are responsible for any code that you share with the team.  In particular, you must ensure that the code is fit for purpose, meets your team's quality standards, and permits integration with the remainder of the system.  As mentioned at the outset of this section, generative AI is a powerful tool.  It is not a hack: you will need to keep your brain switched and use these tools responsibly.
+
+The College requires that all contributions by generative AI systems are acknowledged, including code.  I appreciate this is cumbersome, but it is a College requirement that I am not allowed to overturn.  For both group projects, you should acknowledge all sources in the README.md file, but not through comments in the code (as that undermines code cleanliness).  For each use of generative AI, state the path to the file, the affected function, method, or class, the number of lines of code, and a qualitative assessment of the proportion of generated code of the function, method, or class (``whole unit'', ``more than 50\% of the unit'', ``about 50\% of the unit'', ``less than 50\% of the unit'', ``less than 10\% of the unit'').
+
+\section{Workload}
+\tfaq[1]{0mm}{What is the expected workload for this module?}{General~questions}
+\index{workload}
+As a rule of thumb, the College suggests that 1 credit in a course should correspond to 10 hours work.  In other words, this module should require approximately 300 hours of work.  This guideline ignores some very important factors, such as your prior earning, innate ability, productivity, and your ambitions.  Nevertheless, this section will use that guideline to advise you how you should expect to allocate your time to this module.  Please adjust the 300 hour headline figure to your individual requirements. 
+
+Normally, you can distribute your work evenly between Semesters 1 and 2.  In other words, you will need approximately 150 hours per Semester.  If programming (e.g. as taught in 4CCS1PPA), data structures, and database systems were modules you struggled with in Year 1, or if you struggle with the computer literacy skills the module requires, then you should dedicate more time on this module in Semester 1.  If you choose to join a very ambitious team for the major group project, you should dedicate more time to the module in Semester 2.
+\expectation[0mm]{\index{expectations!workload}Aim to dedicate about 14 to 15 hours per week to this module during term time.  The group projects in particular will require require consistent engagement throughout the project (not short bursts of activity).}
+150 hours per Semester is a considerable amount of time.  You should aim to distribute that time evenly across approximately 10 to 11 weeks of each Semester (i.e. 13.6 to 15 hours per week).
+
+Table~\ref{tab:workload-distribution} lists the major activities of this module and identifies an approximate workload for each.  Details for the small and major group projects have been omitted as these are discussed in more depth below.
+
+\begin{table}[ht]
+\checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi
+  \centering
+  \fontfamily{ppl}\selectfont
+  \begin{tabular}{p{75mm}l}
+    \toprule
+     Activity & Total workload \\
+    \midrule
+    Live lectures & \unit[16]{hours}\\
+    Software installation and setup & \unit[2]{hours}\\
+    Studying assignments and handbooks (KEATS) & \unit[4]{hours}\\
+    Small group tutorials & \unit[8]{hours}\\
+    Independent study (Python/Django, devops, project management \& software engineering) & \unit[60]{hours}\\
+    Small group project & \unit[60]{hours}\\
+    Major group project & \unit[148]{hours}\\
+    Peer assessments & \unit[2]{hours}\\
+    \bottomrule
+  \end{tabular}
+  \caption{\ac{SEG} workload distribution (times may vary depending on individual circumstances).}
+  \label{tab:workload-distribution}
+  %\zsavepos{pos:normaltab}
+\end{table}
+
+\section{Schedule}
+\tfaq[1]{0mm}{What are the deadlines for this module?}{General~questions}
+\index{schedule}
+A schedule of deadlines (i.e. dates by which you submit something) and publication dates (i.e. dates by which we will release information, such as feedback), has been specified and published on KEATS.  At the time of writing, these dates have not been confirmed yet by the Department, so they may change.  To ensure you have access to a single source, the schedule for this module is published on KEATS under Module organisation > Schedule.  
+

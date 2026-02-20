@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Layout & typography ---
+\usepackage[margin=1cm]{geometry} % small margins on A4
+\usepackage[scaled=0.95]{helvet}  % Helvetica (or Nimbus Sans)
+\renewcommand{\familydefault}{\sfdefault} % default to sans serif
+\usepackage{setspace}
+\usepackage{microtype}
+
+% --- Tables & formatting ---
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+\usepackage{xcolor}
+
+% --- Learning task emphasis commands ---
+\newcommand{\core}[1]{\textbf{#1}}
+\newcommand{\recommended}[1]{#1}
+\newcommand{\optional}[1]{\textit{\textcolor{gray!60!black}{#1}}}
+
+% Column helpers
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.3}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{0.5em}{}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+% ===========================
+% Page 1: Intro & Conventions
+% ===========================
+{\LARGE Independent Learning Guide/Schedules}\par
+\vspace{0.25em}
+{\large (For students)}\par
+\vspace{0.75em}
+
+\section*{Purpose of this document}
+This guide helps you plan your independent study alongside scheduled teaching. It provides three alternative study plans---\textbf{Recommended}, \textbf{Regular}, and \textbf{Minimal}---so you can choose a realistic workload while still developing the essential skills in:
+\begin{itemize}[leftmargin=1em,itemsep=0.3em]
+  \item \textbf{Python/Django} (programming and web framework fundamentals, deployment of a Django application)
+  \item \textbf{DevOps} (Version control, CI/CD)
+  \item \textbf{Project Management \& Software Engineering} (process, teamwork, software quality)
+\end{itemize}
+In the schedules, you find columns for each of these three subjects.  On the KEATS pages, you find the activities associated with each subject under a dedicated tile with the same name.
+
+\section*{Notational conventions}
+\begin{itemize}[leftmargin=1em,itemsep=0.3em]
+  \item \textbf{``w/c DD Mon''} indicates the week commencing on the given date (e.g.\ \emph{w/c 22 Sep}).
+  \item On KEATS, the independent study activities are labelled ``Core!'', ``Recommended'', or ``Optional''.  Core activities \emph{must} be completed in order to participate in and pass this module.  Failing to complete core activities in a timely manner is likely to result in failure of the module, so you should seek advice if that is the trajectory.  Recommended activities \emph{should} be completed.  You may find the group projects a bit harder and less rewarding if you do not complete some of the recommended activities.  Optional activities \emph{may} be completed.  Optional activities can help facilitate better results.  In the schedule, a core activity is typeset as \core{x.y}, a recommended activity is typeset as \recommended{x.y}, and an optional activity is typeset as \optional{x.y}.
+  \item In the schedules, each activity is labelled by its corresponding number on KEATS.  The same numbering scheme is used for Python/Django, Devops, and Project Management \& Software Engineering.  For example, \core{1.1} in the Python/Django column refers to Python/Django video 1.1, \core{1.1} in the Project Management \& Software Engineering column refers to Project Management video 1.1.
+  \item Each activity \emph{x.y} either comes with video to watch or a text to read.  Some activities come with an additional exercise that you must complete for the activity to be deemed complete.  Such an activity is labelled \emph{x.y}\textbf{+e}.  Some activities some with an additional quiz to complete.  Such an activity is labelled \emph{x.y}\textbf{+q}.
+\end{itemize}
+
+\section*{How to use}
+Start by scheduling time in your calendar to work on the independent study activities.   It is a good idea to use a calendar this year to organise your time, reserve study time for each module, and stick to it. The workload guidance in the Module Handbook (Chapter 2: Study guide) suggests dedicating 60 hours to independent study activities.  
+
+Choose a plan that matches your available time and ability.  If in doubt, choose an ambitious schedule.  You can always slow down: catching up when behind is much harder to accomplish as this Semester will only get busier as it progresses.  Make a print out of the schedule you aim to follow.  Cross out activities as you complete them.  If you find that you are getting behind schedule, you can move down to a slower schedule.  If you are unable to keep up with the Minimal schedule, I strongly recommend that you talk to your personal tutor or the module organiser.
+
+\newpage
+
+% ===========================
+% Page 2: Recommended Schedule
+% ===========================
+\section*{Recommended Schedule}
+This is the most fast-paced schedule that covers all core, recommended, and optional materials before reading week.  The schedule is particularly intense in the first two weeks of teaching as the demands for other modules tends to be light at that time.  Consider getting ahead by starting work a week early.  This schedule is feasible for many, but it requires you to be organised and to start work early.  This schedule sets you up for participating in the small group project in a high achieving team on a six week schedule.
+
+\vspace{0.25em}
+\begin{tabularx}{\textwidth}{L{3.0cm} Y Y Y}
+\toprule
+\textbf{Week} & \textbf{Python/Django} & \textbf{DevOps} & \textbf{Project management/Software engineering} \\
+\midrule
+w/c 22 Sep 
+&  Install all required software.  Consider getting ahead of schedule and start some of the independent learning activities
+& 
+& \\
+w/c 29 Sep & \core{1.1}, \core{1.2+e}, \core{1.3}, \core{1.4+e}, \core{1.5+e} \core{1.6+e}\footnote{Complete and print out your solutions to Python exercises 1.5 and 1.6, and bring the printout to Small group tutorial 2.  You need this to participate in the tutorial on code reviews.}, \core{1.7} 
+& \core{1.1}, \core{1.2}, \core{1.3}, \core{1.4}, \core{1.5}, \core{1.6}, \core{1.7}, \core{1.8}, \core{1.9}
+& \core{1.1}, \core{1.2}, \core{1.3}\\
+w/c 06 Oct 
+& \core{2.1+q}, \core{2.2+q}, \core{2.3+e}, \core{2.4+e}, \core{2.5}, \core{2.6+e}, \core{2.7+q}, \core{2.8}, \core{2.9+e}, \core{2.10+e} 
+& \core{2.1}, \core{2.2}, \core{2.3+q} 
+& \core{2.1}\optional{+e}, \core{2.2}\optional{+q}, \core{2.3}, \core{2.4}\optional{+q}, \core{3.1}\optional{+q}\\
+w/c 13 Oct 
+& \core{3.1+e}, \core{3.2}, \optional{3.3}, \core{3.4}, \core{3.5+e}, \recommended{3.6}, \core{3.7+e} 
+& \core{2.4+q}, \core{2.5+q}
+& \core{3.2}, \recommended{1.4}, \recommended{1.5}, \recommended{1.6+q}, \core{1.7}, \core{1.8+e}, \core{1.9+q}\footnote{Aim to complete this activity before the next week's small group tutorial.}\\
+w/c 20 Oct 
+& \core{4.1+e}, \core{4.2+e}, \core{4.3}, \core{4.4+e}, \core{5.1}, \core{5.2}, \core{5.3}, \optional{5.4}, \optional{5.5}, \core{5.6} 
+& \recommended{2.6+q}, \recommended{2.7+q}
+& \recommended{4.1}\optional{+q}, \core{4.2}\optional{+q}, \core{4.3}\optional{+q}\footnote{Complete this before next week's small group tutorial}\\
+w/c 27 Oct 
+& \core{6.1}, \recommended{6.2}, \optional{6.3}, \optional{6.4}, \optional{7.1}, \optional{7.2}, \optional{7.3+e} 
+& \recommended{3.1}, \core{3.2}, \recommended{3.3}
+& \recommended{1.10}, \core{1.11}, \core{1.12}, \recommended{1.13}\\
+w/c 03 Nov 
+& 
+& 
+& \\
+w/c 10 Nov 
+& 
+& 
+& \\
+w/c 17 Nov 
+& 
+& 
+& \\
+w/c 24 Nov 
+& 
+& 
+& \\
+\bottomrule
+\end{tabularx}
+
+%
+\newpage
+
+% ===========================
+% Page 3: Regular Schedule
+% ===========================
+\section*{Regular Schedule}
+This is a slightly slower schedule that covers all core, recommended, and optional materials, but at a slower pace.  It leaves a fair amount of recommended and optional content for reading week, and the weeks immediately after reading week.  Beware that the workload in Semester 1 becomes high around reading week and thereafter.  You may struggle to complete this schedule in its entirety and end up missing some recommended and optional content.  If you follow this schedule, it is still possible to participate in the small group project on a six week schedule, but it is best to avoid teams where everyone has followed the recommended schedule.
+
+\vspace{0.25em}
+\begin{tabularx}{\textwidth}{L{3.0cm} Y Y Y}
+\toprule
+\textbf{Week} & \textbf{Python/Django} & \textbf{DevOps} & \textbf{Project management/Software engineering} \\
+\midrule
+w/c 22 Sep 
+&  Install all required software.  Consider getting ahead of schedule and start some of the independent learning activities
+& 
+& \\
+w/c 29 Sep & \core{1.1}, \core{1.2+e}, \core{1.3}, \core{1.4+e}, \core{1.5+e}
+& \core{1.1}, \core{1.2}, \core{1.3}, \core{1.4}, \core{1.5}, \core{1.6}
+& \core{1.1}, \core{1.2}\\
+w/c 06 Oct 
+& \core{1.6+e}\footnote{Complete and print out your solutions to Python exercises 1.5 and 1.6, and bring the printout to Small group tutorial 2.  You need this to participate in the tutorial on code reviews.}, \core{1.7}, \core{2.1+q}, \core{2.2+q}, \core{2.3+e}, \core{2.4+e}, \core{2.5}, \core{2.6+e}, 
+& \core{1.7}, \core{1.8}, \core{1.9}, 
+& \core{2.1}\optional{+e}, \core{2.2}\optional{+q}, \core{2.3}, \core{2.4}\optional{+q}\\
+w/c 13 Oct 
+& \core{2.7+q}, \core{2.8}, \core{2.9+e}, \core{2.10+e}, \core{3.1+e}, \core{3.2}, 
+& \core{2.1}, \core{2.2}, 
+& \core{1.3}, \core{1.7}, \core{1.8+e}, \core{1.9+q}\footnote{Aim to complete this activity before the next week's small group tutorial.}\\
+w/c 20 Oct 
+& \optional{3.3}, \core{3.4}, \core{3.5+e}, \recommended{3.6}, \core{3.7+e} 
+& \core{2.3+q} , \core{2.4+q}
+& \core{4.2}\optional{+q}, \core{4.3}\optional{+q}\footnote{Complete this before next week's small group tutorial}\\
+w/c 27 Oct 
+& \core{4.1+e}, \core{4.2+e}, \core{4.3}\core{4.3}, \core{4.4+e}, \core{5.1}, \core{5.2}
+& \core{2.5+q}  
+& \core{3.1}\optional{+q},\core{3.2}, \recommended{4.1}\optional{+q}\\
+w/c 03 Nov 
+& \core{5.3}, \optional{5.4}, \optional{5.5}, \core{5.6}
+& \recommended{2.7+q} 
+&  \recommended{1.4}, \recommended{1.5}\\
+w/c 10 Nov 
+& \core{6.1}, \recommended{6.2}
+&  \recommended{2.6+q}
+& \recommended{1.6+q}, \recommended{1.10}\\
+w/c 17 Nov 
+& \optional{6.3}, \optional{6.4}
+& \recommended{3.1}, \core{3.2}, \recommended{3.3}
+& \core{1.11}, \core{1.12} \\
+w/c 24 Nov 
+& \optional{7.1}, \optional{7.2}, \optional{7.3+e} 
+& 
+& \recommended{1.13}\\
+\bottomrule
+\end{tabularx}
+
+\newpage
+
+% ===========================
+% Page 4: Minimal Schedule
+% ===========================
+\section*{Minimal Schedule}
+This minimal schedule focusses on completing core activities in a timely manner to allow you to participate in the small group project on a four week schedule or less.  If you fall behind this schedule, you should discuss your circumstances with your personal tutor or the module organiser.  Most recommended and optional activities are not included in this schedule, though a few are suggested.
+
+\vspace{0.25em}
+\begin{tabularx}{\textwidth}{L{3.0cm} Y Y Y}
+\toprule
+\textbf{Week} & \textbf{Python/Django} & \textbf{DevOps} & \textbf{Project management/Software engineering} \\
+\midrule
+w/c 22 Sep 
+& 
+& 
+& \\
+w/c 29 Sep 
+& Install all required software, \core{1.1}, \core{1.2+e}, \core{1.3}, \core{1.4+e}
+& \core{1.1}, \core{1.2}, \core{1.3}, \core{1.4}, \core{1.5}
+& \core{1.1}, \core{1.2}\\
+w/c 06 Oct 
+& \core{1.5+e} \core{1.6+e}\footnote{Complete and print out your solutions to Python exercises 1.5 and 1.6, and bring the printout to Small group tutorial 2.  You need this to participate in the tutorial on code reviews.}, \core{1.7} 
+& \core{1.6}, \core{1.7}, \core{1.8}, \core{1.9}
+& \core{2.1}, \core{2.2}, \core{2.3}, \core{2.4}\\
+w/c 13 Oct 
+& \core{2.1+q}, \core{2.2+q}, \core{2.3+e}, \core{2.4+e}, \core{2.5}, \core{2.6+e}
+& \core{2.1}, \core{2.2}
+& \core{1.3}, \core{1.9+q}\footnote{Aim to complete this activity before the next week's small group tutorial.}\\
+w/c 20 Oct 
+& \core{2.7+q}, \core{2.8}, \core{2.9+e}, \core{2.10+e} 
+& \core{2.3+q} 
+& \core{1.7}, \core{1.8+e}\\
+w/c 27 Oct 
+& \core{3.1+e}, \core{3.2}, \core{3.4}, \core{3.5+e} 
+& \core{2.4+q}
+& \core{1.11}, \core{1.12}\\
+w/c 03 Nov 
+& \core{3.7+e}, \core{4.1+e}
+& \core{2.5+q} 
+& \core{4.2}, \core{4.3}\\
+w/c 10 Nov 
+& \core{4.2+e}, \core{4.3}, \core{4.4+e}
+& \core{3.2}, (optionally: \recommended{2.7+q})
+& \core{3.1}, \core{3.2}\\
+w/c 17 Nov 
+& \core{5.1}, \core{5.2}, \core{5.3}, \core{5.6} 
+& (optionally: \recommended{3.1}, \recommended{3.3})
+& \\
+w/c 24 Nov 
+& \core{6.1}
+& 
+& \\
+\bottomrule
+\end{tabularx}
+
+\end{document}
